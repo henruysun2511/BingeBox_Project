@@ -30,7 +30,7 @@ const movies =
                     actorImage: './assets/images/actor/hansen.webp'
                 }
             ],
-            imageUrl: './assets/images/movie/minecraft.webp',
+            imageUrl: './assets/images/movies/minecraft.webp',
             trailer: 'https://www.youtube.com/watch?v=wJO_vIDZn-I',
             schedules: [
                 {
@@ -75,7 +75,7 @@ const movies =
             actors: [
                 {
                     actorName: 'Thái hòa',
-                    actorImage: './assets/images/actor/jackblack.webp'
+                    actorImage: './assets/images/actor/'
                 },
                 {
                     actorName: 'Quang Tuấn',
@@ -94,7 +94,7 @@ const movies =
                     actorImage: ''
                 }
             ],
-            imageUrl: 'assets/images/movie/diadao.webp',
+            imageUrl: './assets/images/movies/diadao.webp',
             trailer: 'https://www.youtube.com/watch?v=-OGDDtsIBHA',
             schedules: [
                 {
@@ -158,7 +158,7 @@ const movies =
                     actorImage: './assets/images/actor/danny.webp'
                 }
             ],
-            imageUrl: './assets/images/movie/captainamericaa.jpg',
+            imageUrl: './assets/images/movies/captainamericaa.jpg',
             trailer: 'https://www.youtube.com/watch?v=1pHDWnXmK7Y',
             schedules: [
                 {
@@ -222,7 +222,7 @@ const movies =
                     actorImage: './assets/images/actor/danny.webp'
                 }
             ],
-            imageUrl: './assets/images/movie/cuoimaigiahan.webp',
+            imageUrl: './assets/images/movies/cuoimaigiahan.webp',
             trailer: 'https://www.youtube.com/watch?v=wJO_vIDZn-I',
             schedules: [
                 {
@@ -274,7 +274,7 @@ const movies =
                     actorImage: './assets/images/actor/brandon.webp'
                 }
             ],
-            imageUrl: './assets/images/movie/buoihenhokinhhoang.webp',
+            imageUrl: './assets/images/movies/buoihenhokinhhoang.webp',
             trailer: 'https://www.youtube.com/watch?v=cQ1eYm_XIcA',
             schedules: [
                 {
@@ -330,7 +330,7 @@ const movies =
                     actorImage: './assets/images/actor/jessica.webp'
                 }
             ],
-            imageUrl: './assets/images/movie/interstellar.jpg',
+            imageUrl: './assets/images/movies/interstellar.jpg',
             trailer: 'https://www.youtube.com/watch?v=QqSp_dwslro',
             schedules: [
                 {
@@ -394,7 +394,7 @@ const movies =
                     actorImage: './assets/images/actor/chim.png'
                 }
             ],
-            imageUrl: './assets/images/movie/flow.webp',
+            imageUrl: './assets/images/movies/flow.webp',
             trailer: 'https://www.youtube.com/watch?v=B3V-9tiuQTo',
             schedules: [
                 {
@@ -446,7 +446,7 @@ const movies =
                     actorImage: './assets/images/actor/jon.jpg'
                 },
             ],
-            imageUrl: './assets/images/movie/taynghiepdu.webp',
+            imageUrl: './assets/images/movies/taynghiepdu.webp',
             trailer: 'https://www.youtube.com/watch?v=c0SG_zJarME',
             schedules: [
                 {
@@ -498,7 +498,7 @@ const movies =
                     actorImage: './assets/images/actor/galgadot.jpg'
                 },
             ],
-            imageUrl: './assets/images/movie/snowwhite.webp',
+            imageUrl: './assets/images/movies/snowwhite.webp',
             trailer: 'https://www.youtube.com/watch?v=iV46TJKL8cU',
             schedules: [
                 {
@@ -543,26 +543,26 @@ const movies =
             actors: [
                 {
                     actorName: 'Timothee Chalamet',
-                    actorImage: './assets/images/actor/rachel.webp'
+                    actorImage: './assets/images/actor/timothee.jph'
                 },
                 {
                     actorName: 'Zendaya',
-                    actorImage: './assets/images/actor/galgadot.jpg'
+                    actorImage: './assets/images/actor/zendaya.jpg'
                 },
                 {
                     actorName: 'Javier Bardem',
-                    actorImage: './assets/images/actor/galgadot.jpg'
+                    actorImage: './assets/images/actor/javier.webp'
                 },
                 {
                     actorName: 'Josh Brolin',
-                    actorImage: './assets/images/actor/galgadot.jpg'
+                    actorImage: './assets/images/actor/joshbrolin.webp'
                 },
                 {
                     actorName: 'Rebecca Ferguson',
-                    actorImage: './assets/images/actor/galgadot.jpg'
+                    actorImage: './assets/images/actor/rebecca.webp'
                 }
             ],
-            imageUrl: './assets/images/movie/dune.jpg',
+            imageUrl: './assets/images/movies/dune.jpg',
             trailer: 'https://www.youtube.com/watch?v=Way9Dexny3w',
             schedules: [
                 {
