@@ -1,3 +1,4 @@
+//Jquery
 $(document).ready(function () {
     let list = $('.carousel .carousel-list');
     let items = $('.carousel .carousel-list .carousel-image');
@@ -26,9 +27,7 @@ $(document).ready(function () {
         reloadSlider();
     });
 
-    let refreshSlider = setInterval(function () {
-        next.click();
-    }, 3000); //tự động chuyển slider sau 3 giây
+    let refreshSlider = setInterval(function () {next.click();}, 3000); //tự động chuyển slider sau 3 giây
 
     function reloadSlider() {
         let checkLeft = items[active].offsetLeft; //đo khoảng cách trái từ item so với phần tử cha (trong trường hợp này là list)
@@ -36,12 +35,10 @@ $(document).ready(function () {
         list.css('left', -checkLeft + 'px'); //dịch sang trái tương ứng 
 
         dots.removeClass('active'); //xóa hiệu ứng active của dot đâu tiên
-        dots[active].addClass('active'); //thêm hiệu ứng active vào dots tương ứng với item đang hiển thị
+        $(dots[active]).addClass('active'); //thêm hiệu ứng active vào dots tương ứng với item đang hiển thị
 
         clearInterval(refreshSlider);
-        refreshSlider = setInterval(function () {
-            next.click();
-        }, 3000);
+        refreshSlider = setInterval(function () {next.click();}, 3000);
     }
 
     dots.each(function (index) {
