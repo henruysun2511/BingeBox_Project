@@ -1,10 +1,9 @@
-body{
-    /* overflow: hidden; */
-    
+body {
+    /* overflow: hidden; */  
 }
 
 /*Header*/
-.header{
+.header {
     background-color: #2E4BA6;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
     padding: 0 50px;
@@ -14,51 +13,60 @@ body{
     width: 100%;
     z-index: 999;
 }
-.header .inner-wrap{
+
+.header .inner-wrap {
     display: flex;
-    justify-content: space-between; /*căn đều trái phải*/
-    align-items: center; /*căn dọc */   
+    justify-content: space-between;
+    align-items: center;
 }
-.header .inner-logo{
+
+.header .inner-logo {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 15px;
 }
-.header .inner-wrap .inner-logo a{
+
+.header .inner-wrap .inner-logo a {
     margin-right: 10px;
 }
-.header .inner-wrap .inner-logo img{
+
+.header .inner-wrap .inner-logo img {
     height: 80px;
     width: auto;
     margin-right: 8px;
- 
+
 }
-.header .inner-wrap .inner-logo p{
+
+.header .inner-wrap .inner-logo p {
     color: white;
     font-weight: 700;
     margin: 0;
 }
 
-.header .inner-wrap .inner-menu ul{
+.header .inner-wrap .inner-menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
-.header .inner-wrap .inner-menu ul li a{
+
+.header .inner-wrap .inner-menu ul li a {
     display: inline-block;
     padding: 35px 20px;
     color: white;
     font-size: 18px;
 }
-.header .inner-wrap .inner-menu ul li a:hover{
+
+.header .inner-wrap .inner-menu ul li a:hover {
     background-color: blue;
 }
-.header .inner-wrap .inner-regist{
+
+.header .inner-wrap .inner-regist {
     height: 80px;
 }
-.header .inner-wrap .inner-regist ul{
+
+.header .inner-wrap .inner-regist ul {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,10 +74,12 @@ body{
     height: 100%;
 
 }
-.header .inner-regist ul li{
+
+.header .inner-regist ul li {
     margin-right: 10px;
 }
-.header .inner-regist ul li button{
+
+.header .inner-regist ul li button {
     padding: 10px 25px;
     border-radius: 30px;
     border: 0;
@@ -78,18 +88,20 @@ body{
 
 }
 
-.header .inner-regist ul li .button a{
+.header .inner-regist ul li .button a {
     color: white;
     font-weight: 400;
 }
-.header .inner-regist ul li .button-dn{
+
+.header .inner-regist ul li .button-dn {
     background: linear-gradient(90deg, #5de0e6, #004aad);
 }
-.header .inner-regist ul li .button-dk{
+
+.header .inner-regist ul li .button-dk {
     background: linear-gradient(90deg, #ff5757, #8c52ff);
 }
 
-.header .inner-regist ul li .button-dn:hover{
+.header .inner-regist ul li .button-dn:hover {
     padding: 10px 25px;
     border-radius: 30px;
     border: 0;
@@ -97,23 +109,123 @@ body{
 
 }
 
-.header .inner-regist ul li .button-dk:hover{
+.header .inner-regist ul li .button-dk:hover {
     padding: 10px 25px;
     border-radius: 30px;
     border: 0;
     background: linear-gradient(90deg, #5de0e6, #004aad);
 
+}
+
+/* Footer */
+.footer .footer-top {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #000000;
+    padding: 30px 10px;
+}
+
+.footer .footer-top .about-us {
+    margin-right: 20px;
+
+    width: 300px;
+}
+
+.footer .footer-top .about-us h1 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer .footer-top .about-us .list-box {
+    background-color: #004aad;
+    width: 200px;
+    height: 10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.footer .footer-top .about-us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer .footer-top .about-us ul li {
+    margin-bottom: 10px;
+}
+
+.footer .footer-top .about-us ul li a {
+    color: white;
+}
+
+.footer .footer-top .about-us ul li a:hover {
+    color: #004aad;
+}
+
+.footer .footer-top .about-us ul li p {
+    color: white;
+    margin-bottom: 0;
+}
+
+.footer .footer-top .about-us .social {
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-top .about-us .social li {
+    margin-right: 10px;
+}
+
+.footer .footer-top .about-us .social li .inner-image {
+    height: 40px;
+    width: 40px;
+
+}
+
+.footer .footer-top .about-us .social li .inner-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.footer-bottom {
+    background-color: #16171F;
+}
+
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    padding: 10px 110px;
+}
+
+.footer-bottom .inner-logo {
+    height: 100px;
+    width: auto;
+}
+
+.footer-bottom .inner-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.footer-bottom .inner-content ul {
+    list-style: none;
+}
+
+.footer-bottom .inner-content ul li p {
+    color: white;
 }
 
 /*Carousel*/
-.carousel{
+.carousel {
     position: relative;
     width: 1600px;
     max-width: 100vw;
     height: 700px;
     margin-top: 100px;
 }
-.carousel-list{
+
+.carousel-list {
     position: absolute;
     top: 0;
     left: 0;
@@ -124,25 +236,26 @@ body{
 }
 
 
-.carousel-image img{
+.carousel-image img {
     height: 700px;
     width: 1600px;
     object-fit: cover;
     object-position: left;
 }
 
-.carousel-button-prev{
+.carousel-button-prev {
     position: absolute;
     top: 48%;
     left: 1%;
 }
-.carousel-button-next{
+
+.carousel-button-next {
     position: absolute;
     top: 48%;
     right: 1%;
 }
 
-button{
+button {
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid grey;
@@ -150,21 +263,21 @@ button{
     padding: 10px 15px;
 }
 
-button:hover{
+button:hover {
     background-color: rgba(128, 128, 128, 0.5);
 }
 
-.carousel-dots{
+.carousel-dots {
     position: absolute;
     bottom: 1px;
-    left:0;
+    left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.carousel-dots li{
+.carousel-dots li {
     width: 10px;
     height: 10px;
     background-color: white;
@@ -173,7 +286,7 @@ button:hover{
     cursor: pointer;
 }
 
-.carousel-dots li.active{
+.carousel-dots li.active {
     background-color: white;
     width: 25px;
     border-radius: 15px;
@@ -181,28 +294,32 @@ button:hover{
 }
 
 /* Quick Ticket Buying */
-.quickTicketBuying{
+.quickTicketBuying {
     margin: 20px;
 }
-.quickTicketBuying .container{
+
+.quickTicketBuying .container {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     padding: 10px;
+    background-color: #fff;
 }
 
-.quickTicketBuying-content{
+.quickTicketBuying-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.quickTicketBuying-number{
+
+.quickTicketBuying-number {
     background-color: orange;
     padding: 2px 8px;
     border-radius: 50%;
     color: white;
     font-weight: 600;
 }
-select{
+
+select {
     width: 200px;
     height: 35px;
     border-radius: 10px;
@@ -222,8 +339,200 @@ select{
     align-items: center;
     justify-content: center;
 }
-.buying:hover{
+
+.buying:hover {
     color: orange;
     cursor: pointer;
 }
 
+/*section-1*/
+.section-1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* background: linear-gradient(90deg, #000000, #3533cd); */
+}
+
+.section-1 .inner-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-1 .inner-content .inner-title {
+    color: var(--color-text)
+}
+
+.list {
+    background-color: #004aad;
+    height: 40px;
+    width: 8px;
+    margin-right: 10px;
+}
+
+.section-1 .inner-film {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.section-1 .inner-film .film-detail {
+    /* background-color: #5de0e6; */
+    height: 450px;
+    /* width: 260px; */
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+.section-1 .inner-film .film-poster {
+    /* height: 370px;
+    width: 260px; */
+    height: 320px;
+    width: 229px;
+    position: relative;
+}
+
+.section-1 .inner-film .film-poster:hover {
+    content: "Mua vé ngay";
+}
+
+.section-1 .inner-film .film-poster img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+
+.section-1 .inner-film ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 5px 0 0 0;
+}
+
+.section-1 .inner-film ul li {
+    margin-right: 10px;
+}
+
+.section-1 .inner-film ul li .infor {
+    padding: 5px;
+    color: white;
+    font-weight: 650;
+    background-color: #004aad;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.section-1 .inner-film ul li .age-permission {
+    background-color: red;
+}
+
+.section-1 .inner-film ul li .subtitle {
+    background-color: rgb(41, 39, 39);
+}
+
+.section-1 .inner-film ul li .film-format {
+    background-color: #67B446;
+}
+
+
+.section-1 .inner-film .film-name {
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+}
+
+.section-1 .inner-film .film-category {
+    color: var(--color-text);
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.section-1 .inner-film .film-date {
+    color: gray;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+/*hover cho nút mua vé ngay*/
+.section-1 .inner-button {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+.section-1 .inner-button button {
+    width: 180px;
+    border-radius: 10px;
+    padding: 7px 20px;
+    border: 0;
+    background-color: #004aad;
+
+}
+
+.section-1 .inner-button button a {
+    color: white;
+    font-weight: 400;
+}
+
+.section-1 .inner-film .film-poster:hover .inner-button {
+    opacity: 1;
+}
+
+.section-1 .film-poster .inner-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+.section-1 .film-poster .inner-icon a {
+    color: #004aad;
+}
+
+.section-1 .inner-film .film-poster:hover .inner-icon {
+    opacity: 1;
+
+}
+
+.section-1 .film-poster .inner-top {
+    position: absolute;
+    top: -30px;
+    left: -60px;
+}
+
+.section-1 .film-poster .inner-top img {
+    height: 100px;
+    width: auto;
+}
+
+/* Css cho cột sidebar */
+
+
+.promotion-title{
+    color: var(--color-text);
+    font-size: 18px;
+    padding-left: 8px
+}
+.promotion-image{
+    background-color: #004aad;
+    width: 230px;
+    height: 100px;
+    border-radius: 15px;
+    margin: 10px;
+}
