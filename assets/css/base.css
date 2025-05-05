@@ -3,6 +3,11 @@
 :root{
    --color-text: #fff;
    --color-blue: #004aad;
+   --color-golden: #edd463;
+   --color-lightblue: #74b0e1;
+   --color-red: #C94D3D;
+   --color-yellow: #efb146;
+   --color-dark: #454B6A;
    --font: "Montserrat", serif;
 }
 
@@ -16,7 +21,7 @@ body{
 } 
 
 a{
-    text-decoration: none; /*toàn bộ link ko có gạch chân*/
+    text-decoration: none !important; /*toàn bộ link ko có gạch chân*/
 }
 
 
