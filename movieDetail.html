@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingeBox Cinema</title>
+    <link rel="icon" type="image/png" href="./assets/images/bingebox_logo.png (1).png">
+
+    <!-- Nhúng font và icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link file css -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .section-1 {
+            margin-top: 49px;
+            height: 660px;
+        }
+
+        .film-poster-big {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            height: 600px;
+
+        }
+
+        .film-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.65);
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            border-radius: 12px;
+            z-index: 2;
+        }
+
+        .film-poster-big img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .film-icon-play {
+            position: absolute;
+            top: 35%;
+            left: 47%;
+            font-size: 70px;
+            color: white;
+            cursor: pointer;
+            z-index: 3;
+
+        }
+
+        .film-icon-play:hover {
+            color: white;
+            transform: scale(1.1);
+            transition: 1s ease-in-out;
+        }
+
+        .section-2 {
+            height: 350px;
+            margin-bottom: 20px;
+        }
+
+
+        .section-2 .inner-wrap {
+            display: flex;
+            justify-content: center;
+            color: var(--color-text);
+        }
+
+        .section-2 .inner-image {
+            height: 400px;
+            width: 278px;
+            margin-right: 25px;
+            position: relative;
+            z-index: 4;
+
+        }
+
+        .section-2 .inner-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            margin-top: -100px;
+            margin-bottom: -45px;
+
+        }
+
+        .section-2 h2 {
+            margin: 20px 0 10px 0;
+            width: 690px;
+        }
+
+        .section-2 .inner-content .inner-basic {
+            display: flex;
+            margin-bottom: 12px;
+        }
+
+        .section-2 .inner-content .inner-basic .inner-icon {
+            display: flex;
+            margin-right: 60px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-2 .inner-content .inner-basic .inner-icon p {
+            padding: 0;
+            margin: 0;
+        }
+
+        .section-2 .inner-content .inner-basic .inner-icon i {
+            margin-right: 10px;
+            color: var(--color-golden);
+        }
+
+        .section-2 .inner-category {
+            display: flex;
+            margin: 5px 0;
+
+        }
+
+        .section-2 .inner-category p {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .section-2 .inner-category a {
+            color: var(--color-text);
+        }
+
+        .section-2 .inner-age {
+            padding: 5px;
+            width: 35px;
+            margin-bottom: 15px;
+            background-color: var(--color-yellow);
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .section-2 .inner-button {
+            display: flex;
+
+        }
+
+        .button {
+            background-color: white;
+            margin-right: 10px;
+            padding: 5px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+
+        }
+
+        a.button-one {
+            background-color: var(--color-lightblue);
+            color: var(--color-text);
+            font-weight: 600;
+            text-decoration: none;
+
+        }
+
+        a.button-two {
+            background-color: var(--color-red);
+            color: var(--color-text);
+            font-weight: 600;
+            text-decoration: none;
+
+        }
+
+        .section-3 {
+            margin-bottom: 50px;
+        }
+
+        .section-3 .inner-wrap {
+            margin-left: 60px;
+        }
+
+        .section-3 .inner-content {
+            display: flex;
+            color: var(--color-text);
+            margin-bottom: 10px;
+        }
+
+        .list {
+            background-color: #004aad;
+            height: 40px;
+            width: 8px;
+            margin-right: 10px;
+        }
+
+        .section-3 p {
+            color: var(--color-text);
+            font-size: 17px;
+            width: 1000px;
+            line-height: 1.5;
+        }
+
+        .section-4 {
+            margin-bottom: 50px;
+        }
+
+        .section-4 .inner-wrap {
+            margin-left: 60px;
+        }
+
+        .section-4 .inner-content {
+            display: flex;
+            color: var(--color-text);
+            margin-bottom: 10px;
+        }
+
+        .section-4 .actor-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section-4 .actor-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+            width: 130px;
+            height: 160px;
+        }
+
+        .section-4 img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .section-4 .inner-name {
+            color: var(--color-text);
+            text-align: center;
+        }
+
+        #overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+            display: none;
+        }
+
+        #close {
+            position: fixed;
+            top: 17%;
+            left: 79%;
+            font-size: 35px;
+            z-index: 6;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        .inner-iframe {
+            text-align: center;
+            position: fixed;
+            top: 20%;
+            left: 25%;
+            z-index: 5;
+            display: none;
+        }
+
+        .section-5 .inner-wrap {
+            margin-left: 60px;
+            color: var(--color-text);
+        }
+
+        .section-5 .inner-content {
+            display: flex;
+            color: var(--color-text);
+            margin-bottom: 50px;
+        }
+
+        .section-5 .schedules {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .section-5 .schedules .schedule-item {
+            color: var(--color-text);
+            margin: 5px 7px 5px 0;
+            padding: 5px 25px;
+            background-color: var(--color-blue);
+            font-weight: 500;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .section-5 .schedules .schedule-item:hover {
+            background-color: var(--color-lightblue);
+            transition: 0.3s ease-in-out;
+        }
+
+        .section-5 .showtime-item {
+            border-top: 1px solid var(--color-dark);
+            padding: 30px 0;
+        }
+
+        .section-5 .showtimes .times {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .times .time-item {
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+
+        .cinema {
+            font-size: 27px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .times .time-item .time-number {
+            background-color: var(--color-dark);
+            text-align: center;
+            padding: 15px 70px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .times .time-item .time-number:hover {
+            background-color: var(--color-blue);
+        }
+
+        .time-info {
+            display: flex;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 400;
+        }
+
+        .time-info .time-subtitle {
+            margin-right: 10px;
+            background-color: rgb(181, 22, 22);
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+
+        .time-info .time-format {
+            background-color: #67B446;
+            padding: 2px;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="section-1">
+        <div class="film-poster-big" id="film-poster-big">
+            <img src="assets/images/movieBigPosters/BPflow.jpg" alt="Captain America: Thế giới mới">
+            <div class="film-overlay"></div>
+            <div class="film-icon-play" id="play-button">
+                <i class="fa-solid fa-circle-play"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-2" id="section-2">
+        <div class="container">
+            <div class="inner-wrap">
+                <div class="inner-image">
+                    <img src="assets/images/movies/flow.webp" alt="flow">
+                </div>
+                <div class="inner-content">
+                    <h2>CAPTAIN AMERICA: TRẬT TỰ THẾ GIỚI MỚI</h2>
+                    <div class="inner-basic">
+                        <div class="inner-icon">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>118 phút</p>
+                        </div>
+                        <div class="inner-icon">
+                            <i class="fa-solid fa-calendar"></i>
+                            <p>14/02/2025</p>
+                        </div>
+
+                    </div>
+                    <div class="inner-director">
+                        <P>Đạo diễn: Nhat Huy</P>
+                    </div>
+                    <div class="inner-nation">
+                        <P>Quốc gia: Mỹ</P>
+                    </div>
+                    <div class="inner-category">
+                        <p>Thể loại: </p>
+                        <div class="category">
+                            <a href="#">Hành động,</a>
+                            <a href="#">Giả tưởng,</a>
+                            <a href="#">Phiêu lưu</a>
+                        </div>
+                    </div>
+                    <div class="inner-age">T13</div>
+                    <div class="inner-button">
+                        <a href="#" class="button button-one" id="button-trailer">TRAILER</a>
+                        <a href="#" class="button button-two">ĐẶT VÉ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-3" id="section-3">
+        <div class="container">
+            <div class="inner-wrap">
+                <div class="inner-content">
+                    <div class=" list inner-list"></div>
+                    <h2 class="inner-title">Nội dung</h2>
+                </div>
+                <p>Trước bối cảnh hậu tận thế, chú mèo xám nhút nhát, vốn luôn sợ nước phải rời bỏ vùng an toàn khi căn
+                    nhà thân yêu bị cuốn trôi bởi cơn lũ dữ. Trên hành trình vượt đại dương mênh mông, chú mèo cùng
+                    những người bạn đồng hành (Capybara, chó Labrador Retriever, Vượn Cáo, chim Thư ký) phải học cách
+                    vượt qua nỗi sợ và chấp nhận những điểm khác biệt để cùng nhau tồn tại</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-4">
+        <div class="container">
+            <div class="inner-wrap">
+                <div class="inner-content">
+                    <div class=" list inner-list"></div>
+                    <h2 class="inner-title">Diễn viên</h2>
+                </div>
+                <div class="actor-list" id="actor-list">
+                    <!-- <div class="actor-item">
+                        <img src="../assets/images/actors/meo.png" alt="meo.png">
+                        <div class="inner-name">Mèo</div>
+                    </div>
+                    <div class="actor-item">
+                        <img src="../assets/images/actors/cho.png" alt="meo.png">
+                        <div class="inner-name">Chó</div>
+                    </div>
+                    <div class="actor-item">
+                        <img src="../assets/images/actors/capybara.png" alt="meo.png">
+                        <div class="inner-name">Capybara</div>
+                    </div>
+                    <div class="actor-item">
+                        <img src="../assets/images/actors/chim.png" alt="meo.png">
+                        <div class="inner-name">Chim thư ký</div>
+                    </div>
+                    <div class="actor-item">
+                        <img src="../assets/images/actors/vuoncao.png" alt="meo.png">
+                        <div class="inner-name">Vượn cáo</div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+    <div id="close"><i class="fa-solid fa-circle-xmark"></i></div>
+    <div class="inner-iframe" id="inner-iframe">
+        <iframe width="860" height="515" src="https://www.youtube.com/embed/ZgZccxuj2RY?si=efrG47dYH994p9g3"
+            allowfullscreen></iframe>
+    </div>
+
+    <div class="section-5">
+        <div class="container">
+            <div class="inner-wrap">
+                <div class="inner-content">
+                    <div class=" list inner-list"></div>
+                    <h2 class="inner-title">Lịch chiếu</h2>
+                </div>
+                <div class="schedules" id="schedules">
+                    <div class="schedule-item">27-05-2025</div>
+                    <div class="schedule-item">28-05-2025</div>
+                    <div class="schedule-item">29-05-2025</div>
+                    <div class="schedule-item">30-05-2025</div>
+                </div>
+                <div class="showtimes">
+                    <div class="showtime-item">
+                        <div class="cinema">BingeBox Cinema Hoàn Kiếm</div>
+                        <div class="times">
+                            <div class="time-item">
+                                <div class="time-number">8:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                            <div class="time-item">
+                                <div class="time-number">14:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                            <div class="time-item">
+                                <div class="time-number">20:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                            <div class="time-item">
+                                <div class="time-number">23:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showtime-item">
+                        <div class="cinema">BingeBox Cinema Hoàn Kiếm</div>
+                        <div class="times">
+                            <div class="time-item">
+                                <div class="time-number">8:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                            <div class="time-item">
+                                <div class="time-number">14:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                            <div class="time-item">
+                                <div class="time-number">20:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                            <div class="time-item">
+                                <div class="time-number">23:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showtime-item">
+                        <div class="cinema">BingeBox Cinema Hoàn Kiếm</div>
+                        <div class="times">
+                            <div class="time-item">
+                                <div class="time-number">8:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                            <div class="time-item">
+                                <div class="time-number">14:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                            <div class="time-item">
+                                <div class="time-number">20:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                            <div class="time-item">
+                                <div class="time-number">23:00</div>
+                                <div class="time-info">
+                                    <div class="time-subtitle">Phụ đề</div>
+                                    <div class="time-format">2D</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="scripts/loadComponents.js"></script>
+    <script type="module" src="scripts/movieDetail.js"></script>
+
+</body>
+
+</html>
