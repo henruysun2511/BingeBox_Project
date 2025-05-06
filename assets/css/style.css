@@ -1,6 +1,3 @@
-body {
-    /* overflow: hidden; */  
-}
 
 /*Header*/
 .header {
@@ -381,6 +378,7 @@ select {
     /* width: 260px; */
     margin-right: 10px;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .section-1 .inner-film .film-poster {
@@ -471,6 +469,7 @@ select {
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s ease, bottom 0.3s ease;
+    z-index: 3;
 }
 
 .section-1 .inner-button button {

@@ -15,23 +15,24 @@ const movies =
             actors: [
                 {
                     actorName: 'Jack Black',
-                    actorImage: './assets/images/actor/jackblack.webp'
+                    actorImage: './assets/images/actors/jackblack.webp'
                 },
                 {
                     actorName: 'Jason Momoa',
-                    actorImage: './assets/images/actor/jasonmomooa.jpg'
+                    actorImage: './assets/images/actors/jasonmomooa.jpg'
                 }, 
                 {
                     actorName: 'Emma Myers',
-                    actorImage: './assets/images/actor/emmamyer.jpg'
+                    actorImage: './assets/images/actors/emmamyer.jpg'
                 },
                 {
                     actorName: 'Sebastian Eugene Hansen',
-                    actorImage: './assets/images/actor/hansen.webp'
+                    actorImage: './assets/images/actors/hansen.webp'
                 }
             ],
             imageUrl: './assets/images/movies/minecraft.webp',
-            trailer: 'https://www.youtube.com/watch?v=wJO_vIDZn-I',
+            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+            trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
             schedules: [
                 {
                     date: '2025-04-13',
@@ -95,7 +96,8 @@ const movies =
                 }
             ],
             imageUrl: './assets/images/movies/diadao.webp',
-            trailer: 'https://www.youtube.com/watch?v=-OGDDtsIBHA',
+            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+            trailer: 'https://www.youtube.com/embed/-OGDDtsIBHA?si=rdTmOglKzo6deygC',
             schedules: [
                 {
                     date: '2025-04-13',
@@ -139,30 +141,31 @@ const movies =
             actors: [
                 {
                     actorName: 'Anthony Mackie',
-                    actorImage: './assets/images/actor/janthonymackie.webp'
+                    actorImage: './assets/images/actors/anthonymackie.webp'
                 },
                 {
                     actorName: 'Harrison Ford',
-                    actorImage: './assets/images/actor/harrisonford.jpg'
+                    actorImage: './assets/images/actors/harrisonford.jpg'
                 }, 
                 {
                     actorName: 'Sebastian Stan',
-                    actorImage: './assets/images/actor/stan.webp'
+                    actorImage: './assets/images/actors/stan.webp'
                 },
                 {
                     actorName: 'Giancarlo Esposito',
-                    actorImage: './assets/images/actor/esposito.webp'
+                    actorImage: './assets/images/actors/esposito.webp'
                 },
                 {
                     actorName: 'Danny Ramirez',
-                    actorImage: './assets/images/actor/danny.webp'
+                    actorImage: './assets/images/actors/danny.webp'
                 }
             ],
             imageUrl: './assets/images/movies/captainamericaa.jpg',
-            trailer: 'https://www.youtube.com/watch?v=1pHDWnXmK7Y',
+            bigPoster: './assets/images/movieBigPosters/BPcaptain.webp',
+            trailer: 'https://www.youtube.com/embed/1pHDWnXmK7Y?si=uHb0sci9_9jbosHM',
             schedules: [
                 {
-                    date: '2025-04-13',
+                    date: '2025-05-27',
                     showtime: [
                         { time: '10:20', room: 'Phòng 1' },
                         { time: '12:10', room: 'Phòng 2' },
@@ -173,14 +176,14 @@ const movies =
                     ]
                 },
                 {
-                    date: '2025-04-14',
+                    date: '2025-05-28',
                     showtime: [
                         { time: '19:20', room: 'Phòng 1' },
                         { time: '20:40', room: 'Phòng 2' }
                     ]
                 },
                 {
-                    date: '2025-04-15',
+                    date: '2025-05-29',
                     showtime: [
                         { time: '19:20', room: 'Phòng 1' },
                         { time: '20:40', room: 'Phòng 2' }
@@ -203,27 +206,28 @@ const movies =
             actor: [
                 {
                     actorName: 'Anthony Mackie',
-                    actorImage: './assets/images/actor/janthonymackie.webp'
+                    actorImage: './assets/images/actors/janthonymackie.webp'
                 },
                 {
                     actorName: 'Harrison Ford',
-                    actorImage: './assets/images/actor/harrisonford.jpg'
+                    actorImage: './assets/images/actors/harrisonford.jpg'
                 }, 
                 {
                     actorName: 'Sebastian Stan',
-                    actorImage: './assets/images/actor/stan.webp'
+                    actorImage: './assets/images/actors/stan.webp'
                 },
                 {
                     actorName: 'Giancarlo Esposito',
-                    actorImage: './assets/images/actor/esposito.webp'
+                    actorImage: './assets/images/actors/esposito.webp'
                 },
                 {
                     actorName: 'Danny Ramirez',
-                    actorImage: './assets/images/actor/danny.webp'
+                    actorImage: './assets/images/actors/danny.webp'
                 }
             ],
             imageUrl: './assets/images/movies/cuoimaigiahan.webp',
-            trailer: 'https://www.youtube.com/watch?v=wJO_vIDZn-I',
+            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+            trailer: 'https://www.youtube.com/embed/L7KuvLShQ_Y?si=L_RX3Gg9-gmtJNZt',
             schedules: [
                 {
                     date: '2025-04-13',
@@ -267,15 +271,16 @@ const movies =
             actors: [
                 {
                     actorName: 'Meghann Fahy',
-                    actorImage: './assets/images/actor/fahy.jpg'
+                    actorImage: './assets/images/actors/fahy.jpg'
                 },
                 {
                     actorName: 'Brandon Sklenar',
-                    actorImage: './assets/images/actor/brandon.webp'
+                    actorImage: './assets/images/actors/brandon.webp'
                 }
             ],
             imageUrl: './assets/images/movies/buoihenhokinhhoang.webp',
-            trailer: 'https://www.youtube.com/watch?v=cQ1eYm_XIcA',
+            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+            trailer: 'https://www.youtube.com/embed/cQ1eYm_XIcA?si=zXYIR7CwUDvrB-86',
             schedules: [
                 {
                     date: '2025-04-13',
@@ -319,19 +324,20 @@ const movies =
             actors: [
                 {
                     actorName: 'Matthew McConaughey',
-                    actorImage: './assets/images/actor/mc.webp'
+                    actorImage: './assets/images/actors/mc.webp'
                 },
                 {
                     actorName: 'Anne Hathaway',
-                    actorImage: './assets/images/actor/anne.jpg'
+                    actorImage: './assets/images/actors/anne.jpg'
                 },
                 {
                     actorName: 'Jessica Chastain',
-                    actorImage: './assets/images/actor/jessica.webp'
+                    actorImage: './assets/images/actors/jessica.webp'
                 }
             ],
             imageUrl: './assets/images/movies/interstellar.jpg',
-            trailer: 'https://www.youtube.com/watch?v=QqSp_dwslro',
+            bigPoster: './assets/images/movieBigPosters/BPinterstellar.jpg',
+            trailer: 'https://www.youtube.com/embed/QqSp_dwslro?si=N4Vdo0oKx--u8bcw',
             schedules: [
                 {
                     date: '2025-04-13',
@@ -375,27 +381,28 @@ const movies =
             actors: [
                 {
                     actorName: 'Mèo',
-                    actorImage: './assets/images/actor/meo.png'
+                    actorImage: './assets/images/actors/meo.png'
                 },
                 {
                     actorName: 'Capybara',
-                    actorImage: './assets/images/actor/capybara.png'
+                    actorImage: './assets/images/actors/capybara.png'
                 },
                 {
                     actorName: 'Chó Labrador Retriever',
-                    actorImage: './assets/images/actor/cho.png'
+                    actorImage: './assets/images/actors/cho.png'
                 },
                 {
                     actorName: 'Vượn cáo',
-                    actorImage: './assets/images/actor/vuoncao.png'
+                    actorImage: './assets/images/actors/vuoncao.png'
                 },
                 {
                     actorName: 'Chim thu ky',
-                    actorImage: './assets/images/actor/chim.png'
+                    actorImage: './assets/images/actors/chim.png'
                 }
             ],
             imageUrl: './assets/images/movies/flow.webp',
-            trailer: 'https://www.youtube.com/watch?v=B3V-9tiuQTo',
+            bigPoster: './assets/images/movieBigPosters/BPflow.jpg',
+            trailer: 'https://www.youtube.com/embed/ZgZccxuj2RY?si=MiDnhaFYDhUmGLEO',
             schedules: [
                 {
                     date: '2025-04-13',
@@ -439,15 +446,16 @@ const movies =
             actors: [
                 {
                     actorName: 'Rami Malek',
-                    actorImage: './assets/images/actor/rami.jpg'
+                    actorImage: './assets/images/actors/rami.jpg'
                 },
                 {
                     actorName: 'Jon Bernthal',
-                    actorImage: './assets/images/actor/jon.jpg'
+                    actorImage: './assets/images/actors/jon.jpg'
                 },
             ],
             imageUrl: './assets/images/movies/taynghiepdu.webp',
-            trailer: 'https://www.youtube.com/watch?v=c0SG_zJarME',
+            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+            trailer: 'https://www.youtube.com/embed/c0SG_zJarME?si=lIxO5mKxPqhX2SR8',
             schedules: [
                 {
                     date: '2025-04-13',
@@ -491,15 +499,16 @@ const movies =
             actors: [
                 {
                     actorName: 'Rachel Zegler',
-                    actorImage: './assets/images/actor/rachel.webp'
+                    actorImage: './assets/images/actors/rachel.webp'
                 },
                 {
                     actorName: 'Gal Gadot',
-                    actorImage: './assets/images/actor/galgadot.jpg'
+                    actorImage: './assets/images/actors/galgadot.jpg'
                 },
             ],
             imageUrl: './assets/images/movies/snowwhite.webp',
-            trailer: 'https://www.youtube.com/watch?v=iV46TJKL8cU',
+            trailer: 'https://www.youtube.com/embed/iV46TJKL8cU?si=NVFyMEub38e0rrJX',
+            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
             schedules: [
                 {
                     date: '2025-04-13',
@@ -543,100 +552,125 @@ const movies =
             actors: [
                 {
                     actorName: 'Timothee Chalamet',
-                    actorImage: './assets/images/actor/timothee.jph'
+                    actorImage: './assets/images/actors/timothee.jpg'
                 },
                 {
                     actorName: 'Zendaya',
-                    actorImage: './assets/images/actor/zendaya.jpg'
+                    actorImage: './assets/images/actors/zendaya.jpg'
                 },
                 {
                     actorName: 'Javier Bardem',
-                    actorImage: './assets/images/actor/javier.webp'
+                    actorImage: './assets/images/actors/javier.webp'
                 },
                 {
                     actorName: 'Josh Brolin',
-                    actorImage: './assets/images/actor/joshbrolin.webp'
+                    actorImage: './assets/images/actors/joshbrolin.webp'
                 },
                 {
                     actorName: 'Rebecca Ferguson',
-                    actorImage: './assets/images/actor/rebecca.webp'
+                    actorImage: './assets/images/actors/rebecca.webp'
                 }
             ],
             imageUrl: './assets/images/movies/dune.jpg',
-            trailer: 'https://www.youtube.com/watch?v=Way9Dexny3w',
-            schedules: [
+            bigPoster: './assets/images/movieBigPosters/BPdunpart2.webp',
+            trailer: 'https://www.youtube.com/embed/U2Qp5pL3ovA?si=6VPJKCo467r_s06-',
+            cinemas: [
                 {
-                    date: '2025-04-13',
-                    showtime: [
-                        { time: '10:20', room: 'Phòng 1' },
-                        { time: '12:10', room: 'Phòng 2' },
-                        { time: '14:00', room: 'Phòng 3' },
-                        { time: '15:50', room: 'Phòng 4' },
-                        { time: '17:40', room: 'Phòng 5' },
-                        { time: '20:20', room: 'Phòng 6' }
+                    cinemaName: 'Bingebox Cinema Chùa Bộc',
+                    cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtime: [
+                                { time: '15:50', room: 'Phòng 7'},
+                                { time: '17:40', room: 'Phòng 7' },
+                                { time: '20:20', room: 'Phòng 7' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtime: [
+                                { time: '15:50', room: 'Phòng 7'},
+                                { time: '17:40', room: 'Phòng 7' },
+                                { time: '20:20', room: 'Phòng 7' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtime: [
+                                { time: '15:50', room: 'Phòng 7'},
+                                { time: '17:40', room: 'Phòng 7' },
+                                { time: '20:20', room: 'Phòng 7' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-14',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                    cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                    schedules: [
+                        {
+                            date: '2025-05-27',
+                            showtime: [
+                                { time: '20:20', room: 'Phòng 7' }
+                            ]
+                        },
+                        {
+                            date: '2025-05-28',
+                            showtime: [
+                                { time: '17:40', room: 'Phòng 7' },
+                                { time: '20:20', room: 'Phòng 7' }
+                            ]
+                        },
+                        {
+                            date: '2025-05-29',
+                            showtime: [
+                                { time: '17:40', room: 'Phòng 7' },
+                                { time: '20:20', room: 'Phòng 7' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-15',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                    cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                    schedules: [
+                        {
+                            date: '2025-05-27',
+                            showtime: [
+                                { time: '15:50', room: 'Phòng 7'},
+                                { time: '17:40', room: 'Phòng 7' },
+                                { time: '20:20', room: 'Phòng 7' }
+                            ]
+                        },
+                        {
+                            date: '2025-05-28',
+                            showtime: [
+                                { time: '15:50', room: 'Phòng 7'},
+                                { time: '17:40', room: 'Phòng 7' },
+                                { time: '20:20', room: 'Phòng 7' }
+                            ]
+                        },
+                        {
+                            date: '2025-05-29',
+                            showtime: [
+                                { time: '15:50', room: 'Phòng 7'},
+                                { time: '17:40', room: 'Phòng 7' },
+                                { time: '20:20', room: 'Phòng 7' }
+                            ]
+                        },
                     ]
-                },
+                }
             ]
+            
         }
     ]
 
+    export {movies};
     
-    var filmListContainer = document.getElementById("film-list");
 
-    movies.forEach(item => {
-        var colDiv = document.createElement('div');
-        colDiv.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6";
-    
-        colDiv.innerHTML = `
-            <div class="inner-film">
-                <div class="film-detail">
-                    <a href="#">
-                        <div class="film-poster">
-                            <img src="${item.imageUrl}" alt="${item.name}">
-                            <div class="inner-icon">
-                                <a href="${item.trailer}" target="_blank"><i class="fa-regular fa-circle-play"></i></a>
-                            </div>
-                            <div class="inner-button">
-                                <button>
-                                    <a href="#">
-                                        <i class="fa-solid fa-ticket"></i>
-                                        MUA VÉ NGAY
-                                    </a>
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-                    <ul>
-                        <li><p class="infor age-permission">${item.agePermisson}</p></li>
-                        <li><p class="infor subtitle">${item.subtitle}</p></li>
-                        <li><p class="infor film-format">${item.format}</p></li>
-                    </ul>
-                    <a href="#"><h2 class="film-name">${item.name}</h2></a>
-                    <h3 class="film-category">Thể loại: ${item.categories.join(', ')}</h3>
-                </div>
-            </div>
-        `;
-    
-        filmListContainer.appendChild(colDiv);
-    });
-
-
-    let moviesJson = JSON.stringify(movies);
-    console.log(moviesJson);
+    // let moviesJson = JSON.stringify(movies);
+    // console.log(moviesJson);
 
 
     
