@@ -101,17 +101,17 @@ if (movie) {
         const closeTrailer = document.getElementById('close');
         const overlay = document.getElementById('overlay');
 
-       
+
         playTrailer.addEventListener('click', function () {
             overlay.style.display = 'block';
             movieTrailer2.style.display = 'block';
-            closeTrailer.style.display = 'block'     
+            closeTrailer.style.display = 'block'
         });
 
         buttonTrailer.addEventListener('click', function () {
             overlay.style.display = 'block';
             movieTrailer2.style.display = 'block';
-            closeTrailer.style.display = 'block'     
+            closeTrailer.style.display = 'block'
         });
 
         closeTrailer.addEventListener('click', function () {
@@ -125,20 +125,20 @@ if (movie) {
     //Render lịch chiếu
     const cinemaSet = new Set();
     const scheduleSet = new Set();
-    movies.forEach(movie => {
-        console.log(movie.cinemas);
-        movie.cinemas?.forEach(cinema => {
-            cinemaSet.add(cinema.cinemaName);
-            cinema.schedules.forEach(schedule => {
-                scheduleSet.add(schedule.date);
-            });
+
+    movie.cinemas?.forEach(cinema => {
+        cinemaSet.add(cinema.cinemaName);
+        cinema.schedules.forEach(schedule => {
+            scheduleSet.add(schedule.date);
         });
     });
+
     scheduleSet.delete('2025-05-27');
     scheduleSet.delete('2025-05-28');
     scheduleSet.delete('2025-05-29');
     console.log(cinemaSet);
     console.log(scheduleSet);
+
 
     const scheduleList = document.getElementById('schedules');
     scheduleList.innerHTML = ''; // Xóa nội dung cũ 
@@ -147,8 +147,60 @@ if (movie) {
         scheduleItem.className = 'schedule-item';
         scheduleItem.innerHTML = `${date}`;
         scheduleList.appendChild(scheduleItem);
+        scheduleItem.addEventListener('click', () => hienThiSuatChieuTheoNgay(scheduleItem.innerHTML));
+
     });
-    
+
+    //Viết sự kiên ấn ngày chiếu ra lịch chiếu tương ứng
+    function hienThiSuatChieuTheoNgay(ngayChieu) {
+        let showtimes = document.querySelector('.showtimes');
+        showtimes.innerHTML = '';
+
+        console.log(showtimes);
+
+        movie.cinemas.forEach(cinema => {
+            let showtimeItem = document.createElement('div');
+            showtimeItem.className = 'showtime-item';
+            showtimeItem.innerHTML = ` <div class="cinema">${cinema.cinemaName}</div>`;
+
+
+            showtimes.appendChild(showtimeItem);
+
+            //lọc ra lịch chiếu theo ngày
+            let timeFillter = cinema.schedules.filter(schedule => schedule.date === ngayChieu);
+            if (timeFillter.length > 0) {
+                let times = document.createElement('div');
+                times.className = 'times';
+
+                timeFillter[0].showtimes.forEach(showtime => {
+                    let timeItem = document.createElement('div');
+                    timeItem.className = "time-item";
+                    timeItem.innerHTML = ` <div class="time-number">${showtime.time}</div>
+                                    `;
+                    let movieFormat = document.createElement('div');
+                    movieFormat.className = 'time-info';
+                    movieFormat.innerHTML = `<div class="time-subtitle">${movie.subtitle}</div>
+                                                                    <div class="time-format">${movie.format}</div>`;
+
+                    timeItem.appendChild(movieFormat);
+
+                    times.appendChild(timeItem);
+
+                });
+
+                showtimeItem.appendChild(times);
+            }
+
+
+
+
+
+        });
+    }
+
+
+
+
 
 } else {
     console.error('Phim không tồn tại');
