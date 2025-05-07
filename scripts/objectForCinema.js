@@ -20,7 +20,7 @@ const movies =
                 {
                     actorName: 'Jason Momoa',
                     actorImage: './assets/images/actors/jasonmomooa.jpg'
-                }, 
+                },
                 {
                     actorName: 'Emma Myers',
                     actorImage: './assets/images/actors/emmamyer.jpg'
@@ -33,32 +33,103 @@ const movies =
             imageUrl: './assets/images/movies/minecraft.webp',
             bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
             trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
-            schedules: [
+            cinemas: [
                 {
-                    date: '2025-04-13',
-                    showtime: [
-                        { time: '10:20', room: 'Phòng 1' },
-                        { time: '12:10', room: 'Phòng 2' },
-                        { time: '14:00', room: 'Phòng 3' },
-                        { time: '15:50', room: 'Phòng 4' },
-                        { time: '17:40', room: 'Phòng 5' },
-                        { time: '20:20', room: 'Phòng 6' }
+                    cinemaName: 'Bingebox Cinema Chùa Bộc',
+                    cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '15:50', room: 'Phòng 1' },
+                                { time: '17:40', room: 'Phòng 2' },
+                                { time: '20:20', room: 'Phòng 3' },
+                                { time: '21:20', room: 'Phòng 4' },
+                                { time: '23:10', room: 'Phòng 5' },
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '15:50', room: 'Phòng 2' },
+                                { time: '17:00', room: 'Phòng 3' },
+                                { time: '20:30', room: 'Phòng 4' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '14:20', room: 'Phòng 1' },
+                                { time: '17:40', room: 'Phòng 2' },
+                                { time: '19:20', room: 'Phòng 3' },
+                                { time: '22:50', room: 'Phòng 4' },
+                                { time: '23:00', room: 'Phòng 5' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-14',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                    cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '15:10', room: 'Phòng 1' },
+                                { time: '17:20', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '21:10', room: 'Phòng 3' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '15:10', room: 'Phòng 1' },
+                                { time: '17:20', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '21:10', room: 'Phòng 3' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '15:10', room: 'Phòng 1' },
+                                { time: '17:20', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '21:10', room: 'Phòng 3' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-15',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                    cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '16:00', room: 'Phòng 1' },
+                                { time: '17:30', room: 'Phòng 1' },
+                                { time: '20:20', room: 'Phòng 2' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '16:00', room: 'Phòng 1' },
+                                { time: '17:30', room: 'Phòng 1' },
+                                { time: '20:20', room: 'Phòng 2' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '17:30', room: 'Phòng 1' },
+                                { time: '20:20', room: 'Phòng 2' }
+                            ]
+                        },
                     ]
-                },
+                }
             ]
         },
         {
@@ -81,7 +152,7 @@ const movies =
                 {
                     actorName: 'Quang Tuấn',
                     actorImage: ''
-                }, 
+                },
                 {
                     actorName: 'Diễm Hằng Lamoon',
                     actorImage: ''
@@ -98,32 +169,212 @@ const movies =
             imageUrl: './assets/images/movies/diadao.webp',
             bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
             trailer: 'https://www.youtube.com/embed/-OGDDtsIBHA?si=rdTmOglKzo6deygC',
-            schedules: [
+            cinemas: [
                 {
-                    date: '2025-04-13',
-                    showtime: [
-                        { time: '10:20', room: 'Phòng 1' },
-                        { time: '12:10', room: 'Phòng 2' },
-                        { time: '14:00', room: 'Phòng 3' },
-                        { time: '15:50', room: 'Phòng 4' },
-                        { time: '17:40', room: 'Phòng 5' },
-                        { time: '20:20', room: 'Phòng 6' }
+                    cinemaName: 'Bingebox Cinema Chùa Bộc',
+                    cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '8:30', room: 'Phòng 1' },
+                                { time: '9:00', room: 'Phòng 2' },
+                                { time: '10:10', room: 'Phòng 3' },
+                                { time: '11:30', room: 'Phòng 4' },
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '8:30', room: 'Phòng 1' },
+                                { time: '9:00', room: 'Phòng 2' },
+                                { time: '10:10', room: 'Phòng 3' },
+                                { time: '11:30', room: 'Phòng 4' },
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '8:30', room: 'Phòng 1' },
+                                { time: '9:00', room: 'Phòng 2' },
+                                { time: '10:10', room: 'Phòng 3' },
+                                { time: '11:30', room: 'Phòng 4' },
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-14',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                    cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '15:40', room: 'Phòng 1' },
+                                { time: '16:20', room: 'Phòng 2' },
+                                { time: '16:40', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-15',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                    cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                    schedules: [
+                        {
+                            date: '2025-05-27',
+                            showtimes: [
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '2025-05-28',
+                            showtimes: [
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '2025-05-29',
+                            showtimes: [
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
                     ]
-                },
+                }
             ]
         },
         {
@@ -136,7 +387,7 @@ const movies =
             categories: ['Hành động', 'Siêu anh hùng'],
             agePermisson: 'T13',
             subtitle: 'Phụ đề',
-            format: '2D IMAX',
+            format: 'IMAX',
             script: 'Sau khi gặp tổng thống Hoa Kỳ mới đắc cử Thaddeus Ross, Sam phải đối mặt với một sự cố quy mô quốc tế. Anh phải tìm ra mục đích đằng sau trước khi kẻ chủ mưu khiến cả thế giới phải khiếp sợ',
             actors: [
                 {
@@ -146,7 +397,7 @@ const movies =
                 {
                     actorName: 'Harrison Ford',
                     actorImage: './assets/images/actors/harrisonford.jpg'
-                }, 
+                },
                 {
                     actorName: 'Sebastian Stan',
                     actorImage: './assets/images/actors/stan.webp'
@@ -163,32 +414,212 @@ const movies =
             imageUrl: './assets/images/movies/captainamericaa.jpg',
             bigPoster: './assets/images/movieBigPosters/BPcaptain.webp',
             trailer: 'https://www.youtube.com/embed/1pHDWnXmK7Y?si=uHb0sci9_9jbosHM',
-            schedules: [
+            cinemas: [
                 {
-                    date: '2025-05-27',
-                    showtime: [
-                        { time: '10:20', room: 'Phòng 1' },
-                        { time: '12:10', room: 'Phòng 2' },
-                        { time: '14:00', room: 'Phòng 3' },
-                        { time: '15:50', room: 'Phòng 4' },
-                        { time: '17:40', room: 'Phòng 5' },
-                        { time: '20:20', room: 'Phòng 6' }
+                    cinemaName: 'Bingebox Cinema Chùa Bộc',
+                    cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '8:30', room: 'Phòng 1' },
+                                { time: '9:00', room: 'Phòng 2' },
+                                { time: '10:10', room: 'Phòng 3' },
+                                { time: '11:30', room: 'Phòng 4' },
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '8:30', room: 'Phòng 1' },
+                                { time: '9:00', room: 'Phòng 2' },
+                                { time: '10:10', room: 'Phòng 3' },
+                                { time: '11:30', room: 'Phòng 4' },
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '8:30', room: 'Phòng 1' },
+                                { time: '9:00', room: 'Phòng 2' },
+                                { time: '10:10', room: 'Phòng 3' },
+                                { time: '11:30', room: 'Phòng 4' },
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-05-28',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                    cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '15:40', room: 'Phòng 1' },
+                                { time: '16:20', room: 'Phòng 2' },
+                                { time: '16:40', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-05-29',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                    cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                    schedules: [
+                        {
+                            date: '2025-05-27',
+                            showtimes: [
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '2025-05-28',
+                            showtimes: [
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '2025-05-29',
+                            showtimes: [
+                                { time: '12:10', room: 'Phòng 5' },
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '16:00', room: 'Phòng 3' },
+                                { time: '17:20', room: 'Phòng 4' },
+                                { time: '18:30', room: 'Phòng 5' },
+                                { time: '19:00', room: 'Phòng 6' },
+                                { time: '19:20', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' },
+                                { time: '20:50', room: 'Phòng 4' },
+                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '22:00', room: 'Phòng 6' },
+                                { time: '22:30', room: 'Phòng 1' }
+                            ]
+                        },
                     ]
-                },
+                }
             ]
         },
         {
@@ -211,7 +642,7 @@ const movies =
                 {
                     actorName: 'Harrison Ford',
                     actorImage: './assets/images/actors/harrisonford.jpg'
-                }, 
+                },
                 {
                     actorName: 'Sebastian Stan',
                     actorImage: './assets/images/actors/stan.webp'
@@ -228,32 +659,93 @@ const movies =
             imageUrl: './assets/images/movies/cuoimaigiahan.webp',
             bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
             trailer: 'https://www.youtube.com/embed/L7KuvLShQ_Y?si=L_RX3Gg9-gmtJNZt',
-            schedules: [
+            cinemas: [
                 {
-                    date: '2025-04-13',
-                    showtime: [
-                        { time: '10:20', room: 'Phòng 1' },
-                        { time: '12:10', room: 'Phòng 2' },
-                        { time: '14:00', room: 'Phòng 3' },
-                        { time: '15:50', room: 'Phòng 4' },
-                        { time: '17:40', room: 'Phòng 5' },
-                        { time: '20:20', room: 'Phòng 6' }
+                    cinemaName: 'Bingebox Cinema Chùa Bộc',
+                    cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '15:20', room: 'Phòng 1' },
+                                { time: '18:10', room: 'Phòng 2' },
+                                { time: '20:30', room: 'Phòng 3' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '16:20', room: 'Phòng 1' },
+                                { time: '18:10', room: 'Phòng 2' },
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '16:20', room: 'Phòng 1' },
+                                { time: '18:10', room: 'Phòng 2' },
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-14',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                    cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '20:20', room: 'Phòng 5' },
+                                { time: '21:00', room: 'Phòng 6' },
+                                { time: '21:30', room: 'Phòng 1' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '16:50', room: 'Phòng 5' },
+                                { time: '18:00', room: 'Phòng 6' },
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtime: [
+                                { time: '16:50', room: 'Phòng 5' },
+                                { time: '18:00', room: 'Phòng 6' },
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-15',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                    cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                    schedules: [
+                        {
+                            date: '2025-05-27',
+                            showtimes: [
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                            ]
+                        },
+                        {
+                            date: '2025-05-28',
+                            showtimes: [
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                            ]
+                        },
+                        {
+                            date: '2025-05-29',
+                            showtimes: [
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                            ]
+                        },
                     ]
-                },
+                }
             ]
         },
         {
@@ -281,32 +773,89 @@ const movies =
             imageUrl: './assets/images/movies/buoihenhokinhhoang.webp',
             bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
             trailer: 'https://www.youtube.com/embed/cQ1eYm_XIcA?si=zXYIR7CwUDvrB-86',
-            schedules: [
+            cinemas: [
                 {
-                    date: '2025-04-13',
-                    showtime: [
-                        { time: '10:20', room: 'Phòng 1' },
-                        { time: '12:10', room: 'Phòng 2' },
-                        { time: '14:00', room: 'Phòng 3' },
-                        { time: '15:50', room: 'Phòng 4' },
-                        { time: '17:40', room: 'Phòng 5' },
-                        { time: '20:20', room: 'Phòng 6' }
+                    cinemaName: 'Bingebox Cinema Chùa Bộc',
+                    cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '9:00', room: 'Phòng 5' },
+                                { time: '14:10', room: 'Phòng 6' },
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '9:00', room: 'Phòng 5' },
+                                { time: '14:10', room: 'Phòng 6' },
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '16:20', room: 'Phòng 5' },
+                                { time: '18:10', room: 'Phòng 6' },
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-14',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                    cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '10:00', room: 'Phòng 6' },
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '9:50', room: 'Phòng 5' },
+                                { time: '12:00', room: 'Phòng 6' },
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '9:50', room: 'Phòng 5' },
+                                { time: '18:00', room: 'Phòng 6' },
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-15',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                    cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                    schedules: [
+                        {
+                            date: '2025-05-27',
+                            showtimes: [
+                                { time: '13:50', room: 'Phòng 3' },
+                                { time: '14:40', room: 'Phòng 4' },
+                            ]
+                        },
+                        {
+                            date: '2025-05-28',
+                            showtimes: [
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                            ]
+                        },
+                        {
+                            date: '2025-05-29',
+                            showtimes: [
+                                { time: '13:50', room: 'Phòng 6' },
+                                { time: '14:40', room: 'Phòng 1' },
+                                { time: '15:20', room: 'Phòng 2' },
+                            ]
+                        },
                     ]
-                },
+                }
             ]
         },
         {
@@ -338,32 +887,91 @@ const movies =
             imageUrl: './assets/images/movies/interstellar.jpg',
             bigPoster: './assets/images/movieBigPosters/BPinterstellar.jpg',
             trailer: 'https://www.youtube.com/embed/QqSp_dwslro?si=N4Vdo0oKx--u8bcw',
-            schedules: [
+            cinemas: [
                 {
-                    date: '2025-04-13',
-                    showtime: [
-                        { time: '10:20', room: 'Phòng 1' },
-                        { time: '12:10', room: 'Phòng 2' },
-                        { time: '14:00', room: 'Phòng 3' },
-                        { time: '15:50', room: 'Phòng 4' },
-                        { time: '17:40', room: 'Phòng 5' },
-                        { time: '20:20', room: 'Phòng 6' }
+                    cinemaName: 'Bingebox Cinema Chùa Bộc',
+                    cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 7' },
+                                { time: '20:10', room: 'Phòng 7' },
+                                { time: '20:30', room: 'Phòng 6' },
+                                { time: '23:10', room: 'Phòng 5' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 7' },
+                                { time: '20:10', room: 'Phòng 7' },
+                                { time: '20:30', room: 'Phòng 6' },
+                                { time: '23:10', room: 'Phòng 5' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 7' },
+                                { time: '20:10', room: 'Phòng 7' },
+                                { time: '20:30', room: 'Phòng 6' },
+                                { time: '23:10', room: 'Phòng 5' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-14',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                    cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '19:60', room: 'Phòng 7' },
+                                { time: '22:10', room: 'Phòng 7' },
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '19:50', room: 'Phòng 7' },
+                                { time: '22:00', room: 'Phòng 6' },
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '19:50', room: 'Phòng 5' },
+                                { time: '13:00', room: 'Phòng 6' },
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-15',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                    cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                    schedules: [
+                        {
+                            date: '2025-05-27',
+                            showtimes: [
+                                { time: '20:40', room: 'Phòng 4' },
+                            ]
+                        },
+                        {
+                            date: '2025-05-28',
+                            showtimes: [
+                                { time: '20:20', room: 'Phòng 2' },
+                            ]
+                        },
+                        {
+                            date: '2025-05-29',
+                            showtimes: [
+                                { time: '20:20', room: 'Phòng 2' },
+                            ]
+                        },
                     ]
-                },
+                }
             ]
         },
         {
@@ -403,32 +1011,84 @@ const movies =
             imageUrl: './assets/images/movies/flow.webp',
             bigPoster: './assets/images/movieBigPosters/BPflow.jpg',
             trailer: 'https://www.youtube.com/embed/ZgZccxuj2RY?si=MiDnhaFYDhUmGLEO',
-            schedules: [
+            cinemas: [
                 {
-                    date: '2025-04-13',
-                    showtime: [
-                        { time: '10:20', room: 'Phòng 1' },
-                        { time: '12:10', room: 'Phòng 2' },
-                        { time: '14:00', room: 'Phòng 3' },
-                        { time: '15:50', room: 'Phòng 4' },
-                        { time: '17:40', room: 'Phòng 5' },
-                        { time: '20:20', room: 'Phòng 6' }
+                    cinemaName: 'Bingebox Cinema Chùa Bộc',
+                    cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '9:00', room: 'Phòng 5' },
+                                { time: '10:10', room: 'Phòng 6' },
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '9:00', room: 'Phòng 5' },
+                                { time: '10:10', room: 'Phòng 6' },
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '9:00', room: 'Phòng 5' },
+                                { time: '10:10', room: 'Phòng 6' },
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-14',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                    cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '13:00', room: 'Phòng 6' },
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '9:50', room: 'Phòng 5' },
+                                { time: '13:00', room: 'Phòng 6' },
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '9:50', room: 'Phòng 5' },
+                                { time: '13:00', room: 'Phòng 6' },
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-15',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                    cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                    schedules: [
+                        {
+                            date: '2025-05-27',
+                            showtimes: [
+                                { time: '14:40', room: 'Phòng 4' },
+                            ]
+                        },
+                        {
+                            date: '2025-05-28',
+                            showtimes: [
+                                { time: '15:20', room: 'Phòng 2' },
+                            ]
+                        },
+                        {
+                            date: '2025-05-29',
+                            showtimes: [
+                                { time: '15:20', room: 'Phòng 2' },
+                            ]
+                        },
                     ]
-                },
+                }
             ]
         },
         {
@@ -456,32 +1116,93 @@ const movies =
             imageUrl: './assets/images/movies/taynghiepdu.webp',
             bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
             trailer: 'https://www.youtube.com/embed/c0SG_zJarME?si=lIxO5mKxPqhX2SR8',
-            schedules: [
+            cinemas: [
                 {
-                    date: '2025-04-13',
-                    showtime: [
-                        { time: '10:20', room: 'Phòng 1' },
-                        { time: '12:10', room: 'Phòng 2' },
-                        { time: '14:00', room: 'Phòng 3' },
-                        { time: '15:50', room: 'Phòng 4' },
-                        { time: '17:40', room: 'Phòng 5' },
-                        { time: '20:20', room: 'Phòng 6' }
+                    cinemaName: 'Bingebox Cinema Chùa Bộc',
+                    cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '15:00', room: 'Phòng 1' },
+                                { time: '16:10', room: 'Phòng 2' },
+                                { time: '17:30', room: 'Phòng 3' },
+                                { time: '18:10', room: 'Phòng 4' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '13:00', room: 'Phòng 2' },
+                                { time: '15:10', room: 'Phòng 3' },
+                                { time: '18:30', room: 'Phòng 4' },
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '13:00', room: 'Phòng 2' },
+                                { time: '15:10', room: 'Phòng 3' },
+                                { time: '17:30', room: 'Phòng 4' },
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-14',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                    cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '8:00', room: 'Phòng 1' },
+                                { time: '10:10', room: 'Phòng 2' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '8:10', room: 'Phòng 1' },
+                                { time: '10:10', room: 'Phòng 2' },
+                                { time: '17:30', room: 'Phòng 3' },
+                                { time: '18:10', room: 'Phòng 4' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '15:00', room: 'Phòng 1' },
+                                { time: '16:10', room: 'Phòng 2' },
+                                { time: '17:30', room: 'Phòng 3' },
+                                { time: '18:10', room: 'Phòng 4' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-15',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                    cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                    schedules: [
+                        {
+                            date: '2025-05-27',
+                            showtimes: [
+                                { time: '15:40', room: 'Phòng 2' },
+                            ]
+                        },
+                        {
+                            date: '2025-05-28',
+                            showtimes: [
+                                { time: '16:20', room: 'Phòng 2' },
+                            ]
+                        },
+                        {
+                            date: '2025-05-29',
+                            showtimes: [
+                                { time: '16:20', room: 'Phòng 2' },
+                            ]
+                        },
                     ]
-                },
+                }
             ]
         },
         {
@@ -509,32 +1230,106 @@ const movies =
             imageUrl: './assets/images/movies/snowwhite.webp',
             trailer: 'https://www.youtube.com/embed/iV46TJKL8cU?si=NVFyMEub38e0rrJX',
             bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
-            schedules: [
+            cinemas: [
                 {
-                    date: '2025-04-13',
-                    showtime: [
-                        { time: '10:20', room: 'Phòng 1' },
-                        { time: '12:10', room: 'Phòng 2' },
-                        { time: '14:00', room: 'Phòng 3' },
-                        { time: '15:50', room: 'Phòng 4' },
-                        { time: '17:40', room: 'Phòng 5' },
-                        { time: '20:20', room: 'Phòng 6' }
+                    cinemaName: 'Bingebox Cinema Chùa Bộc',
+                    cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '22:30', room: 'Phòng 3' },
+                                { time: '23:10', room: 'Phòng 4' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '22:30', room: 'Phòng 3' },
+                                { time: '23:10', room: 'Phòng 4' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '22:30', room: 'Phòng 3' },
+                                { time: '23:10', room: 'Phòng 4' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-14',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                    cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                    schedules: [
+                        {
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '22:30', room: 'Phòng 3' },
+                                { time: '23:10', room: 'Phòng 4' }
+                            ]
+                        },
+                        {
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '22:30', room: 'Phòng 3' },
+                                { time: '23:10', room: 'Phòng 4' }
+                            ]
+                        },
+                        {
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '22:30', room: 'Phòng 3' },
+                                { time: '23:10', room: 'Phòng 4' }
+                            ]
+                        },
                     ]
                 },
                 {
-                    date: '2025-04-15',
-                    showtime: [
-                        { time: '19:20', room: 'Phòng 1' },
-                        { time: '20:40', room: 'Phòng 2' }
+                    cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                    cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                    schedules: [
+                        {
+                            date: '2025-05-27',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '22:30', room: 'Phòng 3' },
+                                { time: '23:10', room: 'Phòng 4' }
+                            ]
+                        },
+                        {
+                            date: '2025-05-28',
+                            showtime: [
+                                { time: '19:00', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '22:30', room: 'Phòng 3' },
+                                { time: '23:10', room: 'Phòng 4' }
+                            ]
+                        },
+                        {
+                            date: '2025-05-29',
+                            showtimes: [
+                                { time: '19:00', room: 'Phòng 1' },
+                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '22:30', room: 'Phòng 3' },
+                                { time: '23:10', room: 'Phòng 4' }
+                            ]
+                        },
                     ]
-                },
+                }
             ]
         },
         {
@@ -581,24 +1376,24 @@ const movies =
                     schedules: [
                         {
                             date: '27-05-2025',
-                            showtime: [
-                                { time: '15:50', room: 'Phòng 7'},
+                            showtimes: [
+                                { time: '15:50', room: 'Phòng 7' },
                                 { time: '17:40', room: 'Phòng 7' },
                                 { time: '20:20', room: 'Phòng 7' }
                             ]
                         },
                         {
                             date: '28-05-2025',
-                            showtime: [
-                                { time: '15:50', room: 'Phòng 7'},
+                            showtimes: [
+                                { time: '15:50', room: 'Phòng 7' },
                                 { time: '17:40', room: 'Phòng 7' },
                                 { time: '20:20', room: 'Phòng 7' }
                             ]
                         },
                         {
                             date: '29-05-2025',
-                            showtime: [
-                                { time: '15:50', room: 'Phòng 7'},
+                            showtimes: [
+                                { time: '15:50', room: 'Phòng 7' },
                                 { time: '17:40', room: 'Phòng 7' },
                                 { time: '20:20', room: 'Phòng 7' }
                             ]
@@ -610,21 +1405,21 @@ const movies =
                     cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
                     schedules: [
                         {
-                            date: '2025-05-27',
-                            showtime: [
+                            date: '27-05-2025',
+                            showtimes: [
                                 { time: '20:20', room: 'Phòng 7' }
                             ]
                         },
                         {
-                            date: '2025-05-28',
-                            showtime: [
+                            date: '28-05-2025',
+                            showtimes: [
                                 { time: '17:40', room: 'Phòng 7' },
                                 { time: '20:20', room: 'Phòng 7' }
                             ]
                         },
                         {
-                            date: '2025-05-29',
-                            showtime: [
+                            date: '29-05-2025',
+                            showtimes: [
                                 { time: '17:40', room: 'Phòng 7' },
                                 { time: '20:20', room: 'Phòng 7' }
                             ]
@@ -636,42 +1431,46 @@ const movies =
                     cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
                     schedules: [
                         {
-                            date: '2025-05-27',
-                            showtime: [
-                                { time: '15:50', room: 'Phòng 7'},
-                                { time: '17:40', room: 'Phòng 7' },
-                                { time: '20:20', room: 'Phòng 7' }
+                            date: '27-05-2025',
+                            showtimes: [
+                                { time: '15:50', room: 'Phòng 7' },
+                                { time: '17:00', room: 'Phòng 7' },
+                                { time: '20:30', room: 'Phòng 7' },
+                                { time: '21:40', room: 'Phòng 7' },
+                                { time: '22:50', room: 'Phòng 7' },
+
                             ]
                         },
                         {
-                            date: '2025-05-28',
-                            showtime: [
-                                { time: '15:50', room: 'Phòng 7'},
-                                { time: '17:40', room: 'Phòng 7' },
-                                { time: '20:20', room: 'Phòng 7' }
+                            date: '28-05-2025',
+                            showtimes: [
+                                { time: '16:50', room: 'Phòng 7' },
+                                { time: '18:40', room: 'Phòng 7' },
+                                { time: '19:20', room: 'Phòng 7' }
                             ]
                         },
                         {
-                            date: '2025-05-29',
-                            showtime: [
-                                { time: '15:50', room: 'Phòng 7'},
-                                { time: '17:40', room: 'Phòng 7' },
-                                { time: '20:20', room: 'Phòng 7' }
+                            date: '29-05-2025',
+                            showtimes: [
+                                { time: '19:50', room: 'Phòng 7' },
+                                { time: '20:40', room: 'Phòng 7' },
+                                { time: '22:00', room: 'Phòng 7' },
+                                { time: '23:00', room: 'Phòng 7' }
                             ]
                         },
                     ]
                 }
             ]
-            
+
         }
     ]
 
-    export {movies};
-    
-
-    // let moviesJson = JSON.stringify(movies);
-    // console.log(moviesJson);
+export { movies };
 
 
-    
+// let moviesJson = JSON.stringify(movies);
+// console.log(moviesJson);
+
+
+
 
