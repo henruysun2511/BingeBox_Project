@@ -31,7 +31,7 @@ const movies =
                 }
             ],
             imageUrl: './assets/images/movies/minecraft.webp',
-            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+            bigPoster: './assets/images/movieBigPosters/BPminecraft.jpg',
             trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
             cinemas: [
                 {
@@ -147,27 +147,27 @@ const movies =
             actors: [
                 {
                     actorName: 'Thái hòa',
-                    actorImage: './assets/images/actor/'
+                    actorImage: './assets/images/actors/thaihoa.jpg'
                 },
                 {
                     actorName: 'Quang Tuấn',
-                    actorImage: ''
+                    actorImage: './assets/images/actors/quangtuan.webp'
                 },
                 {
                     actorName: 'Diễm Hằng Lamoon',
-                    actorImage: ''
+                    actorImage: './assets/images/actors/lamoon.jpg'
                 },
                 {
                     actorName: 'Anh Tú Wilson',
-                    actorImage: ''
+                    actorImage: './assets/images/actors/wilson.webp'
                 },
                 {
                     actorName: 'Uyển Ân',
-                    actorImage: ''
+                    actorImage: './assets/images/actors/uyenan.jpg'
                 }
             ],
             imageUrl: './assets/images/movies/diadao.webp',
-            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+            bigPoster: './assets/images/movieBigPosters/BPdiadao.webp',
             trailer: 'https://www.youtube.com/embed/-OGDDtsIBHA?si=rdTmOglKzo6deygC',
             cinemas: [
                 {
@@ -201,10 +201,6 @@ const movies =
                         {
                             date: '28-05-2025',
                             showtimes: [
-                                { time: '8:30', room: 'Phòng 1' },
-                                { time: '9:00', room: 'Phòng 2' },
-                                { time: '10:10', room: 'Phòng 3' },
-                                { time: '11:30', room: 'Phòng 4' },
                                 { time: '12:10', room: 'Phòng 5' },
                                 { time: '13:50', room: 'Phòng 6' },
                                 { time: '14:40', room: 'Phòng 1' },
@@ -225,23 +221,18 @@ const movies =
                         {
                             date: '29-05-2025',
                             showtimes: [
-                                { time: '8:30', room: 'Phòng 1' },
-                                { time: '9:00', room: 'Phòng 2' },
-                                { time: '10:10', room: 'Phòng 3' },
-                                { time: '11:30', room: 'Phòng 4' },
-                                { time: '12:10', room: 'Phòng 5' },
-                                { time: '13:50', room: 'Phòng 6' },
-                                { time: '14:40', room: 'Phòng 1' },
-                                { time: '15:20', room: 'Phòng 2' },
+                                { time: '13:10', room: 'Phòng 6' },
+                                { time: '14:00', room: 'Phòng 1' },
+                                { time: '15:40', room: 'Phòng 2' },
                                 { time: '16:00', room: 'Phòng 3' },
-                                { time: '17:20', room: 'Phòng 4' },
-                                { time: '18:30', room: 'Phòng 5' },
-                                { time: '19:00', room: 'Phòng 6' },
-                                { time: '19:20', room: 'Phòng 1' },
-                                { time: '20:10', room: 'Phòng 2' },
+                                { time: '16:20', room: 'Phòng 4' },
+                                { time: '18:00', room: 'Phòng 5' },
+                                { time: '19:10', room: 'Phòng 6' },
+                                { time: '19:30', room: 'Phòng 1' },
+                                { time: '20:20', room: 'Phòng 2' },
                                 { time: '20:30', room: 'Phòng 3' },
-                                { time: '20:50', room: 'Phòng 4' },
-                                { time: '21:10', room: 'Phòng 5' },
+                                { time: '21:00', room: 'Phòng 4' },
+                                { time: '21:00', room: 'Phòng 5' },
                                 { time: '22:00', room: 'Phòng 6' },
                                 { time: '22:30', room: 'Phòng 1' }
                             ]
@@ -314,7 +305,7 @@ const movies =
                     cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
                     schedules: [
                         {
-                            date: '2025-05-27',
+                            date: '27-05-2025',
                             showtimes: [
                                 { time: '12:10', room: 'Phòng 5' },
                                 { time: '13:50', room: 'Phòng 6' },
@@ -334,7 +325,7 @@ const movies =
                             ]
                         },
                         {
-                            date: '2025-05-28',
+                            date: '28-05-2025',
                             showtimes: [
                                 { time: '12:10', room: 'Phòng 5' },
                                 { time: '13:50', room: 'Phòng 6' },
@@ -354,7 +345,7 @@ const movies =
                             ]
                         },
                         {
-                            date: '2025-05-29',
+                            date: '29-05-2025',
                             showtimes: [
                                 { time: '12:10', room: 'Phòng 5' },
                                 { time: '13:50', room: 'Phòng 6' },
@@ -559,7 +550,7 @@ const movies =
                     cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
                     schedules: [
                         {
-                            date: '2025-05-27',
+                            date: '27-05-2025',
                             showtimes: [
                                 { time: '12:10', room: 'Phòng 5' },
                                 { time: '13:50', room: 'Phòng 6' },
@@ -579,7 +570,7 @@ const movies =
                             ]
                         },
                         {
-                            date: '2025-05-28',
+                            date: '28-05-2025',
                             showtimes: [
                                 { time: '12:10', room: 'Phòng 5' },
                                 { time: '13:50', room: 'Phòng 6' },
@@ -599,7 +590,7 @@ const movies =
                             ]
                         },
                         {
-                            date: '2025-05-29',
+                            date: '29-05-2025',
                             showtimes: [
                                 { time: '12:10', room: 'Phòng 5' },
                                 { time: '13:50', room: 'Phòng 6' },
@@ -625,40 +616,28 @@ const movies =
         {
             id: 'MV004',
             name: 'CƯỚI MA GIẢI HẠN',
-            duration: '118 phút',
-            releaseDate: '2025-03-14',
-            nation: 'Mỹ',
-            director: 'Julius Onah',
-            categories: ['Hành động', 'Siêu anh hùng'],
-            agePermisson: 'T13',
+            duration: '128 phút',
+            releaseDate: '2025-04-11',
+            nation: 'Thái',
+            director: 'Chayanop Boonprakob',
+            categories: ['Hài'],
+            agePermisson: 'T18',
             subtitle: 'Phụ đề',
-            format: '2D IMAX',
-            script: 'Sau khi gặp tổng thống Hoa Kỳ mới đắc cử Thaddeus Ross, Sam phải đối mặt với một sự cố quy mô quốc tế. Anh phải tìm ra mục đích đằng sau trước khi kẻ chủ mưu khiến cả thế giới phải khiếp sợ',
-            actor: [
+            format: '2D',
+            script: 'Menn, một tên trộm cắp đang làm tay trong cho cảnh sát, đồng thời cũng là một gã trai thẳng chính hiệu. Ngày nọ, Menn vô tình nhặt được một bao lì xì đỏ bí ẩn và bị ràng buộc bởi khế ước siêu nhiên, bắt anh phải kết hôn với một hồn ma. Không dừng lại ở đó, số phận càng trớ trêu hơn khi “vợ” của Menn không chỉ là người cõi âm, mà còn là một “mỹ” vong dễ thương với tư tưởng cấp tiến tên Titi. Menn buộc phải giúp Titi tìm ra sự thật đằng sau vụ tai nạn cướp đi sinh mạng của cậu để Titi được siêu thoát và trả lại bình yên cho mình. Trùng hợp làm sao, tất cả đầu mối đều dẫn đến vụ buôn ma túy bất hợp pháp do Menn và Goi, nữ cảnh sát lớn tuổi mà Menn yêu mến, đang điều tra.',
+            actors: [
                 {
-                    actorName: 'Anthony Mackie',
-                    actorImage: './assets/images/actors/janthonymackie.webp'
+                    actorName: 'Billkin',
+                    actorImage: './assets/images/actors/bilkin.jpg'
                 },
                 {
-                    actorName: 'Harrison Ford',
-                    actorImage: './assets/images/actors/harrisonford.jpg'
-                },
-                {
-                    actorName: 'Sebastian Stan',
-                    actorImage: './assets/images/actors/stan.webp'
-                },
-                {
-                    actorName: 'Giancarlo Esposito',
-                    actorImage: './assets/images/actors/esposito.webp'
-                },
-                {
-                    actorName: 'Danny Ramirez',
-                    actorImage: './assets/images/actors/danny.webp'
+                    actorName: 'PP Krit',
+                    actorImage: './assets/images/actors/pp.jpg'
                 }
             ],
             imageUrl: './assets/images/movies/cuoimaigiahan.webp',
-            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
-            trailer: 'https://www.youtube.com/embed/L7KuvLShQ_Y?si=L_RX3Gg9-gmtJNZt',
+            bigPoster: './assets/images/movieBigPosters/BPcuoimagiaihan.jpg',
+            trailer: 'https://www.youtube.com/embed/L7KuvLShQ_Y?si=RoGqPvVhM-Ls-xrG',
             cinemas: [
                 {
                     cinemaName: 'Bingebox Cinema Chùa Bộc',
@@ -709,7 +688,7 @@ const movies =
                         },
                         {
                             date: '29-05-2025',
-                            showtime: [
+                            showtimes: [
                                 { time: '16:50', room: 'Phòng 5' },
                                 { time: '18:00', room: 'Phòng 6' },
                             ]
@@ -721,7 +700,7 @@ const movies =
                     cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
                     schedules: [
                         {
-                            date: '2025-05-27',
+                            date: '27-05-2025',
                             showtimes: [
                                 { time: '13:50', room: 'Phòng 6' },
                                 { time: '14:40', room: 'Phòng 1' },
@@ -729,7 +708,7 @@ const movies =
                             ]
                         },
                         {
-                            date: '2025-05-28',
+                            date: '28-05-2025',
                             showtimes: [
                                 { time: '13:50', room: 'Phòng 6' },
                                 { time: '14:40', room: 'Phòng 1' },
@@ -737,7 +716,7 @@ const movies =
                             ]
                         },
                         {
-                            date: '2025-05-29',
+                            date: '29-05-2025',
                             showtimes: [
                                 { time: '13:50', room: 'Phòng 6' },
                                 { time: '14:40', room: 'Phòng 1' },
@@ -771,7 +750,7 @@ const movies =
                 }
             ],
             imageUrl: './assets/images/movies/buoihenhokinhhoang.webp',
-            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+            bigPoster: './assets/images/movieBigPosters/BPhenhokinhhoang.webp',
             trailer: 'https://www.youtube.com/embed/cQ1eYm_XIcA?si=zXYIR7CwUDvrB-86',
             cinemas: [
                 {
@@ -832,14 +811,14 @@ const movies =
                     cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
                     schedules: [
                         {
-                            date: '2025-05-27',
+                            date: '27-05-2025',
                             showtimes: [
                                 { time: '13:50', room: 'Phòng 3' },
                                 { time: '14:40', room: 'Phòng 4' },
                             ]
                         },
                         {
-                            date: '2025-05-28',
+                            date: '28-05-2025',
                             showtimes: [
                                 { time: '13:50', room: 'Phòng 6' },
                                 { time: '14:40', room: 'Phòng 1' },
@@ -847,7 +826,7 @@ const movies =
                             ]
                         },
                         {
-                            date: '2025-05-29',
+                            date: '29-05-2025',
                             showtimes: [
                                 { time: '13:50', room: 'Phòng 6' },
                                 { time: '14:40', room: 'Phòng 1' },
@@ -953,19 +932,19 @@ const movies =
                     cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
                     schedules: [
                         {
-                            date: '2025-05-27',
+                            date: '27-05-2025',
                             showtimes: [
                                 { time: '20:40', room: 'Phòng 4' },
                             ]
                         },
                         {
-                            date: '2025-05-28',
+                            date: '28-05-2025',
                             showtimes: [
                                 { time: '20:20', room: 'Phòng 2' },
                             ]
                         },
                         {
-                            date: '2025-05-29',
+                            date: '29-05-2025',
                             showtimes: [
                                 { time: '20:20', room: 'Phòng 2' },
                             ]
@@ -1070,19 +1049,20 @@ const movies =
                     cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
                     schedules: [
                         {
-                            date: '2025-05-27',
+                            date: '27-05-2025',
                             showtimes: [
                                 { time: '14:40', room: 'Phòng 4' },
                             ]
                         },
                         {
-                            date: '2025-05-28',
+                            date: '28-05-2025',
                             showtimes: [
                                 { time: '15:20', room: 'Phòng 2' },
+                                { time: '18:00', room: 'Phòng 2' },
                             ]
                         },
                         {
-                            date: '2025-05-29',
+                            date: '29-05-2025',
                             showtimes: [
                                 { time: '15:20', room: 'Phòng 2' },
                             ]
@@ -1114,7 +1094,7 @@ const movies =
                 },
             ],
             imageUrl: './assets/images/movies/taynghiepdu.webp',
-            bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+            bigPoster: './assets/images/movieBigPosters/BPamateur.jpg',
             trailer: 'https://www.youtube.com/embed/c0SG_zJarME?si=lIxO5mKxPqhX2SR8',
             cinemas: [
                 {
@@ -1184,19 +1164,19 @@ const movies =
                     cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
                     schedules: [
                         {
-                            date: '2025-05-27',
+                            date: '27-05-2025',
                             showtimes: [
                                 { time: '15:40', room: 'Phòng 2' },
                             ]
                         },
                         {
-                            date: '2025-05-28',
+                            date: '28-05-2025',
                             showtimes: [
                                 { time: '16:20', room: 'Phòng 2' },
                             ]
                         },
                         {
-                            date: '2025-05-29',
+                            date: '29-05-2025',
                             showtimes: [
                                 { time: '16:20', room: 'Phòng 2' },
                             ]
@@ -1302,7 +1282,7 @@ const movies =
                     cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
                     schedules: [
                         {
-                            date: '2025-05-27',
+                            date: '27-05-2025',
                             showtimes: [
                                 { time: '19:00', room: 'Phòng 1' },
                                 { time: '20:10', room: 'Phòng 2' },
@@ -1311,7 +1291,7 @@ const movies =
                             ]
                         },
                         {
-                            date: '2025-05-28',
+                            date: '28-05-2025',
                             showtime: [
                                 { time: '19:00', room: 'Phòng 1' },
                                 { time: '20:10', room: 'Phòng 2' },
@@ -1320,7 +1300,7 @@ const movies =
                             ]
                         },
                         {
-                            date: '2025-05-29',
+                            date: '29-05-2025',
                             showtimes: [
                                 { time: '19:00', room: 'Phòng 1' },
                                 { time: '20:10', room: 'Phòng 2' },
@@ -1467,9 +1447,254 @@ const movies =
 
 export { movies };
 
+const movieComingSoons =
+[
+    {
+        id: 'MV013',
+        name: 'BÍ KÍP LUYỆN RỒNG',
+        duration: '100 phút',
+        releaseDate: '13/6/2025',
+        nation: 'Mỹ',
+        director: 'Dean DeBlois',
+        categories: ['Hành động', 'Phiêu lưu'],
+        agePermisson: 'K',
+        subtitle: 'Unknown',
+        format: '2D',
+        script: 'Câu chuyện về một chàng trai trẻ với ước mơ trở thành thợ săn rồng, nhưng định mệnh lại đưa đẩy anh đến tình bạn bất ngờ với một chú rồng.',
+        actors: [
+            {
+                actorName: 'Mason Thames',
+                actorImage: './assets/images/actors/mason.jpg'
+            },
+            {
+                actorName: 'Răng Sún',
+                actorImage: './assets/images/actors/toothless.webp'
+            }
+        ],
+        imageUrl: './assets/images/movies/comingsoons/bikipluyenrong.webp',
+        bigPoster: './assets/images/movieBigPosters/BPdragon.jpg',
+        trailer: 'https://www.youtube.com/embed/22w7z_lT6YM?si=WBejZJZe9ylqt_aB',
+        cinemas: [
+            {
+                cinemaName: 'Bingebox Cinema Chùa Bộc',
+                cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                schedules: []
+            },
+            {
+                cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                schedules: []
+            },
+            {
+                cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                schedules: []
+            }
+        ]
+    },
+    {
+        id: 'MV014',
+        name: '28 năm sau',
+        duration: '128 phút',
+        releaseDate: '2025-04-04',
+        nation: 'Việt Nam',
+        director: 'Bùi Thạc Chuyên',
+        categories: ['Chiến tranh'],
+        agePermisson: 'K',
+        subtitle: 'Phụ đề',
+        format: '2D',
+        script: 'Địa Đạo: Mặt Trời Trong Bóng Tối là dự án điện ảnh kỷ niệm 50 năm hòa bình thống nhất đất nước, dự kiến khởi chiếu 30.04.2025. Phim do đạo diễn Bùi Thạc Chuyên cầm trịch, với sự tham gia của dàn diễn viên thực lực – Thái Hòa, Quang Tuấn và diễn viên trẻ Hồ Thu Anh. Vào năm 1967, chiến tranh Việt Nam ngày càng khốc liệt. Đội du kích 21 người do BẢY THEO chỉ huy tại căn cứ Bình An Đông trở thành mục tiêu mà quân đội Mỹ TÌM VÀ DIỆT số 1 khi nhận nhiệm vụ bằng mọi giá phải bảo vệ một nhóm thông tin tình báo chiến lược mới đến ẩn náu tại căn cứ. Các cuộc liên lạc vô tuyến điện từ với nhóm tình báo bị quân đội Mỹ phát hiện và định vị, lấy đi lợi thế duy nhất của đội du kích là sự vô hình trong hệ thống địa đạo rộng khắp, phức tạp và bí ẩn. Bộ phim là những câu chuyện đan xen giữa tình đồng đội, tình yêu và khát khao sống ở những người lính. Trên hết, vẫn là nghĩa vụ và sự hi sinh vì Tổ Quốc. Đạo diễn Bùi Thạc Chuyên nung nấu 10 năm trời để chuẩn bị cho phim điện ảnh Địa Đạo, đem câu chuyện huyền thoại về nhân dân miền Nam tài trí thông minh và tinh thần yêu nước ngoan cường ngày ấy lên màn ảnh rộng. Lịch sử đã chứng minh, dẫu cho trên đầu là bom rơi đạn nổ, dưới hầm là không khí đặc quánh đến hít thở cũng khó khăn, chỉ cần trong tim mỗi người chiến sĩ luôn hướng đến ánh sáng tự do của một dân tộc tự do trong tương lai, họ sẽ kiên trì đứng vững mà chiến đấu. Như có mặt trời trong bóng tối luôn soi sáng dẫn đường.',
+        actors: [
+            {
+                actorName: 'Thái hòa',
+                actorImage: './assets/images/actors/thaihoa.jpg'
+            },
+            {
+                actorName: 'Quang Tuấn',
+                actorImage: './assets/images/actors/quangtuan.webp'
+            },
+            {
+                actorName: 'Diễm Hằng Lamoon',
+                actorImage: './assets/images/actors/lamoon.jpg'
+            },
+            {
+                actorName: 'Anh Tú Wilson',
+                actorImage: './assets/images/actors/wilson.webp'
+            },
+            {
+                actorName: 'Uyển Ân',
+                actorImage: './assets/images/actors/uyenan.jpg'
+            }
+        ],
+        imageUrl: './assets/images/movies/diadao.webp',
+        bigPoster: './assets/images/movieBigPosters/BPdiadao.webp',
+        trailer: 'https://www.youtube.com/embed/-OGDDtsIBHA?si=rdTmOglKzo6deygC',
+        cinemas: [
+            {
+                cinemaName: 'Bingebox Cinema Chùa Bộc',
+                cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                schedules: []
+            },
+        ]
+    },
+    {
+        id: 'MV015',
+        name: 'NHIỆM VỤ BẤT KHẢ THI: NGHIỆP BÁO - PHẦN 2',
+        duration: '101 phút',
+        releaseDate: '2025-04-04',
+        nation: 'Mỹ',
+        director: 'Jared Hess',
+        categories: ['Hành động', 'Phiêu lưu'],
+        agePermisson: 'K',
+        subtitle: 'Phụ đề',
+        format: '2D',
+        script: 'Chào mừng bạn đến với thế giới của Minecraft, nơi sự sáng tạo không chỉ giúp bạn chế tạo mà còn là yếu tố quan trọng để sống sót! Bốn kẻ lạc lõng - Garrett “The Garbage Man” Garrison (Momoa), Henry (Hansen), Natalie (Myers) và Dawn (Brooks) - bất ngờ gặp rắc rối khi họ bị kéo qua cánh cửa bí ẩn dẫn đến Overworld: một thế giới kỳ lạ',
+        actors: [
+            {
+                actorName: 'Jack Black',
+                actorImage: './assets/images/actors/jackblack.webp'
+            },
+            {
+                actorName: 'Jason Momoa',
+                actorImage: './assets/images/actors/jasonmomooa.jpg'
+            },
+            {
+                actorName: 'Emma Myers',
+                actorImage: './assets/images/actors/emmamyer.jpg'
+            },
+            {
+                actorName: 'Sebastian Eugene Hansen',
+                actorImage: './assets/images/actors/hansen.webp'
+            }
+        ],
+        imageUrl: './assets/images/movies/minecraft.webp',
+        bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+        trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
+        cinemas: [
+            {
+                cinemaName: 'Bingebox Cinema Chùa Bộc',
+                cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                schedules: []
+            },
+            {
+                cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                schedules: []
+            },
+            {
+                cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                schedules: []
+            }
+        ]
+    },
+    {
+        id: 'MV016',
+        name: 'SUPERMAN',
+        duration: 'x phút',
+        releaseDate: '2025-04-04',
+        nation: 'Mỹ',
+        director: 'Jared Hess',
+        categories: ['Hành động', 'Phiêu lưu'],
+        agePermisson: 'K',
+        subtitle: 'Phụ đề',
+        format: '2D',
+        script: 'Chào mừng bạn đến với thế giới của Minecraft, nơi sự sáng tạo không chỉ giúp bạn chế tạo mà còn là yếu tố quan trọng để sống sót! Bốn kẻ lạc lõng - Garrett “The Garbage Man” Garrison (Momoa), Henry (Hansen), Natalie (Myers) và Dawn (Brooks) - bất ngờ gặp rắc rối khi họ bị kéo qua cánh cửa bí ẩn dẫn đến Overworld: một thế giới kỳ lạ',
+        actors: [
+            {
+                actorName: 'Jack Black',
+                actorImage: './assets/images/actors/jackblack.webp'
+            },
+            {
+                actorName: 'Jason Momoa',
+                actorImage: './assets/images/actors/jasonmomooa.jpg'
+            },
+            {
+                actorName: 'Emma Myers',
+                actorImage: './assets/images/actors/emmamyer.jpg'
+            },
+            {
+                actorName: 'Sebastian Eugene Hansen',
+                actorImage: './assets/images/actors/hansen.webp'
+            }
+        ],
+        imageUrl: './assets/images/movies/comingsoons/fantastic4.jpeg',
+        bigPoster: './assets/images/movieBigPosters/BPfantastic4.avif',
+        trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
+        cinemas: [
+            {
+                cinemaName: 'Bingebox Cinema Chùa Bộc',
+                cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                schedules: []
+            },
+            {
+                cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                schedules: []
+            },
+            {
+                cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                schedules: []
+            }
+        ]
+    },
+    {
+        id: 'MV017',
+        name: 'BỘ TỨ SIÊU ĐẲNG: BƯỚC ĐẦU TIÊN',
+        duration: '101 phút',
+        releaseDate: '2025-04-04',
+        nation: 'Mỹ',
+        director: 'Jared Hess',
+        categories: ['Hành động', 'Phiêu lưu'],
+        agePermisson: 'K',
+        subtitle: 'Phụ đề',
+        format: '2D',
+        script: 'Chào mừng bạn đến với thế giới của Minecraft, nơi sự sáng tạo không chỉ giúp bạn chế tạo mà còn là yếu tố quan trọng để sống sót! Bốn kẻ lạc lõng - Garrett “The Garbage Man” Garrison (Momoa), Henry (Hansen), Natalie (Myers) và Dawn (Brooks) - bất ngờ gặp rắc rối khi họ bị kéo qua cánh cửa bí ẩn dẫn đến Overworld: một thế giới kỳ lạ',
+        actors: [
+            {
+                actorName: 'Jack Black',
+                actorImage: './assets/images/actors/jackblack.webp'
+            },
+            {
+                actorName: 'Jason Momoa',
+                actorImage: './assets/images/actors/jasonmomooa.jpg'
+            },
+            {
+                actorName: 'Emma Myers',
+                actorImage: './assets/images/actors/emmamyer.jpg'
+            },
+            {
+                actorName: 'Sebastian Eugene Hansen',
+                actorImage: './assets/images/actors/hansen.webp'
+            }
+        ],
+        imageUrl: './assets/images/movies/comingsoons/fantastic4.jpeg',
+        bigPoster: './assets/images/movieBigPosters/BPfantastic4.avif',
+        trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
+        cinemas: [
+            {
+                cinemaName: 'Bingebox Cinema Chùa Bộc',
+                cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                schedules: []
+            },
+            {
+                cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                schedules: []
+            },
+            {
+                cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                schedules: []
+            }
+        ]
+    }
+]
 
-// let moviesJson = JSON.stringify(movies);
-// console.log(moviesJson);
+export { movieComingSoons };
+
+
 
 
 

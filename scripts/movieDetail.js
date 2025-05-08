@@ -1,11 +1,13 @@
 import { movies } from "./objectForCinema.js";
+import { movieComingSoons } from "./objectForCinema.js";
 
 // Lấy id phim từ URL
+
 const params = new URLSearchParams(window.location.search);
 const movieId = params.get('id');
 
-// Tìm phim theo id
-const movie = movies.find(m => m.id === movieId);
+
+const movie = movies.find(m => m.id === movieId) || movieComingSoons.find(m => m.id === movieId);
 
 if (movie) {
     var movieBigPoster = document.getElementById('film-poster-big');
@@ -72,6 +74,7 @@ if (movie) {
         </div>`;
 
     const movieActor = document.getElementById('actor-list');
+    movieActor.innerHTML= '';
     movie.actors.forEach(actor => {
         if (actor) {
             const actorItem = document.createElement('div');
@@ -133,12 +136,6 @@ if (movie) {
         });
     });
 
-    scheduleSet.delete('2025-05-27');
-    scheduleSet.delete('2025-05-28');
-    scheduleSet.delete('2025-05-29');
-    console.log(cinemaSet);
-    console.log(scheduleSet);
-
 
     const scheduleList = document.getElementById('schedules');
     scheduleList.innerHTML = ''; // Xóa nội dung cũ 
@@ -147,6 +144,13 @@ if (movie) {
         scheduleItem.className = 'schedule-item';
         scheduleItem.innerHTML = `${date}`;
         scheduleList.appendChild(scheduleItem);
+
+        //mặc định luôn hiển thị lịch chiếu trang đầu tiên
+        const firstScheduleItem = document.querySelector('.schedule-item');
+        if (firstScheduleItem) {
+            firstScheduleItem.click();
+        }
+
         scheduleItem.addEventListener('click', () => hienThiSuatChieuTheoNgay(scheduleItem.innerHTML));
 
     });
@@ -155,8 +159,6 @@ if (movie) {
     function hienThiSuatChieuTheoNgay(ngayChieu) {
         let showtimes = document.querySelector('.showtimes');
         showtimes.innerHTML = '';
-
-        console.log(showtimes);
 
         movie.cinemas.forEach(cinema => {
             let showtimeItem = document.createElement('div');
@@ -175,12 +177,13 @@ if (movie) {
                 timeFillter[0].showtimes.forEach(showtime => {
                     let timeItem = document.createElement('div');
                     timeItem.className = "time-item";
-                    timeItem.innerHTML = ` <div class="time-number">${showtime.time}</div>
-                                    `;
+                    timeItem.innerHTML = ` <div class="time-number">${showtime.time}</div>`;
+
+                    //Thêm thông tin phụ đề và định dạng cho từng suất chiếu
                     let movieFormat = document.createElement('div');
                     movieFormat.className = 'time-info';
                     movieFormat.innerHTML = `<div class="time-subtitle">${movie.subtitle}</div>
-                                                                    <div class="time-format">${movie.format}</div>`;
+                                                <div class="time-format">${movie.format}</div>`;
 
                     timeItem.appendChild(movieFormat);
 
@@ -190,16 +193,23 @@ if (movie) {
 
                 showtimeItem.appendChild(times);
             }
-
-
-
-
-
         });
+        //showtimes chứa các showtimeItem, mỗi showtimeItem chứa tên rạp và các times, times lại chứa các timeItem, nói chung là sinh tự động kkk
     }
 
+    if (movieComingSoons.includes(movie)) {
+        let showtimes = document.querySelector('.showtimes');
+        showtimes.innerHTML = 'Chưa có lịch chiếu'; 
+        showtimes.style.fontSize = '20px';
+        showtimes.style.textAlign = 'center'; 
+        showtimes.style.fontStyle = 'italic'; 
 
-
+        let buttonn = document.querySelector('.inner-button');
+        buttonn.innerHTML=`<a href="#" class="button button-one" id="button-trailer">TRAILER</a>
+                        <a href="#" class="button button-two">REMIND ME </a>`;
+        let buttonRemind = document.querySelector('.button-two');
+        buttonRemind.style.backgroundColor = '#FFC107';
+    }
 
 
 } else {
@@ -207,3 +217,9 @@ if (movie) {
 }
 
 console.log(movieId);
+
+
+
+
+
+
