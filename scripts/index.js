@@ -1,6 +1,7 @@
-import { movies } from './objectForCinema.js';
+import { movieComingSoons, movies } from './objectForCinema.js';
 
-var filmListContainer = document.getElementById("film-list");
+function renderMovieList(className, movies){
+    var movieList = document.getElementById(className);
 
     movies.forEach(item => {
         var colDiv = document.createElement('div');
@@ -36,10 +37,17 @@ var filmListContainer = document.getElementById("film-list");
             </div>
         `;
     
-        filmListContainer.appendChild(colDiv);
+        movieList.appendChild(colDiv);
 
         //Click vào phim sẽ chuyển đến trang chi tiết phim
         colDiv.addEventListener('click', function() {
             window.location.href = `movieDetail.html?id=${item.id}`; //Truyền id của đối tượng phim được click
         });
     });
+
+}
+
+renderMovieList('film-list', movies);
+renderMovieList('film-comingsoon-list', movieComingSoons);
+
+
