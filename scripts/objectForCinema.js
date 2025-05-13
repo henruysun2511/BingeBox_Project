@@ -1458,7 +1458,7 @@ const movieComingSoons =
         director: 'Dean DeBlois',
         categories: ['Hành động', 'Phiêu lưu'],
         agePermisson: 'K',
-        subtitle: 'Unknown',
+        subtitle: 'Phụ đề',
         format: '2D',
         script: 'Câu chuyện về một chàng trai trẻ với ước mơ trở thành thợ săn rồng, nhưng định mệnh lại đưa đẩy anh đến tình bạn bất ngờ với một chú rồng.',
         actors: [
@@ -1495,40 +1495,25 @@ const movieComingSoons =
     {
         id: 'MV014',
         name: '28 năm sau',
-        duration: '128 phút',
-        releaseDate: '2025-04-04',
-        nation: 'Việt Nam',
-        director: 'Bùi Thạc Chuyên',
-        categories: ['Chiến tranh'],
-        agePermisson: 'K',
+        duration: '126 phút',
+        releaseDate: '20/06/2025',
+        nation: 'Mỹ',
+        director: 'Danny Boyle',
+        categories: ['Hồi hộp','Kinh dị'],
+        agePermisson: 'X',
         subtitle: 'Phụ đề',
         format: '2D',
-        script: 'Địa Đạo: Mặt Trời Trong Bóng Tối là dự án điện ảnh kỷ niệm 50 năm hòa bình thống nhất đất nước, dự kiến khởi chiếu 30.04.2025. Phim do đạo diễn Bùi Thạc Chuyên cầm trịch, với sự tham gia của dàn diễn viên thực lực – Thái Hòa, Quang Tuấn và diễn viên trẻ Hồ Thu Anh. Vào năm 1967, chiến tranh Việt Nam ngày càng khốc liệt. Đội du kích 21 người do BẢY THEO chỉ huy tại căn cứ Bình An Đông trở thành mục tiêu mà quân đội Mỹ TÌM VÀ DIỆT số 1 khi nhận nhiệm vụ bằng mọi giá phải bảo vệ một nhóm thông tin tình báo chiến lược mới đến ẩn náu tại căn cứ. Các cuộc liên lạc vô tuyến điện từ với nhóm tình báo bị quân đội Mỹ phát hiện và định vị, lấy đi lợi thế duy nhất của đội du kích là sự vô hình trong hệ thống địa đạo rộng khắp, phức tạp và bí ẩn. Bộ phim là những câu chuyện đan xen giữa tình đồng đội, tình yêu và khát khao sống ở những người lính. Trên hết, vẫn là nghĩa vụ và sự hi sinh vì Tổ Quốc. Đạo diễn Bùi Thạc Chuyên nung nấu 10 năm trời để chuẩn bị cho phim điện ảnh Địa Đạo, đem câu chuyện huyền thoại về nhân dân miền Nam tài trí thông minh và tinh thần yêu nước ngoan cường ngày ấy lên màn ảnh rộng. Lịch sử đã chứng minh, dẫu cho trên đầu là bom rơi đạn nổ, dưới hầm là không khí đặc quánh đến hít thở cũng khó khăn, chỉ cần trong tim mỗi người chiến sĩ luôn hướng đến ánh sáng tự do của một dân tộc tự do trong tương lai, họ sẽ kiên trì đứng vững mà chiến đấu. Như có mặt trời trong bóng tối luôn soi sáng dẫn đường.',
+        script: 'Cơn ác mộng chưa kết thúc. Virus trở lại, kéo theo bóng tối bao trùm nước Anh. Một hành trình sinh tử: cậu bé tìm kiếm bác sĩ để cứu mẹ mình, băng qua vùng đất chết chóc đầy xác sống tiến hóa và những kẻ nguy hiểm ẩn sau gương mặt tử tế. Liệu niềm hy vọng cuối cùng có đủ để cứu họ khỏi vực thẳm tuyệt vọng?',
         actors: [
             {
-                actorName: 'Thái hòa',
-                actorImage: './assets/images/actors/thaihoa.jpg'
-            },
-            {
-                actorName: 'Quang Tuấn',
-                actorImage: './assets/images/actors/quangtuan.webp'
-            },
-            {
-                actorName: 'Diễm Hằng Lamoon',
-                actorImage: './assets/images/actors/lamoon.jpg'
-            },
-            {
-                actorName: 'Anh Tú Wilson',
-                actorImage: './assets/images/actors/wilson.webp'
-            },
-            {
-                actorName: 'Uyển Ân',
-                actorImage: './assets/images/actors/uyenan.jpg'
+                actorName: 'Aaron Taylor-Johnson',
+                actorImage: './assets/images/actors/aaron.jpg'
             }
+            
         ],
-        imageUrl: './assets/images/movies/diadao.webp',
+        imageUrl: './assets/images/movies/comingsoons/28namsau.webp',
         bigPoster: './assets/images/movieBigPosters/BPdiadao.webp',
-        trailer: 'https://www.youtube.com/embed/-OGDDtsIBHA?si=rdTmOglKzo6deygC',
+        trailer: 'https://www.youtube.com/embed/nHfMFnAKfpE?si=OB3rRjVLLgiMR6kn',
         cinemas: [
             {
                 cinemaName: 'Bingebox Cinema Chùa Bộc',
@@ -1540,36 +1525,24 @@ const movieComingSoons =
     {
         id: 'MV015',
         name: 'NHIỆM VỤ BẤT KHẢ THI: NGHIỆP BÁO - PHẦN 2',
-        duration: '101 phút',
-        releaseDate: '2025-04-04',
+        duration: 'Đang cập nhật',
+        releaseDate: '30/05/2025',
         nation: 'Mỹ',
-        director: 'Jared Hess',
-        categories: ['Hành động', 'Phiêu lưu'],
+        director: 'Christopher McQuarrie',
+        categories: ['Hành động','Phiêu lưu'],
         agePermisson: 'K',
         subtitle: 'Phụ đề',
         format: '2D',
-        script: 'Chào mừng bạn đến với thế giới của Minecraft, nơi sự sáng tạo không chỉ giúp bạn chế tạo mà còn là yếu tố quan trọng để sống sót! Bốn kẻ lạc lõng - Garrett “The Garbage Man” Garrison (Momoa), Henry (Hansen), Natalie (Myers) và Dawn (Brooks) - bất ngờ gặp rắc rối khi họ bị kéo qua cánh cửa bí ẩn dẫn đến Overworld: một thế giới kỳ lạ',
+        script: 'Cuộc đời là tất thảy những lựa chọn. Tom Cruise thủ vai Ethan Hunt trở lại trong Nhiệm Vụ: Bất Khả Thi – Nghiệp Báo Cuối Cùng.',
         actors: [
             {
-                actorName: 'Jack Black',
-                actorImage: './assets/images/actors/jackblack.webp'
-            },
-            {
-                actorName: 'Jason Momoa',
-                actorImage: './assets/images/actors/jasonmomooa.jpg'
-            },
-            {
-                actorName: 'Emma Myers',
-                actorImage: './assets/images/actors/emmamyer.jpg'
-            },
-            {
-                actorName: 'Sebastian Eugene Hansen',
-                actorImage: './assets/images/actors/hansen.webp'
-            }
+                actorName: 'Tom Cruise',
+                actorImage: './assets/images/actors/tomcruise.webp'
+            } 
         ],
-        imageUrl: './assets/images/movies/minecraft.webp',
+        imageUrl: './assets/images/movies/comingsoons/nhiemvubatkhathi.webp',
         bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
-        trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
+        trailer: 'https://www.youtube.com/embed/no2HdwAX8jI?si=v3rB6F-i3zbH8bdw',
         cinemas: [
             {
                 cinemaName: 'Bingebox Cinema Chùa Bộc',
@@ -1591,34 +1564,23 @@ const movieComingSoons =
     {
         id: 'MV016',
         name: 'SUPERMAN',
-        duration: 'x phút',
-        releaseDate: '2025-04-04',
+        duration: 'Đang cập nhật',
+        releaseDate: '11/07/2025',
         nation: 'Mỹ',
-        director: 'Jared Hess',
-        categories: ['Hành động', 'Phiêu lưu'],
+        director: 'James Gunn',
+        categories: ['Hành động', 'Siêu anh hùng'],
         agePermisson: 'K',
         subtitle: 'Phụ đề',
         format: '2D',
-        script: 'Chào mừng bạn đến với thế giới của Minecraft, nơi sự sáng tạo không chỉ giúp bạn chế tạo mà còn là yếu tố quan trọng để sống sót! Bốn kẻ lạc lõng - Garrett “The Garbage Man” Garrison (Momoa), Henry (Hansen), Natalie (Myers) và Dawn (Brooks) - bất ngờ gặp rắc rối khi họ bị kéo qua cánh cửa bí ẩn dẫn đến Overworld: một thế giới kỳ lạ',
+        script: 'Mùa hè tới đây, Warner Bros. Pictures sẽ mang “Superman” - phim điện ảnh đầu tiên của DC Studios đến các rạp chiếu trên toàn cầu. Với phong cách riêng biệt của mình, James Gunn sẽ khắc họa người hùng huyền thoại trong vũ trụ DC hoàn toàn mới, với sự kết hợp độc đáo của các yếu tố hành động đỉnh cao, hài hước và vô cùng cảm xúc. Một Superman với lòng trắc ẩn và niềm tin vào sự thiện lương của con người sẽ xuất hiện đầy hứa hẹn trên màn ảnh.',
         actors: [
             {
-                actorName: 'Jack Black',
-                actorImage: './assets/images/actors/jackblack.webp'
-            },
-            {
-                actorName: 'Jason Momoa',
-                actorImage: './assets/images/actors/jasonmomooa.jpg'
-            },
-            {
-                actorName: 'Emma Myers',
-                actorImage: './assets/images/actors/emmamyer.jpg'
-            },
-            {
-                actorName: 'Sebastian Eugene Hansen',
-                actorImage: './assets/images/actors/hansen.webp'
+                actorName: 'JDavid Corenswet',
+                actorImage: './assets/images/actors/david.jpg'
             }
+    
         ],
-        imageUrl: './assets/images/movies/comingsoons/fantastic4.jpeg',
+        imageUrl: './assets/images/movies/comingsoons/superman.webp',
         bigPoster: './assets/images/movieBigPosters/BPfantastic4.avif',
         trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
         cinemas: [
@@ -1642,36 +1604,33 @@ const movieComingSoons =
     {
         id: 'MV017',
         name: 'BỘ TỨ SIÊU ĐẲNG: BƯỚC ĐẦU TIÊN',
-        duration: '101 phút',
-        releaseDate: '2025-04-04',
+        duration: 'Đang cập nhật',
+        releaseDate: '2025-07-25',
         nation: 'Mỹ',
-        director: 'Jared Hess',
-        categories: ['Hành động', 'Phiêu lưu'],
+        director: 'Matt Shakman',
+        categories: ['Hành động', 'Phiêu lưu','Giả tưởng'],
         agePermisson: 'K',
         subtitle: 'Phụ đề',
         format: '2D',
-        script: 'Chào mừng bạn đến với thế giới của Minecraft, nơi sự sáng tạo không chỉ giúp bạn chế tạo mà còn là yếu tố quan trọng để sống sót! Bốn kẻ lạc lõng - Garrett “The Garbage Man” Garrison (Momoa), Henry (Hansen), Natalie (Myers) và Dawn (Brooks) - bất ngờ gặp rắc rối khi họ bị kéo qua cánh cửa bí ẩn dẫn đến Overworld: một thế giới kỳ lạ',
+        script: 'The Fantastic Four: First Steps / Bộ Tứ Siêu Đẳng: Bước Đi Đầu Tiên kể về một gia đình của Marvel đối mặt với thử thách khó khăn, họ vừa phải cân bằng vai trò là anh hùng với sức mạnh của mối quan hệ gia đình, vừa phải bảo vệ Trái đất khỏi một vị thần không gian hung dữ tên là Galactus và sứ giả của hắn, Silver Surfer.',
+
         actors: [
             {
-                actorName: 'Jack Black',
+                actorName: 'Pedro Pascal',
                 actorImage: './assets/images/actors/jackblack.webp'
             },
             {
-                actorName: 'Jason Momoa',
+                actorName: 'Vanessa Kirby',
                 actorImage: './assets/images/actors/jasonmomooa.jpg'
             },
             {
-                actorName: 'Emma Myers',
+                actorName: 'Joseph Quinn',
                 actorImage: './assets/images/actors/emmamyer.jpg'
-            },
-            {
-                actorName: 'Sebastian Eugene Hansen',
-                actorImage: './assets/images/actors/hansen.webp'
             }
         ],
         imageUrl: './assets/images/movies/comingsoons/fantastic4.jpeg',
         bigPoster: './assets/images/movieBigPosters/BPfantastic4.avif',
-        trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
+        trailer: 'https://www.youtube.com/embed/lQ7hEyITOsE?si=yTa9hbu5XkmI6X3R',
         cinemas: [
             {
                 cinemaName: 'Bingebox Cinema Chùa Bộc',

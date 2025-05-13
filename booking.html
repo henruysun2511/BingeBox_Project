@@ -27,57 +27,68 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        .section-2{
-            margin-top: 150px;
+        .section-1{
+            margin-top: 120px;
         }
-        .section-2 .showtime{
+        .section-1 .inner-title{
+            color: var(--color-text);
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .section-2 {
+            margin: 10px 0 70px 0;
+        }
+
+        .section-2 .showtime {
             background: orange;
         }
 
         /*Bên trái hiển thị thông tin vé*/
 
-        .section-2 .movie-ticket{
+        .section-2 .movie-ticket {
             background: black;
             border-radius: 15px;
             padding: 15px;
             color: var(--color-text);
         }
 
-        .movie-ticket .movie-infomation{
+        .movie-ticket .movie-infomation {
             display: flex;
-            /* padding: 10px 20px; */
         }
 
-        .movie-ticket .movie-image{
+        .movie-ticket .movie-image {
             width: 209px;
             height: 300px;
             margin-right: 13px;
-         
+            object-fit: cover;
+
         }
-        .movie-ticket .movie-image img{
+
+        .movie-ticket .movie-image img {
             width: 100%;
             height: 100%;
             border-radius: 15px;
             object-fit: cover;
         }
 
-        .movie-ticket .movie-content .movie-title{
+        .movie-ticket .movie-content .movie-title {
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 10px;
         }
 
-        .movie-ticket .movie-content ul{
+        .movie-ticket .movie-content ul {
             list-style-type: none;
             display: flex;
             padding: 0;
         }
 
-        .movie-ticket .movie-content ul li{
+        .movie-ticket .movie-content ul li {
             margin-right: 15px;
         }
 
-        .movie-ticket .movie-content .movie-age{
+        .movie-ticket .movie-content .movie-age {
             background-color: orange;
             color: white;
             padding: 5px;
@@ -90,66 +101,84 @@
             border-radius: 5px;
         }
 
-        .movie-ticket .cinema{
+        .movie-ticket .cinema {
             display: flex;
             padding: 15px 0 0 0;
             font-size: 18px;
         }
-        .cinema .cinema-name{
+
+        .cinema .cinema-name {
             margin-right: 10px;
         }
-        .cinema .cinema-number{
+
+        .cinema .cinema-number {
             margin-left: 10px;
         }
 
-        .movie-ticket .schedule{
+        .movie-ticket .schedule {
             display: flex;
             font-size: 18px;
             padding: 0 0 15px 0;
         }
-        .schedule .showtime-number{
+
+        .schedule .showtime-number {
             margin-right: 10px;
         }
-        .schedule .showtime-day{
+
+        .schedule .showtime-day {
             margin-left: 10px;
         }
 
-        .movie-ticket .seat-info{
+        .movie-ticket .seat-info {
             display: flex;
             justify-content: space-between;
             border-top: 2px dashed gray;
             padding: 15px 0;
         }
 
-        .movie-ticket .total-price{
+        .movie-ticket .total-price {
             display: flex;
             justify-content: space-between;
             border-top: 2px dashed gray;
             padding: 15px 0;
         }
 
-        .total-price .total-price-title{
+        .total-price .total-price-title {
             font-size: 20px;
             font-weight: 600;
         }
 
-        .total-price .total-price-number{
+        .total-price .total-price-number {
             font-size: 20px;
             font-weight: 600;
             color: orange;
         }
 
-        #seat{
+        /* css cho section-4 */
+       
+        .button{
+            color: var(--color-text);
+            background-color: var(--color-blue);
+            padding: 5px 20px;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
         }
-
-
     </style>
-   
+
 
 </head>
 
 <body>
     <div id="header"></div>
+
+    <div class="section-1">
+        <div class="container">
+            <h1 class="inner-title">Bước 1: Chọn ghế</h1>
+        </div>
+    </div>
+
     <div class="section-2">
         <div class="container-fluid">
             <div class="row">
@@ -184,34 +213,31 @@
                             <div class="showtime-day">Chủ nhât, 27/5/2025</div>
                         </div>
 
-                        <div class="seat-info">
-                            <div class="seat-selected">
-                                <div class="seat-total">2x Ghế đơn</div>
-                                <div class="seat-number">Ghế: A1, A2</div>
+                        <div class="seat-info-container">
+                            <div class="seat-info">
+                                <div class="seat-selected">
+                                    <div class="seat-total">2x Ghế đơn</div>
+                                    <div class="seat-number">Ghế: A1, A2</div>
+                                </div>
+                                <div class="seat-price">180.000 đ</div>
                             </div>
-                            <div class="seat-price">180.000 đ</div>
                         </div>
+
 
                         <div class="total-price">
                             <div class="total-price-title">Tổng tiền</div>
                             <div class="total-price-number">360.000 đ</div>
                         </div>
                     </div>
+                    <div class="button-next">Tiếp theo</div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
-
- 
-    
-    
-    
     
 
+    <div id="footer"></div>
 
 
 
@@ -223,7 +249,12 @@
 
 
 
-    
+
+
+
+
+
+
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -233,7 +264,9 @@
         crossorigin="anonymous"></script>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/loadSeat.js"></script>
+    <script src="scripts/loadComponents.js"></script>
+    <script src="scripts/booking.js"></script>
+\
 </body>
 
 </html>

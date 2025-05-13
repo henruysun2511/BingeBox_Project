@@ -22,31 +22,72 @@ movies.forEach(movie => {
                 const seats = generateRandomSeat();
 
                 const magicBoxMovie = {
+                    image: movie.imageUrl,
                     name: movie.name,
                     format: movie.format,
                     cinema: cinema.cinemaName,
                     room: showtime.room,
+                    date: schedule.date,
                     time: showtime.time,
-                    seats: seats
+                    seat: seats
                 };
                 magicBoxMovieList.push(magicBoxMovie);
             });
         });
     });
 });
-console.log(magicBoxMovieList);
+
+//lấy ngày chiếu từ mảng
+const dateSet = new Set();
+magicBoxMovieList.forEach(movie => {
+    dateSet.add(movie.date);
+});
+
+const dateList = document.querySelector('.dates');
+dateList.innerHTML = '';
+dateSet.forEach(date => {
+    const dateItem = document.createElement('div');
+    dateItem.className = 'date-item';
+    dateItem.innerHTML = `${date}`;
+
+    dateList.appendChild(dateItem);
+
+    //click ngày chiếu thì lọc mảng theo ngày chiếu
+    dateItem.addEventListener('click', () => {
+        const magicBoxMovieListByDay = magicBoxMovieList.filter(movie =>
+            movie.date.trim() === dateItem.textContent.trim()
+        );
+        console.log(magicBoxMovieListByDay);
+
+        // Lưu mảng đã lọc vào sessionStorage 
+        sessionStorage.setItem('magicBoxMovieListByDay', JSON.stringify(magicBoxMovieListByDay));
+
+        // Điều hướng sang trang mở hộp
+        window.location.href = 'openMagicBox.html';    
+    });
+    
+});
 
 
-const randomMovie = () => {
-    //Random một phim ngẫu nhiên trong khoảng [1, số lượng phim-1]
-    let minMovie = 1;
-    let maxMovie = magicBoxMovieList.length - 1;
-    const randomIndex = Math.floor(Math.random() * (maxMovie - minMovie + 1)) + minMovie;
+//Viết sự kiện cho nút mua ngay
+const btnMuaNgay = document.querySelector('.button');
+const section5 = document.querySelector('.section-5');
+const overlay = document.querySelector('.dark-overlay');
+const btnX = document.querySelector('.x');
 
-    const randomMovie = magicBoxMovieList[randomIndex];
-    return randomMovie;
-}
-console.log(randomMovie());
+btnMuaNgay.addEventListener('click', () => {
+    section5.style.display = 'block'; 
+    overlay.style.display = 'block'; 
+});
+
+btnX.addEventListener('click', ()=>{
+    section5.style.display = 'none'; 
+    overlay.style.display = 'none';
+});
+
+
+
+
 
 
 
@@ -67,15 +108,15 @@ console.log(randomMovie());
 // });
 
 
-        //Đảm bảo mã JS chỉ chạy sau khi DOM đã tải xong
-        document.addEventListener("DOMContentLoaded", function() {
-            const movieData = '{"name": "Avengers: Endgame", "time": "10:00 AM"}'; // Dữ liệu mẫu
-            new QRCode(document.getElementById("qrcode"), {
-                text: movieData,  // Dữ liệu được mã hóa vào QR code
-                width: 100,
-                height: 100
-            });
-        });
+//Đảm bảo mã JS chỉ chạy sau khi DOM đã tải xong
+document.addEventListener("DOMContentLoaded", function () {
+    const movieData = '{"name": "Avengers: Endgame", "time": "10:00 AM"}'; // Dữ liệu mẫu
+    new QRCode(document.getElementById("qrcode"), {
+        text: movieData,  // Dữ liệu được mã hóa vào QR code
+        width: 100,
+        height: 100
+    });
+});
 
 
 
