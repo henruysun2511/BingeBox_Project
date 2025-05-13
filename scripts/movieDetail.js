@@ -10,7 +10,7 @@ const movieId = params.get('id');
 const movie = movies.find(m => m.id === movieId) || movieComingSoons.find(m => m.id === movieId);
 
 if (movie) {
-    var movieBigPoster = document.getElementById('film-poster-big');
+    let movieBigPoster = document.getElementById('film-poster-big');
     movieBigPoster.innerHTML = `
         <img src="${movie.bigPoster}" alt="${movie.name}">
         <div class="film-overlay"></div>
@@ -19,7 +19,7 @@ if (movie) {
         </div>
     `;
 
-    var movieCommonInformation = document.getElementById('section-2');
+    let movieCommonInformation = document.getElementById('section-2');
     movieCommonInformation.innerHTML =
         `<div class="container">
             <div class="inner-wrap">
@@ -61,7 +61,7 @@ if (movie) {
             </div>
         </div>`;
 
-    var movieScript = document.getElementById('section-3');
+    let movieScript = document.getElementById('section-3');
     movieScript.innerHTML = `
     <div class="container">
             <div class="inner-wrap">
@@ -74,7 +74,7 @@ if (movie) {
         </div>`;
 
     const movieActor = document.getElementById('actor-list');
-    movieActor.innerHTML= '';
+    movieActor.innerHTML = '';
     movie.actors.forEach(actor => {
         if (actor) {
             const actorItem = document.createElement('div');
@@ -169,12 +169,12 @@ if (movie) {
             showtimes.appendChild(showtimeItem);
 
             //lọc ra lịch chiếu theo ngày
-            let timeFillter = cinema.schedules.filter(schedule => schedule.date === ngayChieu);
-            if (timeFillter.length > 0) {
+            let timeFilter = cinema.schedules.filter(schedule => schedule.date === ngayChieu);
+            if (timeFilter.length > 0) {
                 let times = document.createElement('div');
                 times.className = 'times';
 
-                timeFillter[0].showtimes.forEach(showtime => {
+                timeFilter[0].showtimes.forEach(showtime => {
                     let timeItem = document.createElement('div');
                     timeItem.className = "time-item";
                     timeItem.innerHTML = ` <div class="time-number">${showtime.time}</div>`;
@@ -189,6 +189,29 @@ if (movie) {
 
                     times.appendChild(timeItem);
 
+                    //Viết sự kiện ấn vào khung giờ điều hướng sang chỗ đặt vé
+                    let timeNumber = timeItem.querySelector('.time-number');
+                    if (timeNumber) {
+                        timeNumber.addEventListener('click', () => {
+                            //lưu thông tin suất chiếu vào session storage
+                            const bookingInfo = {
+                                bookingImage: movie.imageUrl,
+                                bookingName: movie.name,
+                                bookingFormat: movie.format,
+                                bookingAge: movie.agePermisson,
+                                bookingSubtitle: movie.subtitle,
+                                bookingDuration: movie.duration,
+                                bookingCinema: cinema.cinemaName,
+                                bookingRoom: showtime.room,
+                                bookingTime: showtime.time,
+                                bookingDate: timeFilter[0].date
+                            }
+                            sessionStorage.setItem('bookingInfo', JSON.stringify(bookingInfo));
+
+                            window.location.href = `./booking.html`;
+                        });
+                    }
+
                 });
 
                 showtimeItem.appendChild(times);
@@ -199,13 +222,13 @@ if (movie) {
 
     if (movieComingSoons.includes(movie)) {
         let showtimes = document.querySelector('.showtimes');
-        showtimes.innerHTML = 'Chưa có lịch chiếu'; 
+        showtimes.innerHTML = 'Chưa có lịch chiếu';
         showtimes.style.fontSize = '20px';
-        showtimes.style.textAlign = 'center'; 
-        showtimes.style.fontStyle = 'italic'; 
+        showtimes.style.textAlign = 'center';
+        showtimes.style.fontStyle = 'italic';
 
         let buttonn = document.querySelector('.inner-button');
-        buttonn.innerHTML=`<a href="#" class="button button-one" id="button-trailer">TRAILER</a>
+        buttonn.innerHTML = `<a href="#" class="button button-one" id="button-trailer">TRAILER</a>
                         <a href="#" class="button button-two">REMIND ME </a>`;
         let buttonRemind = document.querySelector('.button-two');
         buttonRemind.style.backgroundColor = '#FFC107';

@@ -1,0 +1,21 @@
+-closest kiểm tra phần tử cha của một phần tử
+vd:
+const sweetbox = seat.closest('.sweetbox-active');
+Kiểm tra xem biến seat có nằm trong thẻ cha .sweetbox-active không
+
+-classList trả về mảng các class của phần tử
+vd:
+Giả sử seat có class là: "seat seat-standard selected"
+thì seat.classList trả về mảng class ["seat", "seat-standard", "selected"]
+
+=>Giờ ta cần duyệt mảng này xem có phần tử nào tồn tại tại trong đối tượng seatPrices thì trả về phần tử ấy
+
+const seatPrices = {
+        'seat-standard': 90000,
+        'seat-vip': 120000,
+        'seat-sweetbox': 150000
+    };
+
+const seatType = [...seat.classList].find(cls => seatPrices[cls]);
+
+-object.key(object_name) => trả về key
