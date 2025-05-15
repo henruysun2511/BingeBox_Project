@@ -30,7 +30,7 @@
 
 <body>
 
- <h1>Thông Tin Vé Của Bạn</h1>
+    <h1>Thông Tin Vé Của Bạn</h1>
     <div id="ticket-info">
         <p><strong>Phim:</strong> <span id="movie"></span></p>
         <p><strong>Rạp:</strong> <span id="cinema"></span></p>
@@ -41,26 +41,69 @@
         <p><strong>Loại ghế:</strong> <span id="type"></span></p>
     </div>
 
-    <script>
-        // 📌 Lấy ID từ URL
+
+   <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+    import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-database.js";
+
+    // Cấu hình Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyADkXqkeLw5OT6AXPJ3vcZziCHurFrKtBc",
+        authDomain: "bingebox-e668d.firebaseapp.com",
+        databaseURL: "https://bingebox-e668d-default-rtdb.firebaseio.com",
+        projectId: "bingebox-e668d",
+        storageBucket: "bingebox-e668d.appspot.com",
+        messagingSenderId: "768145135183",
+        appId: "1:768145135183:web:58b6f6b9c5ff5df890bc3a",
+        measurementId: "G-F2DRWP83F1"
+    };
+
+    // Khởi tạo Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    // Lấy thông tin từ URL
+    async function loadTicket() {
         const params = new URLSearchParams(window.location.search);
         const ticketId = params.get('id');
-
-        // 📌 Lấy thông tin từ LocalStorage
-        const ticketInfo = JSON.parse(localStorage.getItem(ticketId));
-
-        if (ticketInfo) {
-            document.getElementById('movie').textContent = ticketInfo.movie;
-            document.getElementById('cinema').textContent = ticketInfo.cinema;
-            document.getElementById('room').textContent = ticketInfo.room;
-            document.getElementById('seat').textContent = ticketInfo.seat;
-            document.getElementById('time').textContent = ticketInfo.time;
-            document.getElementById('day').textContent = ticketInfo.day;
-            document.getElementById('type').textContent = ticketInfo.type;
-        } else {
-            alert("Không tìm thấy thông tin vé!");
+        
+        console.log("Ticket ID lấy được từ URL:", ticketId);  
+        
+        if (!ticketId) {
+            alert("Không tìm thấy mã vé!");
+            return;
         }
-    </script>
+
+        // Kết nối Firebase và lấy dữ liệu
+        try {
+            const dbRef = ref(database);
+            console.log("Đang fetch dữ liệu từ Firebase:", `tickets/${ticketId}`);
+
+            const snapshot = await get(child(dbRef, `tickets/${ticketId}`));
+            
+            console.log("Dữ liệu trả về từ Firebase:", snapshot.val());
+
+            if (snapshot.exists()) {
+                const ticket = snapshot.val();
+                document.getElementById('movie').textContent = ticket.movie;
+                document.getElementById('cinema').textContent = ticket.cinema;
+                document.getElementById('room').textContent = ticket.room;
+                document.getElementById('seat').textContent = ticket.seat;
+                document.getElementById('time').textContent = ticket.time;
+                document.getElementById('day').textContent = ticket.day;
+                document.getElementById('type').textContent = ticket.type || '';
+            } else {
+                alert("Không tìm thấy thông tin vé!");
+                console.error("Không tìm thấy thông tin vé!");
+            }
+        } catch (error) {
+            console.error("Lỗi khi kết nối Firebase:", error);
+            alert("Lỗi khi tải thông tin vé!");
+        }
+    }
+
+    window.onload = loadTicket;
+</script>
 
 
 
