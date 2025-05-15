@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingeBox Cinema</title>
+    <link rel="icon" type="image/png" href="assets/images/bingebox-removebg-preview (1).png">
+
+    <!-- Nhúng font và icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link file css -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+
+    <style>
+        h1 {
+            font-size: 25px;
+            color: var(--color-text);
+            margin-bottom: 15px;
+        }
+
+        .promotion-form {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .promotion-form label {
+            margin-right: 5px;
+            color: black;
+            padding: 5px;
+            background-color: rgb(255, 255, 255);
+            width: 230px;
+            height: 130px;
+            border-radius: 15px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        input {
+            cursor: pointer;
+            margin-right: 25px;
+            width: 35px;
+            height: auto;
+
+        }
+
+        .payment-form label{
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .payment-form p{
+            font-weight: 500;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="payment-container" id="payment">
+        <h1>Khuyến mãi</h1>
+        <form class="promotion-form">
+            <label>
+                <input type="radio" name="promotion" value="normal">
+                <h2>Giảm 50%</h2>
+                <p>Dành tặng bạn mới</p>
+            </label>
+            <label>
+                <input type="radio" name="promotion" value="vip">
+                <h2>Giảm 50%</h2>
+                <p>Dành tặng bạn mới</p>
+            </label>
+        </form>
+
+
+        <h1>Thanh toán</h1>
+        <form class="payment-form">
+            <label>
+                <input type="radio" name="promotion" value="normal">
+                <img src="../assets/images/actors/anthonymackie.webp" alt="">
+                <p>Ví ShopeePay</p>
+            </label>
+        </form>
+
+    </div>
+
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/payment.js"></script>
+</body>
+
+</html>
