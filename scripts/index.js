@@ -1,7 +1,7 @@
 import { movieComingSoons, movies } from './objectForCinema.js';
 
 
-var movieList = document.getElementById('film-list');
+let movieList = document.getElementById('film-list');
 movieList.innerHTML = "";
 
 movies.forEach(item => {
@@ -15,7 +15,7 @@ movies.forEach(item => {
                         <div class="film-poster">
                             <img src="${item.imageUrl}" alt="${item.name}">
                             <div class="inner-icon">
-                                <a href="${item.trailer}" target="_blank"><i class="fa-regular fa-circle-play"></i></a>
+                                <i class="fa-regular fa-circle-play"></i>
                             </div>
                             <div class="inner-button">
                                 <button>
@@ -44,7 +44,37 @@ movies.forEach(item => {
     colDiv.addEventListener('click', function () {
         window.location.href = `movieDetail.html?id=${item.id}`; //Truyền id của đối tượng phim được click
     });
+
+    //Viết sự kiện ấn vào icon trailer
+    const playTrailer = colDiv.querySelector('.inner-icon');
+    const movieTrailer = document.getElementById('inner-iframe');
+    const closeTrailer = document.getElementById('close');
+    const overlay = document.getElementById('overlay');
+
+    playTrailer.addEventListener('click', function (event) {
+        event.stopPropagation();
+
+        overlay.style.display = 'block';
+        movieTrailer.style.display = 'block';
+        closeTrailer.style.display = 'block';
+
+        // Cập nhật src iframe đúng trailer của phim được click
+        movieTrailer.innerHTML = `
+            <iframe width="860" height="515" src="${item.trailer}" frameborder="0" allowfullscreen></iframe>
+        `;
+    });
+
+    closeTrailer.addEventListener('click', function () {
+        overlay.style.display = 'none';
+        movieTrailer.style.display = 'none';
+        closeTrailer.style.display = 'none';
+
+        // Reset iframe để ngừng video
+        movieTrailer.innerHTML = '';
+    });
+
 });
+
 
 
 var movieComingSoonList = document.getElementById('film-comingsoon-list');
@@ -85,7 +115,7 @@ movieComingSoons.forEach(item => {
     movieComingSoonList.appendChild(colDiv2);
 
     colDiv2.addEventListener('click', function () {
-        window.location.href = `movieDetail.html?id=${item.id}`; 
+        window.location.href = `movieDetail.html?id=${item.id}`;
     });
 });
 

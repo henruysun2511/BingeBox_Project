@@ -30,7 +30,7 @@
 
 <body>
 
-    <h1>Thông Tin Vé Của Bạn</h1>
+ <h1>Thông Tin Vé Của Bạn</h1>
     <div id="ticket-info">
         <p><strong>Phim:</strong> <span id="movie"></span></p>
         <p><strong>Rạp:</strong> <span id="cinema"></span></p>
@@ -42,12 +42,12 @@
     </div>
 
     <script>
-        // Lấy ID từ URL
+        // 📌 Lấy ID từ URL
         const params = new URLSearchParams(window.location.search);
         const ticketId = params.get('id');
 
-        // Lấy thông tin từ SessionStorage
-        const ticketInfo = JSON.parse(sessionStorage.getItem(ticketId));
+        // 📌 Lấy thông tin từ LocalStorage
+        const ticketInfo = JSON.parse(localStorage.getItem(ticketId));
 
         if (ticketInfo) {
             document.getElementById('movie').textContent = ticketInfo.movie;
