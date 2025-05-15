@@ -89,9 +89,6 @@ btnX.addEventListener('click', ()=>{
 
 
 
-
-
-
 //Sinh qr tự động cho từng phim đó
 // document.addEventListener("DOMContentLoaded", function () {
 //     const movieData = getRandomMovie();
@@ -108,15 +105,6 @@ btnX.addEventListener('click', ()=>{
 // });
 
 
-//Đảm bảo mã JS chỉ chạy sau khi DOM đã tải xong
-document.addEventListener("DOMContentLoaded", function () {
-    const movieData = '{"name": "Avengers: Endgame", "time": "10:00 AM"}'; // Dữ liệu mẫu
-    new QRCode(document.getElementById("qrcode"), {
-        text: movieData,  // Dữ liệu được mã hóa vào QR code
-        width: 100,
-        height: 100
-    });
-});
 
 
 

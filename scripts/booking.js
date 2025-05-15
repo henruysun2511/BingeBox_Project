@@ -35,6 +35,12 @@ if (bookingInfo) {
                         <div class="seat-info-container">
                         </div>
 
+                        <div class="food-info-container">
+                        </div>
+
+                        <div class="promotion-info-container">
+                        </div>
+
                         <div class="total-price">
                             <div class="total-price-title">Tổng tiền</div>
                             <div class="total-price-number">0 đ</div>

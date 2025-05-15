@@ -92,7 +92,6 @@ btnMinus.forEach(minus => {
             }
         }
 
-        // sessionStorage.setItem('selectedFoods', JSON.stringify(selectedFoods));
         console.log(selectedFoods);
         renderFood();
     });

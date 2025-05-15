@@ -23,12 +23,12 @@ if (billInfo) {
     });
 
     //render thông tin vé vào cột, hàng sinh tự động
+
     if (ticketBills) {
         const tbody = document.querySelector('tbody');
         tbody.innerHTML = '';
 
         ticketBills.forEach(ticketBill => {
-            stt += 1;
 
             //quét qr điều hướng sang trang vé
             const ticketUrl = new URL(window.location.origin + '/ticket.html');
@@ -48,7 +48,7 @@ if (billInfo) {
             });
 
             let row = document.createElement('tr');
-            row.innerHTML = `<td>${stt}</td>
+            row.innerHTML = `<td>${ticketBill.id}</td>
                         <td>${ticketBill.movie}</td>
                         <td>${ticketBill.cinema}</td>
                         <td>${ticketBill.time}</td>
