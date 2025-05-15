@@ -27,10 +27,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
-        .section-1{
+        .section-1 {
             margin-top: 120px;
         }
-        .section-1 .inner-title{
+
+        .section-1 .inner-title {
             color: var(--color-text);
             text-align: center;
             font-size: 35px;
@@ -129,11 +130,16 @@
             margin-left: 10px;
         }
 
-        .movie-ticket .seat-info {
+        .movie-ticket .seat-info{
             display: flex;
             justify-content: space-between;
             border-top: 2px dashed gray;
             padding: 15px 0;
+            color: var(--color-text);
+        }
+
+        .movie-ticket .seat-selected{
+            width: 300px;
         }
 
         .movie-ticket .total-price {
@@ -154,16 +160,37 @@
             color: orange;
         }
 
-        /* css cho section-4 */
-       
-        .button{
+        /* css cho sự kiện nút */
+        .button-next {
+            margin-top: 30px;
             color: var(--color-text);
             background-color: var(--color-blue);
             padding: 5px 20px;
             border-radius: 5px;
-            font-size: 15px;
+            font-size: 25px;
             font-weight: 600;
             cursor: pointer;
+            text-align: center;
+        }
+
+        .button-prev {
+            margin-top: 10px;
+            color: var(--color-yellow);
+            text-align: center;
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+        .button-prev:hover {
+            color: var(--color-text);
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
         }
     </style>
 
@@ -183,7 +210,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-8">
-                    <div id="seat"></div>
+                    <!-- Nhúng ghế -->
+                    <div id="seat" class="step active"></div>
+                    <!-- Nhúng đồ ăn -->
+                    <div id="food" class="step"></div>
+                    <!-- Nhúng thanh toán -->
+                    <div id="payment" class="step"></div>
                 </div>
                 <div class="col-4">
                     <div class="movie-ticket">
@@ -214,15 +246,18 @@
                         </div>
 
                         <div class="seat-info-container">
-                            <div class="seat-info">
+                            <!-- <div class="seat-info">
                                 <div class="seat-selected">
                                     <div class="seat-total">2x Ghế đơn</div>
                                     <div class="seat-number">Ghế: A1, A2</div>
                                 </div>
                                 <div class="seat-price">180.000 đ</div>
-                            </div>
+                            </div> -->
                         </div>
 
+                        <div class="food-info-container"></div>
+
+                        <div class="promotion-info-container"></div>
 
                         <div class="total-price">
                             <div class="total-price-title">Tổng tiền</div>
@@ -230,24 +265,14 @@
                         </div>
                     </div>
                     <div class="button-next">Tiếp theo</div>
+                    <div class="button-prev">Quay lại</div>
                 </div>
             </div>
         </div>
     </div>
 
-    
 
     <div id="footer"></div>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -266,7 +291,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/loadComponents.js"></script>
     <script src="scripts/booking.js"></script>
-\
+
 </body>
 
 </html>

@@ -1512,7 +1512,7 @@ const movieComingSoons =
             
         ],
         imageUrl: './assets/images/movies/comingsoons/28namsau.webp',
-        bigPoster: './assets/images/movieBigPosters/BPdiadao.webp',
+        bigPoster: './assets/images/movieBigPosters/BP28.jpg',
         trailer: 'https://www.youtube.com/embed/nHfMFnAKfpE?si=OB3rRjVLLgiMR6kn',
         cinemas: [
             {
@@ -1541,7 +1541,7 @@ const movieComingSoons =
             } 
         ],
         imageUrl: './assets/images/movies/comingsoons/nhiemvubatkhathi.webp',
-        bigPoster: './assets/images/movieBigPosters/BPsnowwhite.webp',
+        bigPoster: './assets/images/movieBigPosters/BPmisssion.jpg',
         trailer: 'https://www.youtube.com/embed/no2HdwAX8jI?si=v3rB6F-i3zbH8bdw',
         cinemas: [
             {
@@ -1563,26 +1563,29 @@ const movieComingSoons =
     },
     {
         id: 'MV016',
-        name: 'SUPERMAN',
+        name: 'THẾ GIỚI KHỦNG LONG: TÁI SINH',
         duration: 'Đang cập nhật',
-        releaseDate: '11/07/2025',
+        releaseDate: '4/07/2025',
         nation: 'Mỹ',
-        director: 'James Gunn',
-        categories: ['Hành động', 'Siêu anh hùng'],
+        director: 'Gareth Edwards',
+        categories: ['Hành động', 'Phiêu lưu'],
         agePermisson: 'K',
         subtitle: 'Phụ đề',
         format: '2D',
-        script: 'Mùa hè tới đây, Warner Bros. Pictures sẽ mang “Superman” - phim điện ảnh đầu tiên của DC Studios đến các rạp chiếu trên toàn cầu. Với phong cách riêng biệt của mình, James Gunn sẽ khắc họa người hùng huyền thoại trong vũ trụ DC hoàn toàn mới, với sự kết hợp độc đáo của các yếu tố hành động đỉnh cao, hài hước và vô cùng cảm xúc. Một Superman với lòng trắc ẩn và niềm tin vào sự thiện lương của con người sẽ xuất hiện đầy hứa hẹn trên màn ảnh.',
+        script: 'Tinh hoa hội tụ! Bộ ba Scarlett Johansson, Mahershala Ali và Jonathan Bailey sẽ mở ra 1 kỷ nguyên khủng long hoàn toàn mới! THẾ GIỚI KHỦNG LONG: TÁI SINH | Dự kiến khởi chiếu: 04.07.2025.',
         actors: [
             {
-                actorName: 'JDavid Corenswet',
-                actorImage: './assets/images/actors/david.jpg'
+                actorName: 'Rexy',
+                actorImage: './assets/images/actors/rexy.jpg'
+            },
+            {
+                actorName: 'Blue',
+                actorImage: './assets/images/actors/blue.jpg'
             }
-    
         ],
-        imageUrl: './assets/images/movies/comingsoons/superman.webp',
-        bigPoster: './assets/images/movieBigPosters/BPfantastic4.avif',
-        trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
+        imageUrl: './assets/images/movies/comingsoons/thegioikhunglong.webp',
+        bigPoster: './assets/images/movieBigPosters/BPjurrasic.jpg',
+        trailer: 'https://www.youtube.com/embed/jan5CFWs9ic?si=eiIJrNve2GxX6Gw1',
         cinemas: [
             {
                 cinemaName: 'Bingebox Cinema Chùa Bộc',
@@ -1603,6 +1606,46 @@ const movieComingSoons =
     },
     {
         id: 'MV017',
+        name: 'SUPERMAN',
+        duration: 'Đang cập nhật',
+        releaseDate: '11/07/2025',
+        nation: 'Mỹ',
+        director: 'James Gunn',
+        categories: ['Hành động', 'Siêu anh hùng'],
+        agePermisson: 'K',
+        subtitle: 'Phụ đề',
+        format: '2D',
+        script: 'Mùa hè tới đây, Warner Bros. Pictures sẽ mang “Superman” - phim điện ảnh đầu tiên của DC Studios đến các rạp chiếu trên toàn cầu. Với phong cách riêng biệt của mình, James Gunn sẽ khắc họa người hùng huyền thoại trong vũ trụ DC hoàn toàn mới, với sự kết hợp độc đáo của các yếu tố hành động đỉnh cao, hài hước và vô cùng cảm xúc. Một Superman với lòng trắc ẩn và niềm tin vào sự thiện lương của con người sẽ xuất hiện đầy hứa hẹn trên màn ảnh.',
+        actors: [
+            {
+                actorName: 'JDavid Corenswet',
+                actorImage: './assets/images/actors/david.jpg'
+            }
+    
+        ],
+        imageUrl: './assets/images/movies/comingsoons/superman.webp',
+        bigPoster: './assets/images/movieBigPosters/BPsuperman.jpg',
+        trailer: 'https://www.youtube.com/embed/8B1EtVPBSMw?si=dVL8O6l7klIwwcfs',
+        cinemas: [
+            {
+                cinemaName: 'Bingebox Cinema Chùa Bộc',
+                cinemaAddress: 'Số 1 Chùa Bộc, Đống Đa, Hà Nội',
+                schedules: []
+            },
+            {
+                cinemaName: 'Bingebox Cinema Hoàn Kiếm',
+                cinemaAddress: '272 Đ. Võ Chí Công, Phú Thượng, Tây Hồ, Hà Nội',
+                schedules: []
+            },
+            {
+                cinemaName: 'Bingebox Cinema Metropolis Liễu Giai',
+                cinemaAddress: '29 P. Liễu Giai, Ngọc Khánh, Ba Đình, Hà Nội 100000',
+                schedules: []
+            }
+        ]
+    },
+    {
+        id: 'MV018',
         name: 'BỘ TỨ SIÊU ĐẲNG: BƯỚC ĐẦU TIÊN',
         duration: 'Đang cập nhật',
         releaseDate: '2025-07-25',
@@ -1617,15 +1660,19 @@ const movieComingSoons =
         actors: [
             {
                 actorName: 'Pedro Pascal',
-                actorImage: './assets/images/actors/jackblack.webp'
+                actorImage: './assets/images/actors/pedro.jpg'
             },
             {
                 actorName: 'Vanessa Kirby',
-                actorImage: './assets/images/actors/jasonmomooa.jpg'
+                actorImage: './assets/images/actors/kirby.webp'
             },
             {
                 actorName: 'Joseph Quinn',
-                actorImage: './assets/images/actors/emmamyer.jpg'
+                actorImage: './assets/images/actors/quinn.jpg'
+            },
+            {
+                actorName: 'Ebon Moss-Bachrach',
+                actorImage: './assets/images/actors/ebon.jpg'
             }
         ],
         imageUrl: './assets/images/movies/comingsoons/fantastic4.jpeg',
