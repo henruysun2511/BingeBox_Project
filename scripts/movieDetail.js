@@ -93,7 +93,7 @@ if (movie) {
 
     const movieTrailer = document.getElementById('inner-iframe');
     movieTrailer.innerHTML = `
-        <iframe width="860" height="515" src="${movie.trailer}"
+        <iframe width="860" height="515" frameborder="0" src="${movie.trailer}"
             allowfullscreen></iframe>`;
 
     //Viết sự kiện cho nút trailer

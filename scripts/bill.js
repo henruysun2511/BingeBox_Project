@@ -9,29 +9,34 @@ if (billInfo) {
 
         // Lặp qua từng ghế trong loại đó
         seats.forEach(seat => {
-            stt +=1;
-            ticketBills.push({
-                id: stt,
+            stt += 1;
+            const ticket = {
+                id: `ticket-${stt}`,
                 movie: billInfo.bookingName,
                 room: billInfo.bookingRoom,
                 cinema: billInfo.bookingCinema,
                 time: billInfo.bookingTime,
                 day: billInfo.bookingDate,
                 seat: seat,
-            });
+                type: seatType.replace('seat-', '')
+            };
+
+            // Lưu thông tin vé vào LocalStorage
+            localStorage.setItem(ticket.id, JSON.stringify(ticket));
+            ticketBills.push(ticket);
         });
     });
 
     //render thông tin vé vào cột, hàng sinh tự động
 
-    if (ticketBills) {
+    if (ticketBills.length > 0) {
         const tbody = document.querySelector('tbody');
         tbody.innerHTML = '';
 
         ticketBills.forEach(ticketBill => {
 
             //quét qr điều hướng sang trang vé
-            const ticketUrl = new URL(window.location.origin + '/ticket.html');
+            const ticketUrl = new URL('https://henruysun2511.github.io/BingeBox_Project/ticket.html');
             ticketUrl.searchParams.set('id', ticketBill.id);
 
             //Tạo qr code

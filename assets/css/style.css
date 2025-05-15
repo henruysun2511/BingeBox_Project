@@ -1,4 +1,3 @@
-
 /*Header*/
 .header {
     background-color: #2E4BA6;
@@ -500,7 +499,7 @@ select {
     opacity: 0;
 }
 
-.section-1 .film-poster .inner-icon a {
+.section-1 .film-poster .inner-icon i {
     color: #004aad;
 }
 
@@ -520,21 +519,55 @@ select {
     width: auto;
 }
 
-.film-release{
+.film-release {
     color: gray;
 }
+
 /* Css cho cột sidebar */
 
 
-.promotion-title{
+.promotion-title {
     color: var(--color-text);
     font-size: 18px;
     padding-left: 8px
 }
-.promotion-image{
+
+.promotion-image {
     background-color: #004aad;
     width: 230px;
     height: 100px;
     border-radius: 15px;
     margin: 10px;
+}
+
+/* css cho trailer */
+#overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: none;
+}
+
+#close {
+    position: fixed;
+    top: 17%;
+    left: 79%;
+    font-size: 35px;
+    z-index: 6;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+.inner-iframe {
+    text-align: center;
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    z-index: 5;
+    display: none;
 }
