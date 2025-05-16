@@ -43,10 +43,14 @@ if (billInfo) {
                 time: billInfo.bookingTime,
                 day: billInfo.bookingDate,
                 seat: seat,
-                type: seatType.replace('seat-', '')
+                type: seatType.replace('seat-', ''),
+                subtitle: billInfo.bookingSubtitle,
+                format: billInfo.bookingFormat
             };
 
-            // 🔥 Lưu thông tin vào Firebase
+            console.log(ticket);
+
+            // Lưu thông tin vào Firebase
             firebase.database().ref('tickets/' + ticket.id).set(ticket);
 
             ticketBills.push(ticket);

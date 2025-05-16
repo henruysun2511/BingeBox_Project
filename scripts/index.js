@@ -89,8 +89,7 @@ movieComingSoons.forEach(item => {
                                             <div class="film-poster">                                             
                                                 <img src="${item.imageUrl}">
                                                 <div class="inner-icon">
-                                                    <a href="https://www.bhdstar.vn/"><i
-                                                            class="fa-regular fa-circle-play"></i></a>
+                                                   <i class="fa-regular fa-circle-play"></i>
                                                 </div>                                               
                                             </div>
                                         </a>
@@ -116,6 +115,34 @@ movieComingSoons.forEach(item => {
 
     colDiv2.addEventListener('click', function () {
         window.location.href = `movieDetail.html?id=${item.id}`;
+    });
+
+    //Viết sự kiện ấn vào icon trailer
+    const playTrailer = colDiv2.querySelector('.inner-icon');
+    const movieTrailer = document.getElementById('inner-iframe');
+    const closeTrailer = document.getElementById('close');
+    const overlay = document.getElementById('overlay');
+
+    playTrailer.addEventListener('click', function (event) {
+        event.stopPropagation();
+
+        overlay.style.display = 'block';
+        movieTrailer.style.display = 'block';
+        closeTrailer.style.display = 'block';
+
+        // Cập nhật src iframe đúng trailer của phim được click
+        movieTrailer.innerHTML = `
+            <iframe width="860" height="515" src="${item.trailer}" frameborder="0" allowfullscreen></iframe>
+        `;
+    });
+
+    closeTrailer.addEventListener('click', function () {
+        overlay.style.display = 'none';
+        movieTrailer.style.display = 'none';
+        closeTrailer.style.display = 'none';
+
+        // Reset iframe để ngừng video
+        movieTrailer.innerHTML = '';
     });
 });
 
