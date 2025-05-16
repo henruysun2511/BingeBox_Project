@@ -105,24 +105,25 @@
             <div class="ticket-info">
                 <h3>Phim</h3>
                 <div class="movie-info">
-                    <div class="movie-item" id="movie">Thế giới khủng long</div>
-                    <div class="movie-item" id="format">2D</div>
-                    <div class="movie-item" id="subtitle">Phụ đè</div>
+                    <div class="movie-item" id="movie"></div>
+                    <div class="movie-item" id="format"></div>
+                    <div class="movie-item" id="subtitle"></div>
                 </div>
             </div>
             <div class="ticket-info">
                 <h3>Rạp</h3>
                 <div class="movie-info">
-                    <div class="movie-item" id="cinema">BingeBox Cinema Chùa Bộc</div>
-                    <div class="movie-item" id="time">22:00</div>
-                    <div class="movie-item" id="day">27/06/2025</div>
+                    <div class="movie-item" id="cinema"></div>
+                    <div class="movie-item" id="time"></div>
+                    <div class="movie-item" id="day"></div>
+                    <div class="movie-item" id="room"></div>
                 </div>
             </div>
             <div class="ticket-info">
                 <h3>Ghế</h3>
                 <div class="movie-info">
-                    <div class="movie-item" id="seat">A4</div>
-                    <div class="movie-item" id="type">Thường</div>
+                    <div class="movie-item" id="seat"></div>
+                    <div class="movie-item" id="type"></div>
                 </div>
             </div>
             <h2>Chúc quý khách xem phim vui vẻ</h2>
@@ -137,6 +138,8 @@
 
 
     <script type="module">
+
+
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
         import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-database.js";
 
@@ -158,6 +161,7 @@
 
         // Lấy thông tin từ URL
         async function loadTicket() {
+
             const params = new URLSearchParams(window.location.search);
             const ticketId = params.get('id');
 
@@ -179,10 +183,11 @@
 
                 if (snapshot.exists()) {
                     const ticket = snapshot.val();
-                    document.getElementById('movie').textContent = ticket.movie;
-                    document.getElementById('cinema').textContent = ticket.cinema;
+                    console.log(ticket);
+                    document.getElementById('movie').innerHTML = `${ticket.movie}`;
+                    document.getElementById('cinema').innerHTML = `${ticket.cinema}`;
                     document.getElementById('room').textContent = ticket.room;
-                    document.getElementById('seat').textContent = ticket.seat; 
+                    document.getElementById('seat').textContent = ticket.seat;
                     document.getElementById('time').textContent = ticket.time;
                     document.getElementById('day').textContent = ticket.day;
                     document.getElementById('subtitle').textContent = ticket.subtitle;
@@ -199,6 +204,7 @@
         }
 
         window.onload = loadTicket;
+
     </script>
 
 
