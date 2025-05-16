@@ -184,8 +184,8 @@
                 if (snapshot.exists()) {
                     const ticket = snapshot.val();
                     console.log(ticket);
-                    document.getElementById('movie').innerHTML = `${ticket.movie}`;
-                    document.getElementById('cinema').innerHTML = `${ticket.cinema}`;
+                    document.getElementById('movie').textContent = ticket.movie;
+                    document.getElementById('cinema').textContent = ticket.cinema;
                     document.getElementById('room').textContent = ticket.room;
                     document.getElementById('seat').textContent = ticket.seat;
                     document.getElementById('time').textContent = ticket.time;
