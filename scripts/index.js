@@ -1,11 +1,10 @@
-import { movieComingSoons, movies } from './objectForCinema.js';
+import { movieComingSoons, movies, news } from './objectForCinema.js';
 
-
+//Render cho phim đang chiếu
 let movieList = document.getElementById('film-list');
 movieList.innerHTML = "";
-
 movies.forEach(item => {
-    var colDiv = document.createElement('div');
+    let colDiv = document.createElement('div');
     colDiv.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6";
 
     colDiv.innerHTML = `
@@ -75,12 +74,11 @@ movies.forEach(item => {
 
 });
 
-
-
-var movieComingSoonList = document.getElementById('film-comingsoon-list');
+//Render cho phim sắp chiếu
+let movieComingSoonList = document.getElementById('film-comingsoon-list');
 movieComingSoonList.innerHTML = "";
 movieComingSoons.forEach(item => {
-    var colDiv2 = document.createElement('div');
+    let colDiv2 = document.createElement('div');
     colDiv2.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6";
 
     colDiv2.innerHTML = `<div class="inner-film">
@@ -146,7 +144,56 @@ movieComingSoons.forEach(item => {
     });
 });
 
+//Render cho cột khuyến mãi
+// let promotionList = document.querySelector('.promotion');
+// promotionList.innerHTML='';
+// if(news){
+//     news.forEach(newItem => {
+//         const firstImage = newItem.images[0];
+//         let promotionItem = document.createElement('div');
+//         promotionItem.className = 'promotion-image';
 
+//         promotionItem.innerHTML = `<img src="${firstImage}">`;
+//         promotionList.appendChild(promotionItem);
+//     });
+// }
+
+//Render cho phần tin tức
+if (news) {
+    // Chuyển object thành mảng, lấy 4 phần tử đầu tiên
+    const items = Object.values(news).slice(0, 4);
+
+    // Lấy phần tử đầu tiên render vào phần big
+    const firstItem = items[0];
+    if (firstItem) {
+        const firstImage = firstItem.images[0].src;
+        const caption = firstItem.images[0].caption;
+        const bigNew = document.querySelector('.new-item-big');
+        
+        bigNew.innerHTML = `
+            <img src="${firstImage}" alt="">
+            <div class="new-title">${caption}</div>
+        `;
+    }
+
+    // Render các phần tử còn lại vào phần small
+    const smallNew = document.querySelector('.new-item-small');
+    smallNew.innerHTML = '';
+    items.slice(1).forEach(newItem => {
+        const firstImage = newItem.images[0].src;
+        const caption = newItem.images[0].caption;
+
+        const smallNewItem = document.createElement('div');
+        smallNewItem.className = 'new-item';
+        
+        smallNewItem.innerHTML = `
+            <img src="${firstImage}" alt="">
+            <div class="new-title">${caption}</div>
+        `;
+
+        smallNew.appendChild(smallNewItem);
+    });
+}
 
 
 

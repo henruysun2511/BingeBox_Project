@@ -1,10 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/base.css">
+    <style>
+        .header {
+            background-color: #2E4BA6;
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+            padding: 0 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .header .inner-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .inner-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .header .inner-wrap .inner-logo a {
+            margin-right: 10px;
+        }
+
+        .header .inner-wrap .inner-logo img {
+            height: 80px;
+            width: auto;
+            margin-right: 8px;
+
+        }
+
+        .header .inner-wrap .inner-logo p {
+            color: white;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .header .inner-wrap .inner-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .header .inner-wrap .inner-menu ul li a {
+            display: inline-block;
+            padding: 35px 20px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .header .inner-wrap .inner-menu ul li a:hover {
+            background-color: blue;
+        }
+
+        .header .inner-wrap .inner-regist {
+            height: 80px;
+        }
+
+        .header .inner-wrap .inner-regist ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+            height: 100%;
+
+        }
+
+        .header .inner-regist ul li {
+            margin-right: 10px;
+        }
+
+        .header .inner-regist ul li button {
+            padding: 10px 25px;
+            border-radius: 30px;
+            border: 0;
+            font-size: 15px;
+            font-weight: 600;
+
+        }
+
+        .header .inner-regist ul li .button a {
+            color: white;
+            font-weight: 400;
+        }
+
+        .header .inner-regist ul li .button-dn {
+            background: linear-gradient(90deg, #5de0e6, #004aad);
+        }
+
+        .header .inner-regist ul li .button-dk {
+            background: linear-gradient(90deg, #ff5757, #8c52ff);
+        }
+
+        .header .inner-regist ul li .button-dn:hover {
+            padding: 10px 25px;
+            border-radius: 30px;
+            border: 0;
+            background: linear-gradient(90deg, #ff5757, #8c52ff);
+
+        }
+
+        .header .inner-regist ul li .button-dk:hover {
+            padding: 10px 25px;
+            border-radius: 30px;
+            border: 0;
+            background: linear-gradient(90deg, #5de0e6, #004aad);
+
+        }
+    </style>
 </head>
 
 <body>
@@ -29,17 +145,18 @@
             </div>
             <div class="inner-regist">
                 <ul>
-                    
+
                     <li><button class="button button-dn">
-                        <a href="#">Đăng nhập</a></button></li>
+                            <a href="#">Đăng nhập</a></button></li>
                     <li><button class="button button-dk">
                             <a href="#">Đăng ký</a></button></li>
-                   
+
                 </ul>
             </div>
         </div>
     </div>
 
-    
+
 </body>
+
 </html>

@@ -18,6 +18,7 @@
 body{
     font-family: var(--font); /*toàn bộ trang font này*/   
     background: linear-gradient(90deg, #000000, #3533cd);
+    overflow-x: hidden;
 } 
 
 a{
@@ -25,14 +26,7 @@ a{
 }
 
 
-/* .container { 
-    width: 100%;
-    max-width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
-}
-    I
-
+/* I
 @media (max-width: 1200px) {
     .container {
     max-width: 960px;
