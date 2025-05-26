@@ -11,7 +11,6 @@ selectShowtime.disabled = true;
 const quickticketButton = document.querySelector('.buying');
 quickticketButton.disabled = true;
 
-
 if (movies.length > 0) {
     renderMovieSelect();
 }
@@ -35,8 +34,6 @@ function renderCinemaSelectByMovieName(movieName) {
             selectCinema.appendChild(option);
         });
     });
-
-
 }
 
 function renderDateSelectByMovieNameAndCinemaName(movieName, cinemaName) {
@@ -53,7 +50,6 @@ function renderDateSelectByMovieNameAndCinemaName(movieName, cinemaName) {
             }
         });
     });
-
 }
 
 function renderShowtimeSelectByMovieNameCinemaNameAndDate(movieName, cinemaName, date) {

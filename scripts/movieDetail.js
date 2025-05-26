@@ -55,7 +55,7 @@ if (movie) {
                     <div class="inner-age">${movie.agePermisson}</div>
                     <div class="inner-button">
                         <a class="button button-one" id="button-trailer">TRAILER</a>
-                        <a class="button button-two">ĐẶT VÉ</a>
+                        <a href="#target-section" class="button button-two">ĐẶT VÉ</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ if (movie) {
             <div class="inner-wrap">
                 <div class="inner-content">
                     <div class=" list inner-list"></div>
-                    <h2 class="inner-title">Nội dung</h2>
+                    <h2 class="inner-title" id="target-section">Nội dung</h2>
                 </div>
                 <p>${movie.script}</p>
             </div>
@@ -230,7 +230,6 @@ if (movie) {
         let buttonRemind = document.querySelector('.button-two');
         buttonRemind.style.backgroundColor = '#FFC107';
     }
-
 
 } else {
     console.error('Phim không tồn tại');

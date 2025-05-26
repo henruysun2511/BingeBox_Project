@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+  .promo-container {
+    padding: 20px 10px;
+  }
+
+  h1#promo-title {
+    font-size: 20px;
+  }
+
+  p#promo-subtitle.extra {
+    font-size: 14px;
+  }
+
+  #promo-content {
+    font-size: 14px;
+  }
+
+  .btn-back {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

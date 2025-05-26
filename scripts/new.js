@@ -1,9 +1,8 @@
-import { news } from './objectForCinema.js';
+import { news } from './objectForCinema.js'; 
 
 document.addEventListener('DOMContentLoaded', function() {
     // Get all news items on the index page
     const newsItems = document.querySelectorAll('.news-item');
-    console.log(newsItems);
     
     // Add click event listener to each news item
     newsItems.forEach(item => {
@@ -112,7 +111,7 @@ function loadNewsItems(page, itemsPerPage) {
     newItems.forEach(item => {
         item.addEventListener('click', function() {
             const newsId = this.getAttribute('data-id');
-            window.location.href = `detail-new.html?id=${newsId}`;
+            window.location.href = `newDetail.html?id=${newsId}`;
         });
     });
 }

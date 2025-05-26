@@ -1,0 +1,78 @@
+body {
+  background: linear-gradient(to right, #0a0a3c, #10006b);
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.promo-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px 20px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.promo-container img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #ffcc00;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.extra {
+  color: #ffcc00;
+  text-align: center;
+}
+
+.btn-back {
+  background-color: #ffcc00;
+  color: #16063f;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 30px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #e6b800;
+}
+
+.has-fixed-header {
+  padding-top: 90px;
+}
+
+h1#promo-title {
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+p#promo-subtitle.extra {
+  margin-top: 0;
+  font-size: 1rem;
+}
