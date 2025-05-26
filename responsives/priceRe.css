@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+  .pricing-table {
+    font-size: 12px;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 6px 4px;
+  }
+
+  .ticket-title h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .note {
+    font-size: 12px;
+  }
+}
