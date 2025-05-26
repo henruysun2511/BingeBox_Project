@@ -150,9 +150,7 @@ if (movie) {
         if (firstScheduleItem) {
             firstScheduleItem.click();
         }
-
         scheduleItem.addEventListener('click', () => hienThiSuatChieuTheoNgay(scheduleItem.innerHTML));
-
     });
 
     //Viết sự kiên ấn ngày chiếu ra lịch chiếu tương ứng
@@ -164,7 +162,6 @@ if (movie) {
             let showtimeItem = document.createElement('div');
             showtimeItem.className = 'showtime-item';
             showtimeItem.innerHTML = ` <div class="cinema">${cinema.cinemaName}</div>`;
-
 
             showtimes.appendChild(showtimeItem);
 

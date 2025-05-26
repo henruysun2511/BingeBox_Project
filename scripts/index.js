@@ -3,11 +3,12 @@ import { movieComingSoons, movies, news } from './objectForCinema.js';
 //Render cho phim đang chiếu
 let movieList = document.getElementById('film-list');
 movieList.innerHTML = "";
-movies.forEach(item => {
-    let colDiv = document.createElement('div');
-    colDiv.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6";
+if (movies) {
+    movies.forEach(item => {
+        let colDiv = document.createElement('div');
+        colDiv.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6";
 
-    colDiv.innerHTML = `
+        colDiv.innerHTML = `
             <div class="inner-film">
                 <div class="film-detail">
                     <a>
@@ -37,51 +38,54 @@ movies.forEach(item => {
             </div>
         `;
 
-    movieList.appendChild(colDiv);
+        movieList.appendChild(colDiv);
 
-    //Click vào phim sẽ chuyển đến trang chi tiết phim
-    colDiv.addEventListener('click', function () {
-        window.location.href = `movieDetail.html?id=${item.id}`; //Truyền id của đối tượng phim được click
-    });
+        //Click vào phim sẽ chuyển đến trang chi tiết phim
+        colDiv.addEventListener('click', function () {
+            window.location.href = `movieDetail.html?id=${item.id}`; //Truyền id của đối tượng phim được click
+        });
 
-    //Viết sự kiện ấn vào icon trailer
-    const playTrailer = colDiv.querySelector('.inner-icon');
-    const movieTrailer = document.getElementById('inner-iframe');
-    const closeTrailer = document.getElementById('close');
-    const overlay = document.getElementById('overlay');
+        //Viết sự kiện ấn vào icon trailer
+        const playTrailer = colDiv.querySelector('.inner-icon');
+        const movieTrailer = document.getElementById('inner-iframe');
+        const closeTrailer = document.getElementById('close');
+        const overlay = document.getElementById('overlay');
 
-    playTrailer.addEventListener('click', function (event) {
-        event.stopPropagation();
+        playTrailer.addEventListener('click', function (event) {
+            event.stopPropagation();
 
-        overlay.style.display = 'block';
-        movieTrailer.style.display = 'block';
-        closeTrailer.style.display = 'block';
+            overlay.style.display = 'block';
+            movieTrailer.style.display = 'block';
+            closeTrailer.style.display = 'block';
 
-        // Cập nhật src iframe đúng trailer của phim được click
-        movieTrailer.innerHTML = `
+            // Cập nhật src iframe đúng trailer của phim được click
+            movieTrailer.innerHTML = `
             <iframe width="860" height="515" src="${item.trailer}" frameborder="0" allowfullscreen></iframe>
         `;
+        });
+
+        closeTrailer.addEventListener('click', function () {
+            overlay.style.display = 'none';
+            movieTrailer.style.display = 'none';
+            closeTrailer.style.display = 'none';
+
+            // Reset iframe để ngừng video
+            movieTrailer.innerHTML = '';
+        });
+
     });
+}
 
-    closeTrailer.addEventListener('click', function () {
-        overlay.style.display = 'none';
-        movieTrailer.style.display = 'none';
-        closeTrailer.style.display = 'none';
-
-        // Reset iframe để ngừng video
-        movieTrailer.innerHTML = '';
-    });
-
-});
 
 //Render cho phim sắp chiếu
 let movieComingSoonList = document.getElementById('film-comingsoon-list');
 movieComingSoonList.innerHTML = "";
-movieComingSoons.forEach(item => {
-    let colDiv2 = document.createElement('div');
-    colDiv2.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6";
+if (movieComingSoons) {
+    movieComingSoons.forEach(item => {
+        let colDiv2 = document.createElement('div');
+        colDiv2.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6";
 
-    colDiv2.innerHTML = `<div class="inner-film">
+        colDiv2.innerHTML = `<div class="inner-film">
                                     <div class="film-detail">
                                         <a>
                                             <div class="film-poster">                                             
@@ -109,40 +113,41 @@ movieComingSoons.forEach(item => {
                                         <p class="film-release">${item.releaseDate}</p>
                                     </div>
                                 </div>`;
-    movieComingSoonList.appendChild(colDiv2);
+        movieComingSoonList.appendChild(colDiv2);
 
-    colDiv2.addEventListener('click', function () {
-        window.location.href = `movieDetail.html?id=${item.id}`;
-    });
+        colDiv2.addEventListener('click', function () {
+            window.location.href = `movieDetail.html?id=${item.id}`;
+        });
 
-    //Viết sự kiện ấn vào icon trailer
-    const playTrailer = colDiv2.querySelector('.inner-icon');
-    const movieTrailer = document.getElementById('inner-iframe');
-    const closeTrailer = document.getElementById('close');
-    const overlay = document.getElementById('overlay');
+        //Viết sự kiện ấn vào icon trailer
+        const playTrailer = colDiv2.querySelector('.inner-icon');
+        const movieTrailer = document.getElementById('inner-iframe');
+        const closeTrailer = document.getElementById('close');
+        const overlay = document.getElementById('overlay');
 
-    playTrailer.addEventListener('click', function (event) {
-        event.stopPropagation();
+        playTrailer.addEventListener('click', function (event) {
+            event.stopPropagation();
 
-        overlay.style.display = 'block';
-        movieTrailer.style.display = 'block';
-        closeTrailer.style.display = 'block';
+            overlay.style.display = 'block';
+            movieTrailer.style.display = 'block';
+            closeTrailer.style.display = 'block';
 
-        // Cập nhật src iframe đúng trailer của phim được click
-        movieTrailer.innerHTML = `
+            // Cập nhật src iframe đúng trailer của phim được click
+            movieTrailer.innerHTML = `
             <iframe width="860" height="515" src="${item.trailer}" frameborder="0" allowfullscreen></iframe>
         `;
-    });
+        });
 
-    closeTrailer.addEventListener('click', function () {
-        overlay.style.display = 'none';
-        movieTrailer.style.display = 'none';
-        closeTrailer.style.display = 'none';
+        closeTrailer.addEventListener('click', function () {
+            overlay.style.display = 'none';
+            movieTrailer.style.display = 'none';
+            closeTrailer.style.display = 'none';
 
-        // Reset iframe để ngừng video
-        movieTrailer.innerHTML = '';
+            // Reset iframe để ngừng video
+            movieTrailer.innerHTML = '';
+        });
     });
-});
+}
 
 //Render cho cột khuyến mãi
 // let promotionList = document.querySelector('.promotion');
@@ -169,29 +174,39 @@ if (news) {
         const firstImage = firstItem.images[0].src;
         const caption = firstItem.images[0].caption;
         const bigNew = document.querySelector('.new-item-big');
-        
+
         bigNew.innerHTML = `
             <img src="${firstImage}" alt="">
             <div class="new-title">${caption}</div>
         `;
+
+        let newItemId = firstItem.id || firstItem;
+
+        bigNew.addEventListener('click', function () {
+            window.location.href = `newDetail.html?id=1`; // Chuyển đến trang chi tiết tin tức
+        });
     }
 
     // Render các phần tử còn lại vào phần small
     const smallNew = document.querySelector('.new-item-small');
     smallNew.innerHTML = '';
-    items.slice(1).forEach(newItem => {
+    items.slice(1).forEach((newItem, index) => {
         const firstImage = newItem.images[0].src;
         const caption = newItem.images[0].caption;
 
         const smallNewItem = document.createElement('div');
         smallNewItem.className = 'new-item';
-        
+
         smallNewItem.innerHTML = `
             <img src="${firstImage}" alt="">
             <div class="new-title">${caption}</div>
         `;
 
         smallNew.appendChild(smallNewItem);
+
+        smallNewItem.addEventListener('click', function () {
+            window.location.href = `newDetail.html?id=${index + 2}`; // Chuyển đến trang chi tiết tin tức
+        });
     });
 }
 
