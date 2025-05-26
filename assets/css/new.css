@@ -35,6 +35,7 @@ main {
     min-height: calc(100vh - 200px);
     padding: 40px 0;
     padding-top: 120px;
+    padding-bottom: 80px;
     z-index: 1;
 }
 
@@ -57,7 +58,7 @@ main {
 }
 
 .news-item {
-    background-color: var(--dark-bg);
+    background-color: rgb(2, 2, 66);
     border-radius: 5px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;

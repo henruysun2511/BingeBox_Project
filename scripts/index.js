@@ -1,4 +1,4 @@
-import { movieComingSoons, movies, news } from './objectForCinema.js';
+import { movieComingSoons, movies, news, promotions } from './objectForCinema.js';
 
 //Render cho phim đang chiếu
 let movieList = document.getElementById('film-list');
@@ -150,18 +150,21 @@ if (movieComingSoons) {
 }
 
 //Render cho cột khuyến mãi
-// let promotionList = document.querySelector('.promotion');
-// promotionList.innerHTML='';
-// if(news){
-//     news.forEach(newItem => {
-//         const firstImage = newItem.images[0];
-//         let promotionItem = document.createElement('div');
-//         promotionItem.className = 'promotion-image';
+let promotionList = document.querySelector('.promotion');
+promotionList.innerHTML = "";
+if (promotions) {
+    promotions.forEach(promotion => {
+        let promotionItem = document.createElement('div');
+        promotionItem.className = "promotion-image";
+        promotionItem.innerHTML = `<img src = ${promotion.image}>`;
 
-//         promotionItem.innerHTML = `<img src="${firstImage}">`;
-//         promotionList.appendChild(promotionItem);
-//     });
-// }
+        promotionList.appendChild(promotionItem);
+
+        promotionItem.addEventListener('click', function () {
+            window.location.href = `./promotionDetail.html?id=${promotion.id}`;
+        });
+    });
+}
 
 //Render cho phần tin tức
 if (news) {
