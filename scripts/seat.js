@@ -139,8 +139,6 @@ if (seat) {
     }
 
     
-
-
 } else {
     console.log('Khởi tạo ghế thất bại');
 }

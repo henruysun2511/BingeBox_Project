@@ -7,7 +7,7 @@
 span[id] {
     display: block;
     position: relative;
-    top: -120px; /* Increased offset to prevent content being hidden */
+    top: -120px; 
     visibility: hidden;
     height: 1px;
     margin-bottom: -1px;
@@ -69,7 +69,6 @@ img {
 
 /* Cinema System Section */
 .cinema-system {
-    background-color: #0b1752;
     padding: 40px 0 20px;
     color: #fff;
 }
@@ -95,7 +94,6 @@ img {
 
 /* Cinema Details Section */
 .cinema-details {
-    background-color: #0b1752;
     color: #fff;
     padding: 20px 0 40px;
 }
@@ -160,13 +158,9 @@ img {
 
 /* Movies Section */
 .movies-section {
-    background-color: #0b1752;
     padding: 40px 0;
     color: #fff;
 }
-
-
-
 
 /* Back to top button */
 .back-to-top {
@@ -208,7 +202,7 @@ img {
 
 .movie-modal-content {
     position: relative;
-    background-color: #0b1752;
+    /* background-color: #0b1752; */
     max-width: 800px;
     width: 90%;
     border-radius: 10px;

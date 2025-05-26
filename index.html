@@ -55,39 +55,44 @@
         </ul>
     </div>
 
-    <div class="quickTicketBuying">
+    <div class="quick-ticket">
         <div class="container">
             <div class="row">
                 <div class="col-3">
-                    <div class="quickTicketBuying-content">
-                        <div class="quickTicketBuying-number">1</div>
-                        <select name="" id="">
-                            <option value="">Chọn phim</option>
-                            <option value="">Phim 2</option>
-                            <option value="">Phim 3</option>
-                            <option value="">Phim 4</option>
+                    <div class="quick-ticket-content">
+                        <div class="quick-ticket-number">1</div>
+                        <select name="" id="select-movie">
+                            <option value="" disabled selected>Chọn phim</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="quick-ticket-content">
+                        <div class="quick-ticket-number">2</div>
+                        <select name="" id="select-cinema">
+                            <option value="" disabled selected>Chọn rạp</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="quick-ticket-content">
+                        <div class="quick-ticket-number">3</div>
+                        <select name="" id="select-date">
+                            <option value="" disabled selected>Chọn ngày</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-3">
-                    <div class="quickTicketBuying-content">
-                        <div class="quickTicketBuying-number">2</div>
-                        <select name="" id="">
-                            <option value="">Chọn ngày</option>
+                    <div class="quick-ticket-content">
+                        <div class="quick-ticket-number">4</div>
+                        <select name="" id="select-showtime">
+                            <option value="" disabled selected>Chọn suất chiếu</option>
                         </select>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="quickTicketBuying-content">
-                        <div class="quickTicketBuying-number">3</div>
-                        <select name="" id="">
-                            <option value="">Chọn suất chiếu</option>
-                        </select>
-                    </div>
-                </div>
-                <a class="col-3 buying">
+                <div class="col-2 buying">
                     <p>MUA VÉ NHANH</p>
-                </a>
+                </div>
             </div>
         </div>
     </div>
@@ -228,8 +233,7 @@
                                 quốc tế đến vậy.</div>
                         </div>
                         <div class="inner-info">
-                            <img
-                                src="assets/images/nolan.jpg">
+                            <img src="assets/images/nolan.jpg">
                             <h3 class="inner-name">
                                 Christopher Nolan
                             </h3>
@@ -237,7 +241,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-xl-3 col-md-4 col-sm-6 col-12">
                     <div class="inner-box">
                         <div class="inner-main">
@@ -246,8 +249,7 @@
                                 Cinema đã cho tôi một trải nghiệm tuyệt vời</div>
                         </div>
                         <div class="inner-info">
-                            <img
-                                src="assets/images/leonardo.webp">
+                            <img src="assets/images/leonardo.webp">
                             <h3 class="inner-name">
                                 Leonardo DiCaprio
                             </h3>
@@ -255,15 +257,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-xl-3 col-md-4 col-sm-6 col-12">
                     <div class="inner-box">
                         <div class="inner-main">
                             <div class="inner-content">Phim tôi đạo diễn phải cho chiếu ở rạp BingeBox đầu tiên</div>
                         </div>
                         <div class="inner-info">
-                            <img
-                                src="assets/images/tranthanh.webp">
+                            <img src="assets/images/tranthanh.webp">
                             <h3 class="inner-name">
                                 Trấn thành
                             </h3>
@@ -271,7 +271,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-xl-3 col-md-4 col-sm-6 col-12">
                     <div class="inner-box">
                         <div class="inner-main">
@@ -280,8 +279,7 @@
                                 chiêu đãi thị giác có một không hai.</div>
                         </div>
                         <div class="inner-info">
-                            <img
-                                src="assets/images/ronaldo.jpg">
+                            <img src="assets/images/ronaldo.jpg">
                             <h3 class="inner-name">
                                 Cristiano Ronaldo
                             </h3>
@@ -314,17 +312,12 @@
                         </div>
                     </div>
                 </div>
-
-                <a href="news.html" class="inner-button">
+                <a href="new.html" class="inner-button">
                     <div class="button-new">Xem thêm</div>
                 </a>
-
             </div>
         </div>
     </div>
-
-
-
 
 
     <div id="footer"></div>
@@ -344,6 +337,7 @@
     <script src="scripts/carousel.js"></script>
     <script src="scripts/loadComponents.js"></script>
     <script type="module" src="scripts/objectForCinema.js"></script>
+    <script type="module" src="scripts/quickTicketBuying.js"></script>
 
 
 

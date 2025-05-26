@@ -1,6 +1,9 @@
+import { news } from './objectForCinema.js';
+
 document.addEventListener('DOMContentLoaded', function() {
     // Get all news items on the index page
     const newsItems = document.querySelectorAll('.news-item');
+    console.log(newsItems);
     
     // Add click event listener to each news item
     newsItems.forEach(item => {
@@ -9,12 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const newsId = this.getAttribute('data-id');
             
             // Navigate to detail-new.html instead of detail.html with the ID as parameter
-            window.location.href = `detail-new.html?id=${newsId}`;
+            window.location.href = `newDetail.html?id=${newsId}`;
         });
     });
     
     // Handle the detail page loading
-    if (window.location.pathname.includes('detail-new.html')) {
+    if (window.location.pathname.includes('newDetail.html')) {
         loadNewsDetail();
     }
 
@@ -26,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const currentPage = parseInt(urlParams.get('page')) || 1;
     const itemsPerPage = 8; // Number of news items per page
-    const totalItems = Object.keys(newsData).length;
+    const totalItems = Object.keys(news).length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
     // Update page title based on current page
@@ -87,7 +90,7 @@ function loadNewsItems(page, itemsPerPage) {
     newsGrid.innerHTML = '';
 
     // Get news items for current page
-    const newsItems = Object.entries(newsData)
+    const newsItems = Object.entries(news)
         .slice(startIndex, endIndex)
         .map(([id, data]) => {
             return `
@@ -123,9 +126,9 @@ function loadNewsDetail() {
     console.log(`Loading news ID: ${newsId}`);
     
     // Check if we have the news data
-    if (newsId && newsData && newsData[newsId]) {
+    if (newsId && news && news[newsId]) {
         // Load the content
-        const newsItem = newsData[newsId];
+        const newsItem = news[newsId];
         populateNewsDetail(newsItem, newsId);
     } else {
         // Handle error - article not found

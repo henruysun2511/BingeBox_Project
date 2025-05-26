@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function reloadSlider() {
         let checkLeft = items[active].offsetLeft; //đo khoảng cách trái từ item so với phần tử cha (trong trường hợp này là list)
-        console.log(checkLeft);
+        //console.log(checkLeft);
         list.style.left = -checkLeft + 'px'; //dịch sang trái tương ứng 
 
         dots.forEach(function(dot) {
