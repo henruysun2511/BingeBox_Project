@@ -1,7 +1,7 @@
 class Validator {
   // Kiểm tra đăng ký: name, email, password, confirmPassword
   validateRegister(data) {
-    if (!data.name || data.name.trim() === '') {
+    if (!data.username || data.username.trim() === '') {
       return false;
     }
 
