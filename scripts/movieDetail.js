@@ -81,7 +81,9 @@ if (movie) {
             actorItem.className = 'actor-item';
 
             actorItem.innerHTML = `
-            <img src="${actor.actorImage}" alt="${actor.actorName}">
+            <div class="new-image-small">
+                <img src="${actor.actorImage}" alt="${actor.actorName}">
+            </div>
               <div class="inner-name">${actor.actorName}</div>`;
             movieActor.appendChild(actorItem);
 

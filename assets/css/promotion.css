@@ -1,11 +1,14 @@
 body {
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 1.1em;
 }
 
 h2 {
   color: #fff;
-  font-weight: bold;
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 30px;
 }
 
 .card {
@@ -22,12 +25,11 @@ h2 {
 
 .card-title {
   color: var(--color-yellow);
-  font-weight: 600;
+  font-style: bold;
 }
 
 .card-text {
   color: #ddd;
-  font-weight: 400;
 }
 
 .btn-danger {
