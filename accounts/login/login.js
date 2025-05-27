@@ -1,6 +1,5 @@
-import {Validator} from '../../scripts/Validator.js';
-import {Message} from '../../scripts/Message.js';
-
+import Validator from '../../scripts/validator.js';
+import Message from '../../scripts/message.js';
 window.onload = () => {
   const form = document.querySelector('form');
   const username = document.querySelector('#username');
@@ -25,7 +24,7 @@ window.onload = () => {
       localStorage.setItem('users', JSON.stringify(users));
       Message.messageInfo('Đăng nhập thành công', 'success').then((result) => {
         if (result.isConfirmed) {
-          window.location.href = '../home/home.html';
+          window.location.href = '../../index.html';
         }
       });
     } else {

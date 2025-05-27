@@ -1,0 +1,44 @@
+Date : 2025-05-27 16:26:02
+Directory : f:\frontend\28tech\Bingebox_project\scripts
+Total : 20 files,  3809 codes, 179 comments, 394 blanks, all 4382 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         20 |      3,809 |        179 |        394 |      4,382 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                             | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                |         20 |      3,809 |        179 |        394 |      4,382 |
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                         | language   | code       | comment    | blank      | total      |
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| f:\frontend\28tech\Bingebox_project\scripts\aboutUs.js           | JavaScript |        199 |         33 |         36 |        268 |
+| f:\frontend\28tech\Bingebox_project\scripts\bill.js              | JavaScript |         74 |         10 |         19 |        103 |
+| f:\frontend\28tech\Bingebox_project\scripts\booking.js           | JavaScript |         96 |         17 |         15 |        128 |
+| f:\frontend\28tech\Bingebox_project\scripts\carousel.js          | JavaScript |         42 |          1 |          8 |         51 |
+| f:\frontend\28tech\Bingebox_project\scripts\food.js              | JavaScript |        102 |          7 |         22 |        131 |
+| f:\frontend\28tech\Bingebox_project\scripts\index.js             | JavaScript |        168 |         14 |         38 |        220 |
+| f:\frontend\28tech\Bingebox_project\scripts\loadComponents.js    | JavaScript |          8 |          0 |          1 |          9 |
+| f:\frontend\28tech\Bingebox_project\scripts\magicBox.js          | JavaScript |         61 |         20 |         38 |        119 |
+| f:\frontend\28tech\Bingebox_project\scripts\message.js           | JavaScript |         10 |          0 |          1 |         11 |
+| f:\frontend\28tech\Bingebox_project\scripts\movieDetail.js       | JavaScript |        192 |         10 |         45 |        247 |
+| f:\frontend\28tech\Bingebox_project\scripts\new.js               | JavaScript |        194 |         41 |         43 |        278 |
+| f:\frontend\28tech\Bingebox_project\scripts\objectForCinema.js   | JavaScript |      2,183 |          0 |         33 |      2,216 |
+| f:\frontend\28tech\Bingebox_project\scripts\openMagicBox.js      | JavaScript |         54 |          5 |         12 |         71 |
+| f:\frontend\28tech\Bingebox_project\scripts\payment.js           | JavaScript |         84 |          4 |         12 |        100 |
+| f:\frontend\28tech\Bingebox_project\scripts\price.js             | JavaScript |         37 |          0 |          9 |         46 |
+| f:\frontend\28tech\Bingebox_project\scripts\promotion.js         | JavaScript |         21 |          0 |          3 |         24 |
+| f:\frontend\28tech\Bingebox_project\scripts\promotionDetail.js   | JavaScript |         18 |          0 |          5 |         23 |
+| f:\frontend\28tech\Bingebox_project\scripts\quickTicketBuying.js | JavaScript |        126 |          2 |         23 |        151 |
+| f:\frontend\28tech\Bingebox_project\scripts\seat.js              | JavaScript |        111 |         12 |         23 |        146 |
+| f:\frontend\28tech\Bingebox_project\scripts\validator.js         | JavaScript |         29 |          3 |          8 |         40 |
+| Total                                                            |            |      3,809 |        179 |        394 |      4,382 |
++------------------------------------------------------------------+------------+------------+------------+------------+------------+
