@@ -179,7 +179,9 @@ if (news) {
         const bigNew = document.querySelector('.new-item-big');
 
         bigNew.innerHTML = `
+        <div class="new-image-big">
             <img src="${firstImage}" alt="">
+        </div>
             <div class="new-title">${caption}</div>
         `;
 

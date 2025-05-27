@@ -1,6 +1,7 @@
 .has-fixed-header {
     padding-top: 10px;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +31,7 @@ img {
     margin: 0 auto;
     padding: 0 20px;
 }
+
 main {
     position: relative;
     min-height: calc(100vh - 200px);
@@ -41,7 +43,7 @@ main {
 
 .page-title {
     color: var(--text-light);
-    font-size: 28px;
+    font-size: 35px;
     margin-bottom: 50px;
     text-align: center;
     position: relative;

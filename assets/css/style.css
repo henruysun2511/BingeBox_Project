@@ -18,7 +18,6 @@
     transition: 1s;
 }
 
-
 .carousel-image img {
     height: 700px;
     width: 2000px;
@@ -266,7 +265,7 @@ select {
     border-radius: 10px;
     padding: 7px 20px;
     border: 0;
-    background-color: #004aad;
+    background-color: var(--color-blue);
 
 }
 
@@ -290,7 +289,7 @@ select {
 }
 
 .section-1 .film-poster .inner-icon i {
-    color: #004aad;
+    color:var(--color-blue);
 }
 
 .section-1 .inner-film .film-poster:hover .inner-icon {
@@ -323,7 +322,7 @@ select {
 }
 
 .promotion-image {
-    background-color: #004aad;
+    background-color: var(--color-blue);
     width: 230px;
     height: 100px;
     margin: 10px 10px 14px;
@@ -379,12 +378,9 @@ select {
 /*css cho section-6*/
 .section-6 {
     margin: 50px 0 130px;
-    background-color: #000000;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     padding: 20px 0;
-}
-
-.section-6 .inner-wrap{
-    padding: 0 90px;
 }
 
 .section-6 .inner-title {
@@ -405,8 +401,15 @@ select {
     cursor: pointer;
 }
 
+.new-image-big{
+    width: 612px;
+    height: 400px;
+    overflow: hidden;
+}
+
 .new-item-big img {
-    width: 750px;
+    width: 612px;
+    height: 400px;
     height: auto;
     object-fit: cover;
     margin-bottom: 10px;
@@ -428,9 +431,9 @@ select {
 }
 
 .new-item-small img {
-    width: 241px;
+    width: 195px;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     margin: 0 10px 10px 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
