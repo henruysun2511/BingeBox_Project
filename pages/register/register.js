@@ -9,9 +9,10 @@ window.onload = () => {
     let users = JSON.parse(localStorage.getItem('users')) || [];
     e.preventDefault();
     const user = {
-      name: username.value,
+      username: username.value,
       email: email.value,
       password: password.value,
+      isLogin: false,
     };
     if (!Validator.validateRegister(user)) {
       Message.messageInfo('Vui lòng nhập đầy đủ thông tin', 'error');

@@ -136,9 +136,10 @@ form input[type='file'] {
   border: 1px solid silver;
   border-radius: 10px;
   width: 100%;
-  padding: 10px;
+  padding: 13px;
   margin-top: 20px;
   float: left;
+  margin-bottom: 13px;
 }
 .cgv-info > div {
   float: left;
@@ -158,4 +159,14 @@ form input[type='file'] {
 }
 .dashboard {
   color: #7f7f7f;
+}
+.box-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.col2-set {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
 }
