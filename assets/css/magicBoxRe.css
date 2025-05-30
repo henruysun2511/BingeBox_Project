@@ -1,0 +1,202 @@
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .section-2 .magicbox-image {
+        padding: 480px 10px 0;
+    }
+
+    .movie-img {
+        width: 130px;
+        height: 200px;
+    }
+
+    .magicbox-logo {
+        width: 350px;
+        height: 350px;
+    }
+
+    table img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .inner-title h1 {
+        font-size: 45px;
+    }
+
+    .inner-title h3 {
+        font-size: 20px;
+    }
+
+    .section-2 .col-6 {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .section-2 .magicbox-content {
+        padding: 30px;
+        text-align: center;
+    }
+
+    .inner-content {
+        justify-content: center;
+    }
+
+    .magicbox-content li {
+        justify-content: center;
+    }
+
+    table tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    table img {
+        width: 200px;
+    }
+
+    .section-5 {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-1 {
+        height: 500px;
+    }
+
+    .inner-title {
+        padding-top: 50px;
+    }
+
+    .inner-title h1 {
+        font-size: 35px;
+    }
+
+    .inner-title h3 {
+        font-size: 18px;
+    }
+
+    .section-2 .magicbox-image {
+        padding: 400px 10px 0;
+    }
+
+    .movie-img {
+        width: 110px;
+        height: 170px;
+    }
+
+    .movie-1 {
+        right: 31px;
+    }
+
+    .movie-2 {
+        right: 293px;
+    }
+
+    .movie-3 {
+        width: 100px;
+        height: 160px;
+        right: 48px;
+    }
+
+    .movie-secret {
+        font-size: 80px;
+        left: 67px;
+    }
+
+    .magicbox-logo {
+        width: 300px;
+        height: 300px;
+    }
+
+    .magicbox-content h3 {
+        font-size: 20px;
+    }
+
+    .magicbox-content li {
+        font-size: 16px;
+    }
+
+    .dates {
+        flex-direction: column;
+    }
+
+    .date-item {
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section-1 {
+        height: 400px;
+    }
+
+    .inner-title h1 {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .inner-title h3 {
+        font-size: 16px;
+    }
+
+    .inner-title .button {
+        padding: 8px 16px;
+        width: 120px;
+    }
+
+    .section-2 .magicbox-image {
+        padding: 350px 10px 0;
+    }
+
+    .movie-img {
+        width: 90px;
+        height: 140px;
+    }
+
+    .movie-1 {
+        right: 21px;
+    }
+
+    .movie-2 {
+        right: 233px;
+    }
+
+    .movie-3 {
+        width: 80px;
+        height: 130px;
+        right: 38px;
+    }
+
+    .movie-secret {
+        font-size: 60px;
+        left: 47px;
+    }
+
+    .magicbox-logo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .magicbox-content img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-3 .movie-secret-2 {
+        margin-top: 700px;
+        width: 180px;
+    }
+
+    .section-3 .movie-secret-2 img {
+        width: 180px;
+        height: 260px;
+    }
+
+    .section-5 h2 {
+        font-size: 24px;
+    }
+} 
