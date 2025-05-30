@@ -1,5 +1,4 @@
 // Cấu hình Firebase
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-analytics.js";
 
@@ -13,7 +12,6 @@ const firebaseConfig = {
     appId: "1:768145135183:web:58b6f6b9c5ff5df890bc3a",
     measurementId: "G-F2DRWP83F1"
 };
-
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
