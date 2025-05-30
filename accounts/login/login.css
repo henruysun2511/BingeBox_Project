@@ -1,12 +1,13 @@
 body {
-  background: url('../../assets/images/starwarsLogin.jpg') no-repeat center center fixed;
+  background: url("../../assets/images/starwarsLogin.jpg") no-repeat center
+    center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   height: 100vh;
 }
 
@@ -88,7 +89,7 @@ h2 {
 }
 
 .login-button:hover {
-  background-color: #1c3cd6; 
+  background-color: #1c3cd6;
 }
 
 .register-link {
@@ -114,15 +115,15 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px; 
-  gap: 12px; 
+  margin-top: 40px;
+  gap: 12px;
   flex-shrink: 0;
 }
 
 .cinema-production img {
   width: 120px;
   height: auto;
-  margin: 0; 
+  margin: 0;
 }
 
 .cinema-production h3 {
@@ -131,5 +132,5 @@ p {
   letter-spacing: 1.5px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   font-weight: 600;
-  margin: 0; 
+  margin: 0;
 }
