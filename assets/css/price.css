@@ -100,8 +100,54 @@ h2 {
 @media (max-width: 768px) {
   .pricing-table {
     font-size: 14px;
+    font-size: 1em;
   }
+<<<<<<< HEAD
+  
+  .pricing-table td {
+    font-size: 16px;
+    background-color: #0d1117;
+    font-size: 1em;
+  }
+  
+  .pricing-table td.standard {
+    color: #d1d5da;
+    font-size: 1em;
+  }
+  
+  .pricing-table td.vip {
+    color: #facc15;
+    font-size: 1em;
+  }
+  
+  .pricing-table td.sweetbox {
+    color: #f87171;
+    font-size: 1em;
+  }
+  
+  .pricing-table td.time-column {
+    text-align: left;
+    font-weight: bold;
+    color: #d1d5da;
+    font-size: 1em;
+  }
+  
+  .note {
+    margin-top: 10px;
+    font-size: 1em;
+    font-style: italic;
+    font-style: bold;
+    color: #9ca3af;
+  }
+  
+  @media (max-width: 768px) {
+    .pricing-table {
+      font-size: 14px;
+    }
+  }
+=======
 }
+>>>>>>> 265017fb4195bae4af698fcb18d2dd3ca497ea28
 
 .has-fixed-header {
   padding-top: 130px;
