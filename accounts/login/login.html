@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="./login.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="inner-wrap"></div>
+
+    <div class="overlay"></div>
+    <form class="login-container">
+      <h2 style="color: white">LOGIN HERE</h2>
+      <div class="form-group">
+        <i class="icon fa-solid fa-user"></i>
+        <label for="username"></label>
+        <input type="text" id="username" name="username" title="Enter your username" placeholder="Username" />
+      </div>
+      <div class="form-group">
+        <i class="icon fa-solid fa-lock"></i>
+        <label for="password"></label>
+        <input type="password" id="password" name="password" title="Enter your password" placeholder="Password" />
+      </div>
+      <button type="submit" class="login-button">ĐĂNG NHẬP</button>
+      <p>
+        Bạn chưa có tài khoản?
+        <a style="color: red" href="">Đăng ký</a>
+      </p>
+      <div class="cinema-production">
+        <img src="../../assets/images/bingebox_logo.png" alt="">
+        <h3>BINGEBOX<br>CINEMA</h3>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="./login.js"></script>
+</body>
+
+</html>

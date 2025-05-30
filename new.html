@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BingeBox Cinema</title>
-    <link rel="icon" type="image/png" href="assets/images/bingebox-removebg-preview (1).png">
+    <title>BingeBox Cinema - Phim</title>
+    <link rel="icon" type="image/png" href="/assets/images/bingebox_logo.png">
 
     <!-- Nhúng font và icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -24,32 +24,30 @@
 
     <!-- Link file css -->
     <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/new.css">
+    <link rel="stylesheet" href="responsives/newRe.css">
+
 
 </head>
 
-<body>
+<body class="has-fixed-header">
+    <div id="header"></div>
 
+    <main>
+        <div class="container">
+            <h1 class="page-title" id="page-title">Tin tức</h1>
+            <div class="news-grid">
+                <!-- News grid will be populated by JavaScript -->
+            </div>
+            <div class="pagination">
+                <a href="#" class="page-prev">Quay lại</a>
+                <a href="#" class="page-next">Tiếp theo</a>
+            </div>
+        </div>
+    </main>
 
+    <div id="footer"></div>
 
- 
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -59,6 +57,8 @@
         crossorigin="anonymous"></script>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/loadComponents.js"></script>
+    <script type="module" src="scripts/new.js"></script>
 </body>
 
 </html>

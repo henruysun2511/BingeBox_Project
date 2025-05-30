@@ -1,62 +1,108 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0d1117;
-    color: white;
-    padding: 50px;
-    line-height: 1.6;
-  }
-  .ticket-title h1 {
-    margin: 10;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-  .ticket-title p{
-    margin: 0;
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 25px;
-  }
-  h1 {
-    color: white;
-    text-align: center;
-  }
- h2 {
-    color: white;
-    text-align: left;
-  }
-  .pricing-table th.standard {
-    color: #d1d5da;
-  }
-  
-  .pricing-table th.vip {
-    color: #facc15;
-  }
-  
-  .pricing-table th.sweetbox {
-    color: #f87171;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: white;
+  line-height: 1.6;
+}
+
+main {
+  padding: 50px;
+}
+
+
+.ticket-title h1 {
+  margin: 10;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.ticket-title p {
+  margin: 0;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  text-align: left;
+}
+
+.pricing-table th.standard {
+  color: #d1d5da;
+}
+
+.pricing-table th.vip {
+  color: #facc15;
+}
+
+.pricing-table th.sweetbox {
+  color: #f87171;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #0d1117;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #2d333b;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.pricing-table th {
+  background-color: #161b22;
+  color: #d1d5da;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.pricing-table td {
+  font-size: 16px;
+  background-color: #0d1117;
+}
+
+.pricing-table td.standard {
+  color: #d1d5da;
+}
+
+.pricing-table td.vip {
+  color: #facc15;
+  font-weight: bold;
+}
+
+.pricing-table td.sweetbox {
+  color: #f87171;
+  font-weight: bold;
+}
+
+.pricing-table td.time-column {
+  text-align: left;
+  font-weight: bold;
+  color: #d1d5da;
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
   .pricing-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #0d1117;
-  }
-  
-  .pricing-table th,
-  .pricing-table td {
-    border: 1px solid #2d333b;
-    padding: 12px 10px;
-    text-align: center;
-  }
-  
-  .pricing-table th {
-    background-color: #161b22;
-    color: #d1d5da;
-    font-weight: bold;
     font-size: 14px;
     font-size: 1em;
   }
+<<<<<<< HEAD
   
   .pricing-table td {
     font-size: 16px;
@@ -99,7 +145,10 @@ body {
       font-size: 14px;
     }
   }
+=======
+}
+>>>>>>> 265017fb4195bae4af698fcb18d2dd3ca497ea28
 
-  .has-fixed-header {
-    padding-top: 130px;
+.has-fixed-header {
+  padding-top: 130px;
 }

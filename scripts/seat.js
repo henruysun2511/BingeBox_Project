@@ -1,5 +1,4 @@
 
-
 const seat = document.querySelector('.seatBox');
 if (seat) {
     //Khởi tạo từng hàng ghế
@@ -98,29 +97,27 @@ if (seat) {
                 }
             }
             console.log(selectedSeatsByType[seatType]);
-            renderTienVaGhe(); //mỗi lần click hiển thị lại ghế và tổng tiền tương ứng
+            renderTicket(); //mỗi lần click hiển thị lại ghế và tổng tiền tương ứng
         });
     });
 
-    //render cho giá vé
-    function renderTienVaGhe() {
-        let seatInfoContainer = document.querySelector('.seat-info-container');
-        console.log(seatInfoContainer);
-        seatInfoContainer.innerHTML = ''; 
-        totalPrice = 0; 
 
-        // Lặp qua các loại ghế đã chọn
+    //render tính tiền vé
+    function renderTicket() {
+        let seatInfoContainer = document.querySelector('.seat-info-container');
+        seatInfoContainer.innerHTML = '';
+        let seatTotalPrice = 0;
+
         Object.keys(selectedSeatsByType).forEach(seatType => {
             const seats = selectedSeatsByType[seatType];
 
             if (seats.length > 0) {
                 const price = seatPrices[seatType];
                 let seatPriceByType = price * seats.length;
-                totalPrice += seatPriceByType;
+                seatTotalPrice += seatPriceByType;
 
-                // Tạo phần tử div cho thông tin ghế
                 let seatInfo = document.createElement('div');
-                seatInfo.classList.add('seat-info'); // Thêm class cho đẹp nếu cần
+                seatInfo.classList.add('seat-info');
                 seatInfo.innerHTML = `
                 <div class="seat-selected">
                     <div class="seat-total">${seats.length} Ghế ${seatType.replace('seat-', '')}</div>
@@ -129,20 +126,19 @@ if (seat) {
                 <div class="seat-price">${seatPriceByType.toLocaleString()} đ</div>
             `;
 
-                // Thêm vào container
                 seatInfoContainer.appendChild(seatInfo);
             }
         });
 
-        // Cập nhật tổng tiền 
-        const totalPriceElement = document.querySelector('.total-price-number');
-        if (totalPriceElement) {
-            totalPriceElement.textContent = `${totalPrice.toLocaleString()} đ`;
-        }
+        //Lưu ghế cho hóa đơn
+        sessionStorage.setItem('selectedSeats', JSON.stringify(selectedSeatsByType));
+
+        // Lưu tổng tiền vé vào SessionStorage
+        sessionStorage.setItem('seatTotalPrice', seatTotalPrice);
+        updateTotalPrice();
     }
 
-
-
+    
 } else {
     console.log('Khởi tạo ghế thất bại');
 }

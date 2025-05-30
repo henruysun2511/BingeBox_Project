@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
       color: #ffffff;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -8,44 +9,47 @@ body {
       flex-direction: column;
       font-size: 1.2em;
     }
+=======
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 1.1em;
+}
+>>>>>>> 265017fb4195bae4af698fcb18d2dd3ca497ea28
 
-    main {
-      flex: 1;
-    }
+h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 30px;
+}
 
-    .promo-container {
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 30px 20px 20px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-      text-align: center;
-    }
+.card {
+  background-color: rgb(2, 2, 66);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
 
-    .promo-container img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    h1 {
-      color: #ffcc00;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
+.card-title {
+  color: var(--color-yellow);
+  font-style: bold;
+}
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      text-align: left;
-    }
+.card-text {
+  color: #ddd;
+}
 
-    .extra {
-      color: #ffcc00;
-      text-align: center;
-    }
+.btn-danger {
+  background-color: #e50914;
+  border: none;
+}
 
+<<<<<<< HEAD
     .btn-back {
       background-color: #ffcc00;
       color: #16063f;
@@ -74,4 +78,12 @@ body {
       margin-top: 0;
       font-size: 1.3rem;
     }
+=======
+.btn-danger:hover {
+  background-color: #b20710;
+}
+>>>>>>> 265017fb4195bae4af698fcb18d2dd3ca497ea28
 
+.has-fixed-header {
+  padding-top: 130px;
+}

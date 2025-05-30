@@ -55,7 +55,7 @@ if (movie) {
                     <div class="inner-age">${movie.agePermisson}</div>
                     <div class="inner-button">
                         <a class="button button-one" id="button-trailer">TRAILER</a>
-                        <a class="button button-two">ĐẶT VÉ</a>
+                        <a href="#target-section" class="button button-two">ĐẶT VÉ</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ if (movie) {
             <div class="inner-wrap">
                 <div class="inner-content">
                     <div class=" list inner-list"></div>
-                    <h2 class="inner-title">Nội dung</h2>
+                    <h2 class="inner-title" id="target-section">Nội dung</h2>
                 </div>
                 <p>${movie.script}</p>
             </div>
@@ -81,7 +81,9 @@ if (movie) {
             actorItem.className = 'actor-item';
 
             actorItem.innerHTML = `
-            <img src="${actor.actorImage}" alt="${actor.actorName}">
+            <div class="new-image-small">
+                <img src="${actor.actorImage}" alt="${actor.actorName}">
+            </div>
               <div class="inner-name">${actor.actorName}</div>`;
             movieActor.appendChild(actorItem);
 
@@ -93,7 +95,7 @@ if (movie) {
 
     const movieTrailer = document.getElementById('inner-iframe');
     movieTrailer.innerHTML = `
-        <iframe width="860" height="515" src="${movie.trailer}"
+        <iframe width="860" height="515" frameborder="0" src="${movie.trailer}"
             allowfullscreen></iframe>`;
 
     //Viết sự kiện cho nút trailer
@@ -150,9 +152,7 @@ if (movie) {
         if (firstScheduleItem) {
             firstScheduleItem.click();
         }
-
         scheduleItem.addEventListener('click', () => hienThiSuatChieuTheoNgay(scheduleItem.innerHTML));
-
     });
 
     //Viết sự kiên ấn ngày chiếu ra lịch chiếu tương ứng
@@ -164,7 +164,6 @@ if (movie) {
             let showtimeItem = document.createElement('div');
             showtimeItem.className = 'showtime-item';
             showtimeItem.innerHTML = ` <div class="cinema">${cinema.cinemaName}</div>`;
-
 
             showtimes.appendChild(showtimeItem);
 
@@ -233,7 +232,6 @@ if (movie) {
         let buttonRemind = document.querySelector('.button-two');
         buttonRemind.style.backgroundColor = '#FFC107';
     }
-
 
 } else {
     console.error('Phim không tồn tại');

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingeBox Cinema - Về chúng tôi</title>
+    <link rel="icon" type="image/png" href="/assets/images/bingebox_logo.png">
+
+    <!-- Nhúng font và icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- Link file css -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/aboutUs.css">
+    <link rel="stylesheet" href="responsives/aboutUsRe.css">
+
+</head>
+
+<body class="has-fixed-header">
+    <div id="header"></div>
+
+    <!-- Anchor targets for scroll - these need to be above the content -->
+    <span id="chua-boc"></span>
+    <span id="hoan-kiem"></span>
+    <span id="metropolis"></span>
+    
+    <section class="cinema-system">
+        <div class="container">
+            <h2 class="section-title">Hệ thống rạp</h2>
+            <div class="cinema-tabs">
+                <a href="#chua-boc" class="cinema-tab active" data-cinema="chua-boc">Bingebox Cinema Chùa Bộc</a>
+                <a href="#hoan-kiem" class="cinema-tab" data-cinema="hoan-kiem">Bingebox Cinema Hoàn Kiếm</a>
+                <a href="#metropolis" class="cinema-tab" data-cinema="metropolis">Bingebox Cinema Metropolis Liễu Giai</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cinema Details -->
+    <section class="cinema-details">
+        <div class="container">
+            <!-- Chùa Bộc Cinema Content -->
+            <div class="cinema-content-wrapper active" id="chua-boc-content">
+                <!-- Content will be dynamically inserted by JavaScript -->
+            </div>
+
+            <!-- Hoàn Kiếm Cinema Content -->
+            <div class="cinema-content-wrapper" id="hoan-kiem-content">
+                <!-- Content will be dynamically inserted by JavaScript -->
+            </div>
+
+            <!-- Metropolis Cinema Content -->
+            <div class="cinema-content-wrapper" id="metropolis-content">
+                <!-- Content will be dynamically inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section class="movies-section">
+        <div class="container">
+            <h2 class="section-title">PHIM ĐANG HOT</h2>
+            <div id = "movie-list"></div>
+        </div>
+    </section>
+    <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+    
+    <div id="footer"></div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/loadComponents.js"></script>
+    <script src="scripts/aboutUs.js"></script>
+</body>
+</html>

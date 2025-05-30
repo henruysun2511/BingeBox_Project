@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingeBox Cinema - Vé</title>
+    <link rel="icon" type="image/png" href="/assets/images/bingebox_logo.png">
+
+    <!-- Nhúng font và icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link file css -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .ticket {
+            color: black;
+            background-color: white;
+            width: 400px;
+            height: 600px;
+            padding: 15px 0;
+        }
+
+        h1 {
+            font-size: 20px;
+            text-align: center;
+            background-color: var(--color-blue);
+            color: white;
+            padding: 5px 0;
+            ;
+        }
+
+        .ticket-info {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px dashed gray;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        h3 {
+            width: 60px;
+            font-size: 16px;
+            color: var(--color-blue);
+            font-weight: 700;
+        }
+
+        .movie-info {
+            border: 1px solid rgb(206, 202, 202);
+            width: 300px;
+            padding: 5px;
+            font-weight: 500;
+            border-radius: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--color-yellow);
+            font-size: 18px;
+            font-style: italic;
+            padding-top: 15px;
+        }
+
+        .inner-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 130px;
+            height: auto;
+            margin: 10px;
+        }
+
+        .title {
+            color: var(--color-blue);
+            font-weight: 800;
+            font-size: 26px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="ticket">
+        <div class="container-fluid">
+            <h1>THÔNG TIN ĐẶT VÉ</h1>
+            <div class="ticket-info">
+                <h3>Phim</h3>
+                <div class="movie-info">
+                    <div class="movie-item" id="movie"></div>
+                    <div class="movie-item" id="format"></div>
+                    <div class="movie-item" id="subtitle"></div>
+                </div>
+            </div>
+            <div class="ticket-info">
+                <h3>Rạp</h3>
+                <div class="movie-info">
+                    <div class="movie-item" id="cinema"></div>
+                    <div class="movie-item" id="time"></div>
+                    <div class="movie-item" id="day"></div>
+                    <div class="movie-item" id="room"></div>
+                </div>
+            </div>
+            <div class="ticket-info">
+                <h3>Ghế</h3>
+                <div class="movie-info">
+                    <div class="movie-item" id="seat"></div>
+                    <div class="movie-item" id="type"></div>
+                </div>
+            </div>
+            <h2>Chúc quý khách xem phim vui vẻ</h2>
+            <div class="inner-image">
+                <img src="assets/images/bingebox_logo.png" alt="">
+                <div class="title">BingeBox <br>Cinema</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script type="module">
+
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+        import { getDatabase, ref, get, child } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-database.js";
+
+        // Cấu hình Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyADkXqkeLw5OT6AXPJ3vcZziCHurFrKtBc",
+            authDomain: "bingebox-e668d.firebaseapp.com",
+            databaseURL: "https://bingebox-e668d-default-rtdb.firebaseio.com",
+            projectId: "bingebox-e668d",
+            storageBucket: "bingebox-e668d.appspot.com",
+            messagingSenderId: "768145135183",
+            appId: "1:768145135183:web:58b6f6b9c5ff5df890bc3a",
+            measurementId: "G-F2DRWP83F1"
+        };
+
+        // Khởi tạo Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Lấy thông tin từ URL
+        async function loadTicket() {
+
+            const params = new URLSearchParams(window.location.search);
+            const ticketId = params.get('id');
+
+            console.log("Ticket ID lấy được từ URL:", ticketId);
+
+            if (!ticketId) {
+                alert("Không tìm thấy mã vé!");
+                return;
+            }
+
+            // Kết nối Firebase và lấy dữ liệu
+            try {
+                const dbRef = ref(database);
+                console.log("Đang fetch dữ liệu từ Firebase:", `tickets/${ticketId}`);
+
+                const snapshot = await get(child(dbRef, `tickets/${ticketId}`));
+
+                console.log("Dữ liệu trả về từ Firebase:", snapshot.val());
+
+                if (snapshot.exists()) {
+                    const ticket = snapshot.val();
+                    console.log(ticket);
+                    document.getElementById('movie').textContent = ticket.movie;
+                    document.getElementById('cinema').textContent = ticket.cinema;
+                    document.getElementById('room').textContent = ticket.room;
+                    document.getElementById('seat').textContent = ticket.seat;
+                    document.getElementById('time').textContent = ticket.time;
+                    document.getElementById('day').textContent = ticket.day;
+                    document.getElementById('subtitle').textContent = ticket.subtitle;
+                    document.getElementById('format').textContent = ticket.format;
+                    document.getElementById('type').textContent = ticket.type || '';
+                } else {
+                    alert("Không tìm thấy thông tin vé!");
+                    console.error("Không tìm thấy thông tin vé!");
+                }
+            } catch (error) {
+                console.error("Lỗi khi kết nối Firebase:", error);
+                alert("Lỗi khi tải thông tin vé!");
+            }
+        }
+
+        window.onload = loadTicket;
+
+    </script>
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

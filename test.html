@@ -2,129 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Ticket Table</title>
-    <style>
-        .magic-box-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 300px;
-            perspective: 1000px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-        .magic-box {
-            position: relative;
-            width: 200px;
-            height: 150px;
-            background: linear-gradient(135deg, #8a2be2, #ff00ff);
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.5);
-            transform-style: preserve-3d;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* Hiệu ứng rung lắc khi hover */
-        .magic-box:hover {
-            animation: shake 0.5s ease infinite alternate;
-        }
+    /* body,
+    html {
+      height: 100%;
+      font-family: sans-serif;
+    } */
 
-        @keyframes shake {
-            0% {
-                transform: rotateZ(-2deg);
-            }
+    body {
+      background-image: url('assets/images/dune.jpg');
+      background-size: cover;
+    }
 
-            100% {
-                transform: rotateZ(2deg);
-            }
-        }
+    .wrapper {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
 
-        .box-lid {
-            position: absolute;
-            width: 100%;
-            height: 30px;
-            background: linear-gradient(135deg, #9932cc, #ba55d3);
-            border-radius: 10px 10px 0 0;
-            top: 0;
-            transform-origin: bottom;
-            transition: transform 0.5s ease;
-        }
+    .inner-wrap {
+      flex: 4;
+      display: flex;
+      align-items: center;
+      /* background-color: var(--color-blue); */
 
-        .box-content {
-            position: absolute;
-            width: 100%;
-            height: 120px;
-            background: rgba(255, 255, 255, 0.1);
-            bottom: 0;
-            border-radius: 0 0 10px 10px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      overflow: hidden;
+      padding: 40px 40px 40px 80px;
+    }
 
-        .magic-item {
-            font-size: 40px;
-            opacity: 0;
-            transition: all 0.8s ease;
-            transform: translateY(100px);
-        }
+    .icon-image {
+      margin-right: 20px;
+    }
 
-        /* Khi hộp mở */
-        .magic-box.open .box-lid {
-            transform: rotateX(-120deg);
-        }
+    .icon-image img {
+      width: 370px;
+      height: auto;
+    }
 
-        .magic-box.open .magic-item {
-            opacity: 1;
-            transform: translateY(-80px) rotate(360deg);
-            animation: float 3s ease-in-out infinite;
-        }
+    .content h1 {
+      color: var(--color-text);
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
 
-        @keyframes float {
+    .content h3 {
+      color: var(--color-text);
+      font-weight: normal;
+    }
 
-            0%,
-            100% {
-                transform: translateY(-80px) rotate(0deg);
-            }
+    .login {
+      flex: 2;
+      background: rgba(12, 5, 5, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(11, 14, 57, 0.37);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-left: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-blue);
+      font-size: 24px;
 
-            50% {
-                transform: translateY(-120px) rotate(180deg);
-            }
-        }
-    </style>
+    }
+  </style>
+
 </head>
 
 <body>
+  <!-- <div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">Phần tử 1</div>
+    <div class="swiper-slide">Phần tử 2</div>
+    <div class="swiper-slide">Phần tử 3</div>
+    <div class="swiper-slide">Phần tử 4</div>
+    <div class="swiper-slide">Phần tử 5</div>
+    <div class="swiper-slide">Phần tử 6</div>
+  </div> -->
 
-    <div class="magic-box-container">
-        <div class="magic-box">
-            <div class="box-lid"></div>
-            <div class="box-content">
-                <div class="magic-item">✨</div>
-            </div>
-        </div>
+  <!-- Nút điều hướng -->
+  <!-- <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div> -->
+
+  <div class="wrapper">
+    <div class="inner-wrap">
+      
     </div>
 
-    <script>
-        const magicBox = document.querySelector('.magic-box');
+    <div class="login">
+      login here
+    </div>
+  </div>
 
-        magicBox.addEventListener('click', function () {
-            // Thêm/xóa class 'open' để kích hoạt hiệu ứng
-            this.classList.toggle('open');
 
-            // Reset animation nếu click lần nữa
-            if (!this.classList.contains('open')) {
-                const item = this.querySelector('.magic-item');
-                item.style.animation = 'none';
-                void item.offsetWidth; // Trigger reflow
-                item.style.animation = null;
-            }
-        });
-    </script>
-
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      loop: true,
+    });
+  </script>
 </body>
 
 </html>

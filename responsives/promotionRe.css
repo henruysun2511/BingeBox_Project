@@ -1,22 +1,19 @@
 @media (max-width: 768px) {
-  .promo-container {
-    padding: 20px 10px;
+  .card h5.card-title {
+    font-size: 16px;
   }
 
-  h1#promo-title {
-    font-size: 20px;
+  .card p.card-text {
+    font-size: 13px;
   }
 
-  p#promo-subtitle.extra {
-    font-size: 14px;
+  .container.py-5 {
+    padding: 20px 10px !important;
   }
 
-  #promo-content {
-    font-size: 14px;
-  }
-
-  .btn-back {
-    font-size: 14px;
-    padding: 8px 16px;
+  .card-img-top {
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
   }
 }
