@@ -7,7 +7,7 @@
    --color-lightblue: #74b0e1;
    --color-red: #C94D3D;
    --color-yellow: #efb146;
-   --color-dark: #1A1B23;
+   --color-dark: #454D6A;
    --font: "Montserrat", serif;
 }
 
@@ -24,29 +24,3 @@ body{
 a{
     text-decoration: none !important; /*toàn bộ link ko có gạch chân*/
 }
-
-
-/* I
-@media (max-width: 1200px) {
-    .container {
-    max-width: 960px;
-    }
-}
-@media (max-width: 992px) { 
-    .container {
-    max-width: 720px;
-    }
-    .header .inner-menu{
-        display: none;
-    }
-}
-@media (max-width: 768px) {
-    .container {
-    max-width: 540px;
-    }
-    }
-@media (max-width: 576px) {
-    .container {
-    max-width: 100%; padding-left: 15px; padding-right: 15px;
-    }  
-}    */

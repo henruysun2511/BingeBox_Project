@@ -1,5 +1,19 @@
 import { movies, movieComingSoons } from './objectForCinema.js';
 
+//Cấu hình firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyADkXqkeLw5OT6AXPJ3vcZziCHurFrKtBc",
+    authDomain: "bingebox-e668d.firebaseapp.com",
+    databaseURL: "https://bingebox-e668d-default-rtdb.firebaseio.com/", 
+    projectId: "bingebox-e668d",
+    storageBucket: "bingebox-e668d.appspot.com",
+    messagingSenderId: "768145135183",
+    appId: "1:768145135183:web:58b6f6b9c5ff5df890bc3a",
+    measurementId: "G-F2DRWP83F1"
+};
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
 if (movies && movieComingSoons) {
   // Hợp nhất 2 mảng phim
   const movieList = movies.concat(movieComingSoons);
@@ -55,35 +69,54 @@ if (movies && movieComingSoons) {
     });
   }
 
-  const savedData = localStorage.getItem('movieComments');
-  if (savedData) {
-    const parsedComments = JSON.parse(savedData);
-    movies.forEach(movie => {
-      const savedMovie = parsedComments.find(m => m.name === movie.name);
-      if (savedMovie && savedMovie.comments) {
-        movie.comments = savedMovie.comments;
-      } else {
-        movie.comments = [];
-      }
+  //Hàm load dữ liệu từ firebase
+  function loadCommentsFromFirebase() {
+    return database.ref('movieComments').once('value').then(snapshot => {
+      const data = snapshot.val();
+      movies.forEach(movie => {
+        if (data && data[movie.name]) {
+          movie.comments = data[movie.name];
+        } else {
+          movie.comments = [];
+        }
+      });
     });
-  } else {
-    movies.forEach(movie => movie.comments = []);
   }
 
-  // Render danh sách phim bên trái
-  const movieWrap = document.querySelector('.movie-wrap');
-  movieWrap.innerHTML = '';
-  movies.forEach(movie => {
-    const movieImage = document.createElement('div');
-    movieImage.classList.add('movie-image');
-    movieImage.innerHTML = `<img src="${movie.imageUrl}" alt="${movie.name}">`;
-    movieImage.addEventListener('click', () => {
-      showMovieDetails(movie); // Hiển thị chi tiết phim và bình luận khi click vào ảnh
+  //Hàm lưu dữ liệu từ firebase
+  function saveCommentsToFirebase() {
+    const commentData = {};
+    movies.forEach(movie => {
+      commentData[movie.name] = movie.comments || [];
     });
-    movieWrap.appendChild(movieImage);
+    database.ref('movieComments').set(commentData);
+  }
 
-    if (!movie.comments) movie.comments = [];
-  });
+  async function init() {
+    await loadCommentsFromFirebase();
+    // Sau khi có comment, mới render phim và phần bình luận
+    renderMovieList();
+  }
+
+  //Hảm hiển thị list phim bên trái
+  function renderMovieList() {
+    const movieWrap = document.querySelector('.movie-wrap');
+    movieWrap.innerHTML = '';
+    movies.forEach(movie => {
+      const movieImage = document.createElement('div');
+      movieImage.classList.add('movie-image');
+      movieImage.innerHTML = `<img src="${movie.imageUrl}" alt="${movie.name}">`;
+      movieImage.addEventListener('click', () => {
+        showMovieDetails(movie); // Hiển thị chi tiết phim và bình luận khi click vào ảnh
+      });
+      movieWrap.appendChild(movieImage);
+
+      if (!movie.comments) movie.comments = [];
+    });
+  }
+
+  init();
+
 
   //Hiển thị chi tiết phim và bình luận của từng phim
   function showMovieDetails(movie) {
@@ -93,7 +126,7 @@ if (movies && movieComingSoons) {
     setupReplyInteraction(movie);
   }
 
-  // Hàm render thông tin phim
+  // Hàm render thông tin chi tiết của từng phim
   function renderMovieInfo(movie) {
     const movieDetails = document.querySelector('.movie-info');
     movieDetails.innerHTML = `
@@ -206,7 +239,7 @@ if (movies && movieComingSoons) {
     </div>
   `).join('');
 
-    // Hiển thị old comment + replies
+    //Hiển thị old comment + replies
     replyComment.querySelector('.reply-main').innerHTML = `
     <div class="old-comment">
       <div class="old-comment-avatar">
@@ -243,9 +276,9 @@ if (movies && movieComingSoons) {
       comment.replies = comment.replies || [];
       comment.replies.push(reply);
 
-      // Re-render panel
-      renderReplyComment(comment, movie);
-      saveCommentsToLocalStorage(); //Lưu vào local storage
+      // Render lại mỗi khi rep comment
+      renderReplyComment(comment, movie); 
+      saveCommentsToFirebase() //Lưu vào firebase
     };
   }
 
@@ -283,7 +316,8 @@ if (movies && movieComingSoons) {
         rating: selectedRating,
         replies: []
       });
-      saveCommentsToLocalStorage();
+      saveCommentsToFirebase();
+      //saveCommentsToLocalStorage();
       renderCommentSection(movie);
       setupCommentSubmit(movie); // Gắn lại sự kiện cho nút gửi
       setupReplyInteraction(movie);
@@ -291,10 +325,3 @@ if (movies && movieComingSoons) {
   }
 }
 
-function saveCommentsToLocalStorage() {
-  const commentData = movies.map(movie => ({
-    name: movie.name,
-    comments: movie.comments || []
-  }));
-  localStorage.setItem('movieComments', JSON.stringify(commentData));
-}
