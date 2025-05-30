@@ -55,36 +55,42 @@ body {
     color: #d1d5da;
     font-weight: bold;
     font-size: 14px;
+    font-size: 1em;
   }
   
   .pricing-table td {
     font-size: 16px;
     background-color: #0d1117;
+    font-size: 1em;
   }
   
   .pricing-table td.standard {
     color: #d1d5da;
+    font-size: 1em;
   }
   
   .pricing-table td.vip {
     color: #facc15;
-    font-weight: bold;
+    font-size: 1em;
   }
   
   .pricing-table td.sweetbox {
     color: #f87171;
-    font-weight: bold;
+    font-size: 1em;
   }
   
   .pricing-table td.time-column {
     text-align: left;
     font-weight: bold;
     color: #d1d5da;
+    font-size: 1em;
   }
   
   .note {
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 1em;
+    font-style: italic;
+    font-style: bold;
     color: #9ca3af;
   }
   
