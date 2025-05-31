@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 480px) {
     .section-1 .inner-title {
-        font-size: 17px;
+        font-size: 20px;
     }
 
     .col-xl-8,
@@ -49,12 +49,15 @@
     }
 
     .movie-ticket .movie-image {
-        width: 150px;
-        height: 220px;
-        margin: 0 auto 10px;
+        width: 100%;
+        height: auto;
         text-align: center;
-        display: flex;
-        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .movie-ticket .movie-image img{
+        width: 189px;
+        height: 300px;
     }
 
     .movie-ticket .movie-content .movie-title {
@@ -116,7 +119,6 @@
     }
 }
 
-/* Responsive cho màn hình ≤ 320px */
 @media screen and (max-width: 320px) {
 
     .section-1 .inner-title {
