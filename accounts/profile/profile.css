@@ -49,7 +49,8 @@ ul {
 }
 
 .block-account .block-content li {
-  background: url(https://res.cloudinary.com/dry3sdlc1/image/upload/v1744741759/ribon_left-ccc_yqqvke.png) no-repeat scroll left center #ccc;
+  background: url(https://res.cloudinary.com/dry3sdlc1/image/upload/v1744741759/ribon_left-ccc_yqqvke.png)
+    no-repeat scroll left center #ccc;
   color: #fff;
   height: 34px;
   padding-left: 18px;
@@ -58,7 +59,8 @@ ul {
 }
 
 .block-content li.current {
-  background: url(https://res.cloudinary.com/dry3sdlc1/image/upload/v1744742331/ribon_left_qwzst7.png) no-repeat scroll left center #e71a0f;
+  background: url(https://res.cloudinary.com/dry3sdlc1/image/upload/v1744742331/ribon_left_qwzst7.png)
+    no-repeat scroll left center #e71a0f;
   color: #fff;
   padding-left: 18px;
 }
@@ -114,7 +116,7 @@ ul {
   width: 30%;
 }
 
-#fileToUpload>img {
+#fileToUpload > img {
   background: transparent none repeat scroll 0 0;
   border: 2px solid #676565;
   border-radius: 80px;
@@ -136,7 +138,7 @@ ul {
   border: none;
 }
 
-form input[type='file'] {
+form input[type="file"] {
   display: none;
 }
 
@@ -158,7 +160,7 @@ form input[type='file'] {
   margin-bottom: 13px;
 }
 
-.cgv-info>div {
+.cgv-info > div {
   float: left;
 }
 
