@@ -34,7 +34,8 @@
         .screen {
             margin: 30px 0 50px;
         }
-        .screen img{
+
+        .screen img {
             width: 100%;
             height: 100%;
         }
@@ -71,6 +72,7 @@
         .ticketBox-notice {
             display: flex;
             justify-content: center;
+            margin-bottom: 15px;
         }
 
         .ticketBox-notice ul {
@@ -130,45 +132,30 @@
 
         .seatBox .row {
             display: flex;
+            flex-wrap: nowrap;
         }
 
         .row-center {
             justify-content: center;
         }
 
-        @media screen and (max-width: 680px) {
-            img {
-                width: 600px;
+        @media screen and (max-width: 480px) {
+            body {
+                overflow-x: auto;
             }
 
-            .seat {
-                width: 25px;
-                height: 25px;
-                font-size: 10px;
-            }
-        }
-
-        @media screen and (max-width: 490px) {
-            img {
-                width: 500px;
+            .seatBox .row{
+                flex-wrap: nowrap;
             }
 
-            .seat {
-                width: 20px;
-                height: 20px;
-                font-size: 10px;
-            }
-        }
-
-        @media screen and (max-width: 400px) {
             img {
                 width: 400px;
             }
 
             .seat {
-                width: 17px;
-                height: 17px;
-                font-size: 7px;
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
             }
 
             .ticketBox-notice .ticketBox-noctice-item {
@@ -179,6 +166,10 @@
                 width: 20px;
                 height: 20px;
             }
+        }
+
+        @media screen and (max-width: 320px) {
+            /* OK nếu bạn muốn hỗ trợ điện thoại rất nhỏ */
         }
     </style>
 

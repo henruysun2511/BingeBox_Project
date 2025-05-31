@@ -6,7 +6,7 @@ movieList.innerHTML = "";
 if (movies) {
     movies.forEach(item => {
         let colDiv = document.createElement('div');
-        colDiv.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6";
+        colDiv.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6";
 
         colDiv.innerHTML = `
             <div class="inner-film">
@@ -83,7 +83,7 @@ movieComingSoonList.innerHTML = "";
 if (movieComingSoons) {
     movieComingSoons.forEach(item => {
         let colDiv2 = document.createElement('div');
-        colDiv2.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6";
+        colDiv2.className = "col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6";
 
         colDiv2.innerHTML = `<div class="inner-film">
                                     <div class="film-detail">

@@ -1,0 +1,185 @@
+/* Tablet - max width 1024px (iPad ngang) */
+@media screen and (max-width: 1024px) {
+    .carousel {
+        height: 500px;
+        margin-top: 80px;
+    }
+
+    .carousel-image img {
+        height: 500px;
+        width: 100vw;
+    }
+
+    .quick-ticket .col-3,
+    .quick-ticket .col-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .quick-ticket .buying {
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .section-1 .col-xl-10,
+    .section-1 .col-xl-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .promotion {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Tablet dọc & điện thoại lớn - max width 768px */
+@media screen and (max-width: 768px) {
+    .carousel {
+        height: 400px;
+    }
+
+    .carousel-image img {
+        height: 400px;
+    }
+
+    .section-1 .inner-film {
+        justify-content: center;
+    }
+
+    .news {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new-image-big,
+    .new-item-big img {
+        width: 90vw;
+        height: auto;
+    }
+
+    .new-item-small img {
+        width: 90px;
+    }
+
+    .section-6 .inner-title {
+        font-size: 30px;
+    }
+
+    .section-4 .col-xl-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Điện thoại - max width 480px */
+@media screen and (max-width: 480px) {
+    .carousel {
+        width: 480px;
+        height: 210px;
+        margin-top: 85px;
+    }
+
+    .carousel-image img {
+        width: 480px;
+        height: 210px;
+    }
+
+    .quick-ticket-number {
+        font-size: 12px;
+        padding: 2px 6px;
+    }
+
+    select {
+        font-size: 14px;
+    }
+
+    .section-1 .inner-film {
+        width: 214px;
+        padding: 0;
+    }
+
+    .section-1 .inner-film .film-detail {
+        height: auto;
+    }
+
+    .section-1 .inner-film .film-poster {
+        width: 190px;
+        height: 280px;
+    }
+
+    .promotion-image {
+        width: 180px;
+        height: 50px;
+    }
+
+    .section-4 .inner-info .inner-name {
+        font-size: 18px;
+    }
+
+    .section-4 .inner-info .inner-position {
+        font-size: 14px;
+    }
+
+    .section-6 .button-new {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+/* Điện thoại rất nhỏ - max width 320px */
+@media screen and (max-width: 320px) {
+    .carousel {
+        width: 320px;
+        height: 140px;
+        margin-top: 80px;
+    }
+
+    .carousel-image img {
+        width: 320px;
+        height: 140px;
+    }
+
+    .section-1 .inner-content .inner-title {
+        font-size: 20px;
+    }
+
+    .section-1 .inner-film {
+        width: 140px;
+        padding: 0;
+    }
+
+    .section-1 .inner-film .film-detail {
+        height: auto;
+    }
+
+    .section-1 .inner-film .film-poster {
+        width: 140px;
+        height: 240px;
+    }
+
+    .section-6 .inner-title {
+        font-size: 24px;
+    }
+
+    .quick-ticket-number {
+        font-size: 10px;
+    }
+
+    select {
+        font-size: 12px;
+    }
+
+    .promotion-image {
+        width: 100px;
+        height: 50px;
+    }
+
+    .buying {
+        font-size: 14px;
+    }
+}
