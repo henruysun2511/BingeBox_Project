@@ -1,0 +1,149 @@
+@media screen and (max-width: 1024px) {
+    .col-xl-8,
+    .col-xl-4,
+    .col-lg-8,
+    .col-lg-4,
+    .col-md-12,
+    .col-sm-12,
+    .col-4,
+    .col-8 {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .section-2 .movie-ticket {
+        margin-top: 15px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .section-1 .inner-title {
+        font-size: 17px;
+    }
+
+    .col-xl-8,
+    .col-lg-8,
+    .col-md-12,
+    .col-sm-12,
+    .col-12,
+    .col-xl-4,
+    .col-lg-4 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    #seat {
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .movie-ticket {
+        padding: 10px;
+    }
+
+    .movie-ticket .movie-infomation {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .movie-ticket .movie-image {
+        width: 150px;
+        height: 220px;
+        margin: 0 auto 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .movie-ticket .movie-content .movie-title {
+        font-size: 18px;
+    }
+
+    .movie-ticket .movie-content ul {
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 5px 0;
+    }
+
+    .movie-ticket .movie-content ul li {
+        margin: 5px 0;
+    }
+
+    .movie-ticket .movie-age {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        margin: 0 auto;
+    }
+
+    .cinema,
+    .schedule {
+        flex-direction: column;
+        text-align: center;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .button-next {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+
+    .button-prev {
+        font-size: 16px;
+    }
+
+    .total-price .total-price-title,
+    .total-price .total-price-number {
+        font-size: 18px;
+    }
+
+    .movie-ticket .seat-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .movie-ticket .seat-selected {
+        width: 100%;
+    }
+
+    .seat-price {
+        text-align: right;
+    }
+}
+
+/* Responsive cho màn hình ≤ 320px */
+@media screen and (max-width: 320px) {
+
+    .section-1 .inner-title {
+        font-size: 20px;
+    }
+
+    .movie-ticket .movie-image {
+        width: 120px;
+        height: 180px;
+    }
+
+    .movie-ticket .movie-content .movie-title {
+        font-size: 16px;
+    }
+
+    .movie-ticket .movie-age {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .button-next {
+        font-size: 18px;
+    }
+
+    .total-price .total-price-title,
+    .total-price .total-price-number {
+        font-size: 16px;
+    }
+}

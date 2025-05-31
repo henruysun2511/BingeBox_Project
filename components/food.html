@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="../assets/css/base.css">
 
     <style>
-        .food-item{
+        .food-item {
             color: var(--color-text);
             display: flex;
             margin-bottom: 15px;
@@ -35,36 +35,36 @@
             border-radius: 10px;
         }
 
-        .food-image{
+        .food-image {
             width: 120px;
             height: 120px;
             margin-right: 15px;
-           
         }
-        .food-image img{
+
+        .food-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-             border-radius: 15px;
+            border-radius: 15px;
         }
 
-        .food-info{
+        .food-info {
             margin-right: 300px;
         }
 
-        .food-name{
+        .food-name {
             font-size: 21px;
             margin-bottom: 15px;
             font-weight: 500;
             color: var(--color-yellow);
         }
 
-        .food-choose{
+        .food-choose {
             display: flex;
-            
         }
 
-        .minus, .plus{
+        .minus,
+        .plus {
             border-radius: 50%;
             background-color: var(--color-yellow);
             margin: 0 20px;
@@ -72,16 +72,82 @@
             cursor: pointer;
         }
 
-        .total{
+        .total {
             font-size: 20px;
         }
 
-        .food-price{
+        .food-price {
             display: flex;
             align-items: center;
             font-size: 25px;
         }
 
+        @media screen and (max-width: 1024px) {
+            .food-info {
+                margin-right: 80px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {}
+
+        @media screen and (max-width: 480px) {
+            .food-info {
+                margin-right: 30px;
+            }
+
+            .food-name {
+                font-size: 15px;
+            }
+
+            .food-price {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .food-item {
+                color: var(--color-text);
+                display: flex;
+                margin-bottom: 15px;
+                background-color: black;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            .food-image {
+                width: 70px;
+                height: 70px;
+                margin-right: 15px;
+            }
+
+            .food-info {
+                margin-right: 20px;
+            }
+
+            .food-name {
+                font-size: 11px;
+                margin-bottom: 15px;
+            }
+
+            .minus,
+            .plus {
+                border-radius: 50%;
+                background-color: var(--color-yellow);
+                margin: 0 20px;
+                padding: 1px 5px;
+                cursor: pointer;
+            }
+
+            .total {
+                font-size: 11px;
+            }
+
+            .food-price {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+            }
+        }
     </style>
 
 </head>
@@ -104,7 +170,7 @@
         </div>
     </div>
 
-    
+
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

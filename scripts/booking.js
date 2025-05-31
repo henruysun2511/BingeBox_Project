@@ -22,9 +22,9 @@ if (bookingInfo) {
                         </div>
 
                         <div class="cinema">
-                            <div class="cinema-name">${bookingInfo.bookingCinema}</div>
+                            <div class="cinema-name">Rạp: ${bookingInfo.bookingCinema}</div>
                             <div> - </div>
-                            <div class="cinema-number">Rạp ${bookingInfo.bookingRoom}</div>
+                            <div class="cinema-number">${bookingInfo.bookingRoom}</div>
                         </div>
                         <div class="schedule">
                             <div class="showtime-number">Suất chiếu: ${bookingInfo.bookingTime}</div>

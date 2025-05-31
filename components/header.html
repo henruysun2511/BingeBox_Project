@@ -120,6 +120,99 @@
             background: linear-gradient(90deg, #5de0e6, #004aad);
 
         }
+
+        .inner-icon {
+            display: none;
+            color: white;
+            font-size: 25px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .inner-menu {
+                display: none;
+                flex-direction: column;
+                background-color: #2E4BA6;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .inner-regist {
+                display: none;
+                flex-direction: column;
+                background-color: #2E4BA6;
+                position: absolute;
+                top: 860%;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .inner-menu.show-menu {
+                display: flex;
+            }
+
+            .inner-menu ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .inner-menu ul li a {
+                padding: 10px 20px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .inner-regist.show-regist {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 30px 0;
+            }
+
+            .inner-regist ul {
+                flex-direction: column;
+                width: 100%;
+                padding: 0;
+            }
+
+            .inner-regist ul li {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+
+            .inner-regist ul li button {
+                width: 80%;
+            }
+
+            .inner-icon {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .header .inner-wrap .inner-menu ul li a {
+                padding: 10px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .inner-regist {
+                display: none;
+                flex-direction: column;
+                background-color: #2E4BA6;
+                position: absolute;
+                top: 535%;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
     </style>
 </head>
 
@@ -151,56 +244,20 @@
                             <a href="#">Đăng ký</a></button></li>
                 </ul>
             </div>
+            <div class="inner-icon"><i class="fa-solid fa-bars"></i></div>
         </div>
     </div>
 
     <script>
-        const loginButton = document.querySelector('.button-dn');
-        const registButton = document.querySelector('.button-dk');
+        const menuIcon = document.querySelector('.inner-icon');
+        const menu = document.querySelector('.inner-menu');
+        const regist = document.querySelector('.inner-regist');
 
-        loginButton.addEventListener('click', () => {
-            window.location.href = './accounts/login/login.html';
+        menuIcon.addEventListener('click', () => {
+            regist.classList.toggle('show-regist');
+            menu.classList.toggle('show-menu');
+
         });
-
-        registButton.addEventListener('click', () => {
-            window.location.href = './accounts/register/register.html';
-        });
-
-        const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-
-        if (currentUser && currentUser.isLogin) {
-            // Lấy phần chứa nút đăng nhập/đăng ký
-            const authContainer = document.querySelector('.inner-regist');
-
-            // Xóa danh sách nút đăng nhập/đăng ký
-            const oldList = authContainer.querySelector('ul');
-            if (oldList) oldList.remove();
-
-            // Tạo username hiển thị
-            const userSpan = document.createElement('span');
-            userSpan.textContent = currentUser.username;
-            userSpan.classList.add('username-display');
-
-            // Tạo nút đăng xuất
-            const logoutButton = document.createElement('button');
-            logoutButton.textContent = 'Đăng xuất';
-            logoutButton.classList.add('button', 'logout-btn');
-
-            logoutButton.addEventListener('click', () => {
-                sessionStorage.removeItem('currentUser');
-                let users = JSON.parse(localStorage.getItem('users')) || [];
-                users = users.map(u => {
-                    if (u.email === currentUser.email) u.isLogin = false;
-                    return u;
-                });
-                localStorage.setItem('users', JSON.stringify(users));
-                window.location.reload();
-            });
-
-            // Thêm vào DOM
-            authContainer.appendChild(userSpan);
-            authContainer.appendChild(logoutButton);
-        }
     </script>
 
 
