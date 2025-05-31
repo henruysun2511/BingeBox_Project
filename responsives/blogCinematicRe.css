@@ -1,0 +1,107 @@
+@media screen and (max-width: 1024px) {
+    .movie-wrap {
+        display: flex;
+        height: 350px;
+    }
+
+    .avatar {
+        width: 700px;
+        height: auto;
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+    .nickname {
+        height: auto;
+        width: 700px;
+        position: fixed;
+        z-index: 2;
+        display: none;
+        left: 15%;
+        top: 32%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .avatar {
+        width: 500px;
+        height: auto;
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .movie-wrap {
+        display: flex;
+        height: 350px;
+        flex-wrap: wrap;
+    }
+
+    .movie-image {
+        height: 200px;
+        width: 100px;
+    }
+
+    .avatar {
+        width: 400px;
+        height: auto;
+        position: fixed;
+        top: 25%;
+        left: 10%;
+    }
+
+    .nickname {
+        height: auto;
+        width: 400px;
+        position: fixed;
+        z-index: 2;
+        display: none;
+        left: 10%;
+        top: 32%;
+    }
+
+    .avatar-title{
+        font-size: 20px;
+    }
+
+    #nickname-input{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .movie-image {
+        height: 150px;
+        width: 50px;
+    }
+
+    .avatar {
+        width: 300px;
+        height: auto;
+        position: fixed;
+        top: 10%;
+        left: 0;
+    }
+
+    .nickname {
+        height: auto;
+        width: 300px;
+        position: fixed;
+        z-index: 2;
+        display: none;
+        left: 0;
+        top: 10%;
+    }
+
+    .avatar-title{
+        font-size: 15px;
+    }
+
+    #nickname-input{
+        width: 300px;
+    }
+}
