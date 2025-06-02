@@ -55,7 +55,7 @@ if (movie) {
                     <div class="inner-age">${movie.agePermisson}</div>
                     <div class="inner-button">
                         <a class="button button-one" id="button-trailer">TRAILER</a>
-                        <a href="#target-section" class="button button-two">ĐẶT VÉ</a>
+                        <a class="button button-two">YÊU THÍCH</a>
                     </div>
                 </div>
             </div>
