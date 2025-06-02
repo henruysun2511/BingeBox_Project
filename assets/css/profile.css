@@ -354,7 +354,7 @@
       list-style: none;
     }
 
-    .movie{
+    .movie-menu{
       padding: 10px 20px;
       width: 250px;
       text-align: center;
@@ -364,7 +364,7 @@
       text-transform: uppercase;
     }
 
-    .movie i{
+    .movie-menu i{
       margin-right: 10px;
     }
 
@@ -372,12 +372,26 @@
       background-color: var(--color-blue);
     }
 
-    .movie-fancy-select{
+    .movie-favourite-select{
       background-color: var(--color-red);
     }
 
     .movie-remind-select{
       background-color: var(--color-golden);
+    }
+
+    .movie-list{
+      display: flex;
+      margin: 25px 0;
+      padding: 20px;
+    }
+
+    .movie-list img{
+      width: 229px;
+      height: 320px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin: 0 15px 15px 0;
     }
 
     /* css cho khối chọn avatar */

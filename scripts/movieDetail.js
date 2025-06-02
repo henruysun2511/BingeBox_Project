@@ -219,6 +219,38 @@ if (movie) {
         //showtimes chứa các showtimeItem, mỗi showtimeItem chứa tên rạp và các times, times lại chứa các timeItem, nói chung là sinh tự động kkk
     }
 
+    //Lưu phim yêu thích, nhắc tôi vào local đển render ở profile.html
+    function addMovieToLocalStorage(movie, type) {
+        let storedMovies = JSON.parse(localStorage.getItem('savedMovies')) || [];
+
+        // Kiểm tra xem phim đã tồn tại chưa
+        const existingIndex = storedMovies.findIndex(m => m.id === movie.id);
+
+        if (existingIndex >= 0) {
+            // Nếu phim đã tồn tại, cập nhật loại
+            storedMovies[existingIndex].savedType = type;
+        } else {
+            // Nếu phim chưa tồn tại, thêm mới
+            const movieToSave = {
+                ...movie,
+                savedType: type,
+                savedImage: movie.imageUrl // Lưu thêm ảnh để hiển thị sau này
+            };
+            storedMovies.push(movieToSave);
+        }
+
+        localStorage.setItem('savedMovies', JSON.stringify(storedMovies));
+    }
+
+    const buttonFavourite = document.querySelector('.button-two');
+    if (buttonFavourite) {
+        buttonFavourite.addEventListener('click', function(e) {
+            e.preventDefault();
+            addMovieToLocalStorage(movie, 'favorite');
+            alert('Đã thêm vào danh sách yêu thích');
+        });
+    }
+
     if (movieComingSoons.includes(movie)) {
         let showtimes = document.querySelector('.showtimes');
         showtimes.innerHTML = 'Chưa có lịch chiếu';
@@ -231,6 +263,14 @@ if (movie) {
                         <a href="#" class="button button-two">REMIND ME </a>`;
         let buttonRemind = document.querySelector('.button-two');
         buttonRemind.style.backgroundColor = '#FFC107';
+
+        if (buttonRemind && buttonRemind.textContent.includes('REMIND ME')) {
+            buttonRemind.addEventListener('click', function (e) {
+                e.preventDefault();
+                addMovieToLocalStorage(movie, 'remind');
+                alert('Đã thêm vào danh sách nhắc nhở');
+            });
+        }
     }
 
 } else {

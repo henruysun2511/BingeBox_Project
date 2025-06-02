@@ -213,6 +213,8 @@ if (bills.length === 0) {
   });
 }
 
+
+
 //Render cho title đạt được
 //Số lượng phim đã xem
 const moviesWatched = new Set();
@@ -239,3 +241,48 @@ totalExpenditure.innerHTML = `<i class="fa-solid fa-money-check-dollar"></i>
 
 
 
+//Render cho phim của tôi
+//Ẩn hiện panel từng menu
+const myMovieMenu = document.querySelectorAll('.movie-menu');
+const myMovieDetails = document.querySelectorAll('.movie-list');
+myMovieMenu.forEach(item => {
+  item.addEventListener('click', () => {
+    // Ẩn tất cả panel
+    myMovieDetails.forEach(panel => panel.style.display = 'none');
+    // Hiện panel tương ứng
+    const targetId = item.getAttribute('data-target');
+    document.getElementById(targetId).style.display = 'block';
+  });
+});
+
+//Phim đã xem
+const watchedImages = [];
+moviesWatched.forEach(watchedTitle => {
+  const matchedMovie = movies.find(m => m.name === watchedTitle); 
+  if (matchedMovie) {
+    watchedImages.push(matchedMovie.imageUrl || matchedMovie.bigPoster);
+  }
+});
+
+watchedImages.forEach(url => {
+  const img = document.createElement('img');
+  img.src = url;
+  img.alt = 'Phim đã xem';
+  document.querySelector('#watched').appendChild(img);
+});
+
+// Phân loại phim yêu thích và nhắc tôi
+const savedMovies = JSON.parse(localStorage.getItem('savedMovies')) || [];
+
+const favorites = savedMovies.filter(movie => movie.savedType === 'favorite');
+const reminds = savedMovies.filter(movie => movie.savedType === 'remind');
+favorites.forEach(favourite => {
+  let movieImage = document.createElement('img');
+  movieImage.src = `${favourite.imageUrl}`;
+  document.querySelector('#favourite').appendChild(movieImage);
+});
+reminds.forEach(remind => {
+  let movieImage = document.createElement('img');
+  movieImage.src = `${remind.imageUrl}`;
+  document.querySelector('#remind').appendChild(movieImage);
+});

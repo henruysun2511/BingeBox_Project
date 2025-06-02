@@ -220,15 +220,21 @@
               <!-- Thông tin phim -->
               <div class="menu-detail" id="my-movie" style="display: none;">
                 <ul>
-                  <li class="movie movie-watched-select" data-target="my-info">
-                    <i class="fa-solid fa-film"></i>Phim đã xem</li>
-                  <li class="movie movie-fancy-select" data-target="my-info">
-                    <i class="fa-solid fa-heart"></i>Phim yêu thích</li>
-                  <li class="movie movie-remind-select" data-target="my-info">
-                    <i class="fa-solid fa-bell"></i>Nhắc tôi</li>
+                  <li class="movie-menu movie-watched-select" data-target="watched">
+                    <i class="fa-solid fa-film"></i>Phim đã xem
+                  </li>
+                  <li class="movie-menu movie-favourite-select" data-target="favourite">
+                    <i class="fa-solid fa-heart"></i>Phim yêu thích
+                  </li>
+                  <li class="movie-menu movie-remind-select" data-target="remind">
+                    <i class="fa-solid fa-bell"></i>Nhắc tôi
+                  </li>
                 </ul>
-                <div class="movie-list">
-                  <img src="" alt="">
+                <div class="movie-list" id="watched">
+                </div>
+                <div class="movie-list" id="favourite" style="display: none;">
+                </div>
+                <div class="movie-list" id="remind" style="display: none;">
                 </div>
               </div>
             </ul>
@@ -267,15 +273,7 @@
     <button class="select-button">Xác nhận</button>
   </div>
 
-  <div class="section-4" style="color: var(--color-text);">
-    <div class="container">
-      Giải quyết logic:
-      <br>Sửa được thông tin cá nhân sau khi sửa xong thì render lại gồm các thông tin cơ bản, quote, ava, ảnh nề
-      <br>Hiển thị được số phim đã xem, doanh thu => điểm thưởng
-      <br>Cho chọn được ava, ảnh nền trước
-      <br>hiển thị các phim đã xem, đã thích, đã nhắc
-    </div>
-  </div>
+
 
 
 
