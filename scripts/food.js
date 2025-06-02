@@ -122,6 +122,7 @@ function renderFood() {
 
     // Lưu vào SessionStorage
     sessionStorage.setItem('foodTotalPrice', foodTotalPrice);
+    sessionStorage.setItem('selectedFoods', JSON.stringify(selectedFoods));
     updateTotalPrice();
 }
 

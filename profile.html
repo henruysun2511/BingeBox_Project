@@ -23,6 +23,8 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/profile.css" />
 </head>
@@ -77,12 +79,12 @@
         <div class="col-xl-8">
           <div class="profile-detail">
             <ul class="profile-title">
-              <li>
+              <li class="movie-watched">
                 <i class="fa-solid fa-film"></i>
                 <h3>7</h3>
                 <p>Số phim đã xem</p>
               </li>
-              <li>
+              <li class="total-expenditure">
                 <i class="fa-solid fa-money-check-dollar"></i>
                 <h3>5.000.000 đ</h3>
                 <p>Tổng chi tiêu</p>
@@ -100,6 +102,7 @@
               <li class="menu-item" data-target="my-movie">Phim của tôi</li>
             </ul>
             <ul>
+              <!-- Thông tin cá nhân -->
               <div class="menu-detail" id="my-info">
                 <div class="form">
                   <div class="form-group">
@@ -158,9 +161,76 @@
                 </div>
                 <div class="update-button"><button>Cập nhật</button></div>
               </div>
-              <div class="menu-detail" id="my-ticket" style="display: none;">Chưa có vé nào</div>
-              <div class="menu-detail" id="my-bill" style="display: none;">Hóa đơn ở đây</div>
-              <div class="menu-detail" id="my-movie" style="display: none;">Phim ở đây</div>
+              <!-- Thông tin vé -->
+              <div class="menu-detail" id="my-ticket" style="display: none;">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Phim</th>
+                      <th>Rạp</th>
+                      <th>Giờ</th>
+                      <th>Ngày</th>
+                      <th>Phòng</th>
+                      <th>Ghế</th>
+                      <th>QR Code</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ticket-table-body">
+                    <!-- JS render vào đây -->
+                  </tbody>
+                </table>
+              </div>
+              <!-- Thông tin hóa đơn -->
+              <div class="menu-detail" id="my-bill" style="display: none;">
+                <div class="bill-list">
+                  <div class="bill-card">
+                    <h1>HỆ THỐNG RẠP CHIẾU PHIM BINGEBOX</h1>
+                    <div class="bill-time">Thời gian giao dịch: 21/2/2025</div>
+                    <div class="bill-cinema">BingeBox Cinema Liễu Giai</div>
+                    <h3 class="bill-movie">Captain America: Thế giới mới</h3>
+                    <ul>
+                      <li>2D</li>
+                      <li>Phụ đề</li>
+                      <li>T13</li>
+                    </ul>
+                    <h3 class="bill-room">Phòng: 8</h3>
+                    <div class="bill-group">
+                      <div class="bill-seat">
+                        <p>Ghế: A3, A4</p>
+                        <div class="seat-type">Thường x2</div>
+                      </div>
+                      <div class="bill-price">180.000d</div>
+                    </div>
+                    <div class="bill-group">
+                      <p>Combo 1</p>
+                      <div class="bill-price">180.000d</div>
+                    </div>
+                    <div class="bill-group">
+                      <p>Danh tặng bạn mới</p>
+                      <div class="bill-price">-100.000d</div>
+                    </div>
+                    <div class="bill-total">
+                      <h3>Tổng tiền: </h3>
+                      <div class="total-price">500 000 đ</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Thông tin phim -->
+              <div class="menu-detail" id="my-movie" style="display: none;">
+                <ul>
+                  <li class="movie movie-watched-select" data-target="my-info">
+                    <i class="fa-solid fa-film"></i>Phim đã xem</li>
+                  <li class="movie movie-fancy-select" data-target="my-info">
+                    <i class="fa-solid fa-heart"></i>Phim yêu thích</li>
+                  <li class="movie movie-remind-select" data-target="my-info">
+                    <i class="fa-solid fa-bell"></i>Nhắc tôi</li>
+                </ul>
+                <div class="movie-list">
+                  <img src="" alt="">
+                </div>
+              </div>
             </ul>
           </div>
         </div>
@@ -194,7 +264,7 @@
       <li>Một ngày 10 phim</li>
       <li>Phú ông bao vé</li>
     </ul>
-      <button class="select-button">Xác nhận</button>
+    <button class="select-button">Xác nhận</button>
   </div>
 
   <div class="section-4" style="color: var(--color-text);">

@@ -67,7 +67,6 @@ function showStep() {
     // Cập nhật trạng thái của nút
     btnPrev.disabled = (currentStep === 0);
     btnNext.innerText = (currentStep === steps.length - 1) ? "Hoàn tất" : "Tiếp theo";
-
 }
 
 // Hàm chuyển bước tiếp theo
@@ -77,19 +76,47 @@ function nextStep() {
     if (currentStep < steps.length - 1) {
         currentStep++;
     } else {
-        //Lấy ghế từ sessionStorage để push vào bookingInfo
-        const selectedSeats = JSON.parse(sessionStorage.getItem('selectedSeats'));
-        console.log(selectedSeats);
+        // Lấy thông tin ghế, đồ ăn, giá từ sessionStorage
+        const selectedSeats = JSON.parse(sessionStorage.getItem('selectedSeats')) || {};
+        const selectedFoods = JSON.parse(sessionStorage.getItem('selectedFoods')) || []; 
+        const selectedPromotion = JSON.parse(sessionStorage.getItem('promotionInfo')) || null;
+        const seatTotalPrice = parseInt(sessionStorage.getItem('seatTotalPrice')) || 0;
+        const foodTotalPrice = parseInt(sessionStorage.getItem('foodTotalPrice')) || 0;
+        const promotionTotalPrice = parseFloat(sessionStorage.getItem('promotionTotalPrice')) || 0;
 
-        // Lấy thông tin hiện tại từ SessionStorage
-        let bookingInfo = JSON.parse(sessionStorage.getItem('bookingInfo'));
+        const totalPrice = (seatTotalPrice + foodTotalPrice) * (1 - promotionTotalPrice);
 
-        // Nếu có thông tin ghế, push vào bookingInfo
-        if (bookingInfo && selectedSeats) {
+        // Lấy thông tin phim
+        const bookingInfo = JSON.parse(sessionStorage.getItem('bookingInfo'));
+
+        if (bookingInfo) {
+            const bill = {
+                movie: bookingInfo.bookingName,
+                cinema: bookingInfo.bookingCinema,
+                room: bookingInfo.bookingRoom,
+                date: bookingInfo.bookingDate,
+                time: bookingInfo.bookingTime,
+                seats: selectedSeats,
+                foods: selectedFoods,
+                seatTotalPrice,
+                foodTotalPrice,
+                promotion: selectedPromotion,
+                promotionDiscount: promotionTotalPrice,
+                totalPrice,
+                createdAt: new Date().toISOString()
+            };
+
+            //Lưu thông tin phim và ghế để render ở bill.html
             bookingInfo.bookingSeats = selectedSeats;
             sessionStorage.setItem('bookingInfo', JSON.stringify(bookingInfo));
+
+            // Lưu hóa đơn vào localStorage để render ở profile.html
+            const existingBills = JSON.parse(localStorage.getItem('myBills')) || [];
+            existingBills.push(bill);
+            localStorage.setItem('myBills', JSON.stringify(existingBills));
         }
 
+        // Chuyển sang trang hóa đơn
         alert("Thanh toán thành công!");
         window.location.href = `bill.html`;
     }

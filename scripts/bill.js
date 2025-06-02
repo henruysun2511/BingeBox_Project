@@ -5,7 +5,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.7.3/firebase
 const firebaseConfig = {
     apiKey: "AIzaSyADkXqkeLw5OT6AXPJ3vcZziCHurFrKtBc",
     authDomain: "bingebox-e668d.firebaseapp.com",
-    databaseURL: "https://bingebox-e668d-default-rtdb.firebaseio.com/", 
+    databaseURL: "https://bingebox-e668d-default-rtdb.firebaseio.com/",
     projectId: "bingebox-e668d",
     storageBucket: "bingebox-e668d.appspot.com",
     messagingSenderId: "768145135183",
@@ -34,7 +34,7 @@ if (billInfo) {
 
             // Tạo thông tin vé
             const ticket = {
-                id: `ticket-${stt}`, // Sửa lại cho đúng template string
+                id: 'ticket-' + Date.now() + '-' + Math.floor(Math.random() * 100000),
                 movie: billInfo.bookingName,
                 room: billInfo.bookingRoom,
                 cinema: billInfo.bookingCinema,
@@ -46,11 +46,15 @@ if (billInfo) {
                 format: billInfo.bookingFormat
             };
 
-            console.log(ticket);
+            // Tạo link QR điều hướng sang trang vé
+            const ticketUrl = new URL('https://henruysun2511.github.io/BingeBox_Project/ticket.html');
+            ticketUrl.searchParams.set('id', ticket.id);
+            ticket.qrUrl = ticketUrl.href;
 
             // Lưu thông tin vào Firebase
             firebase.database().ref('tickets/' + ticket.id).set(ticket);
 
+            // Push vào danh sách
             ticketBills.push(ticket);
         });
     });
@@ -61,10 +65,6 @@ if (billInfo) {
         tbody.innerHTML = '';
 
         ticketBills.forEach((ticketBill, index) => {
-            // Tạo link QR điều hướng sang trang vé
-            const ticketUrl = new URL('https://henruysun2511.github.io/BingeBox_Project/ticket.html');
-            ticketUrl.searchParams.set('id', ticketBill.id);
-
             // Tạo QR Code
             let qrDiv = document.createElement('div');
             qrDiv.id = `qrcode-${index}`;
@@ -72,7 +72,7 @@ if (billInfo) {
             qrDiv.style.height = '100px';
 
             new QRCode(qrDiv, {
-                text: ticketUrl.href,
+                text: ticketBill.qrUrl,
                 width: 100,
                 height: 100
             });
@@ -94,6 +94,11 @@ if (billInfo) {
             row.querySelector('td:last-child').appendChild(qrDiv);
             tbody.appendChild(row);
         });
+
+        //Lưu toàn bộ ticketBills vào localStorage để dùng ở trang khác
+        const oldTickets = JSON.parse(localStorage.getItem('myTickets')) || [];
+        const updatedTickets = oldTickets.concat(ticketBills);
+        localStorage.setItem('myTickets', JSON.stringify(updatedTickets));
     }
 } else {
     console.log('Không có dữ liệu');

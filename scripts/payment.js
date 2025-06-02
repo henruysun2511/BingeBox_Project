@@ -62,6 +62,7 @@ function renderPromotion(promotion) {
 
         // Lưu vào SessionStorage
         sessionStorage.setItem('promotionTotalPrice', promotionTotalPrice);
+        sessionStorage.setItem('promotionInfo', JSON.stringify(promotion));
         updateTotalPrice();
     }
 }
