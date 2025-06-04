@@ -136,6 +136,34 @@
     .date-item {
         margin: 5px 0;
     }
+
+    .section-5 {
+        width: 90%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .section-5 h2 {
+        font-size: 22px;
+    }
+
+    .date-item {
+        font-size: 16px;
+        padding: 12px;
+        min-width: 100px;
+    }
+
+    .inner-date {
+        padding: 15px;
+    }
+
+    .section-5 .x {
+        top: -10px;
+        right: -10px;
+        padding: 4px 6px;
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -144,7 +172,7 @@
         width: 228px;
     }
 
-    .section-5{
+    .section-5 {
         padding-top: 1000px;
     }
 
@@ -214,7 +242,26 @@
         height: 260px;
     }
 
+    .section-5 {
+        width: 100%;
+        height: auto; 
+        max-height: 90vh;
+        border-radius: 10px;
+        overflow-y: auto; 
+        padding: 15px;
+    }
+
     .section-5 h2 {
-        font-size: 24px;
+        font-size: 18px;
+    }
+
+    .date-item {
+        font-size: 14px;
+        padding: 10px;
+        min-width: 90px;
+    }
+
+    .section-5 .x {
+        font-size: 12px;
     }
 }
