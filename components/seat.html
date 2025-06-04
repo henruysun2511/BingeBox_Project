@@ -140,12 +140,30 @@
         }
 
         @media screen and (max-width: 480px) {
-            body {
+            .seatBox {
                 overflow-x: auto;
+                max-width: 100%;
+                padding-left: 15px;
             }
 
-            .seatBox .row{
+            .seatBox::-webkit-scrollbar {
+                height: 8px;
+            }
+
+            .seatBox::-webkit-scrollbar-track {
+                background: #222;
+                border-radius: 10px;
+            }
+
+            .seatBox::-webkit-scrollbar-thumb {
+                background-color: var(--color-yellow, #ffcc00);
+                border-radius: 10px;
+                border: 2px solid #222;
+            }
+
+            .seatBox .row {
                 flex-wrap: nowrap;
+                min-width: max-content;
             }
 
             img {
@@ -166,10 +184,6 @@
                 width: 20px;
                 height: 20px;
             }
-        }
-
-        @media screen and (max-width: 320px) {
-            /* OK nếu bạn muốn hỗ trợ điện thoại rất nhỏ */
         }
     </style>
 
