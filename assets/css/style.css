@@ -347,16 +347,17 @@ select {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 4;
     display: none;
 }
 
+/* Close button */
 #close {
     position: fixed;
-    top: 17%;
-    left: 79%;
+    top: 15%;
+    right: 0;
     font-size: 35px;
     z-index: 6;
     cursor: pointer;
@@ -364,13 +365,27 @@ select {
     display: none;
 }
 
+/* Centered fixed iframe container */
 .inner-iframe {
-    text-align: center;
     position: fixed;
-    top: 20%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 860px;
+    aspect-ratio: 16 / 9;
     z-index: 5;
     display: none;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inner-iframe iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
 }
 
 /*css cho section-6*/
