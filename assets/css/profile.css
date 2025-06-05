@@ -1,0 +1,513 @@
+.section-1 {
+  margin-top: 100px;
+}
+
+.section-1 .inner-image {
+  width: 100%;
+  height: 600px;
+  box-shadow: 0 2px 15px var(--color-yellow);
+}
+
+.section-1 .inner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-2 {
+  color: var(--color-text);
+  margin-bottom: 70px;
+}
+
+.section-2 .inner-wrap {
+  display: flex;
+}
+
+.section-2 .profile-avatar {
+  border-radius: 45%;
+  width: 300px;
+  height: 300px;
+  margin-top: -80px;
+}
+
+.section-2 .profile-avatar img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border: 5px solid var(--color-yellow);
+}
+
+.section-2 .profile-info {
+  margin: 25px;
+}
+
+.section-2 h1 {
+  font-size: 48px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.profile-apellation {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 18px;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.profile-apellation li {
+  border: 1.5px solid var(--color-text);
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-size: 15px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.profile-apellation li.selected {
+  background-color: var(--color-yellow);
+  color: black;
+  font-weight: bold;
+  border: 1px solid var(--color-yellow);
+}
+
+.section-3 {
+  margin: 30px;
+  color: var(--color-text);
+}
+
+.section-3 .container-fluid {
+  padding: 0 150px;
+}
+
+.section-3 .profile-common {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  padding: 18px 30px;
+  border-radius: 15px;
+}
+
+.profile-common h1 {
+  text-align: center;
+  color: var(--color-yellow);
+  margin-bottom: 25px;
+}
+
+.profile-common p {
+  font-size: 20px;
+}
+
+.profile-common .profile-quote {
+  font-style: italic;
+  border-bottom: 1px solid var(--color-yellow);
+  padding: 0 0 20px;
+}
+
+.profile-common .profile-common-info {
+  border-bottom: 1px solid var(--color-yellow);
+  padding: 20px 0;
+}
+
+.profile-common .profile-barcode {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.section-3 .profile-title {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin-bottom: 50px;
+  padding-left: 0;
+}
+
+.section-3 .profile-title li {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  width: 310px;
+}
+
+.section-3 .profile-title li i {
+  color: var(--color-yellow);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.section-3 .profile-title li h3 {
+  font-weight: 500;
+}
+
+.section-3 .profile-title li p {
+  color: rgb(172, 171, 171);
+}
+
+.profile-menu {
+  border-bottom: 2px solid var(--color-yellow);
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.profile-menu .menu-item {
+  background-color: transparent;
+  font-size: 21px;
+  cursor: pointer;
+  width: 230px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.menu-detail {
+  margin: 20px 0;
+  width: 950px;
+  height: auto;
+  padding: 40px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile-detail ul {
+  padding-left: 0;
+}
+
+/* css cho thông tin chi tiết */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 10px);
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.form-group textarea {
+  width: 100%;
+}
+
+.form-group .avatar-image-2 img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.form-group .wallpaper-image-2 img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.form-group i {
+  padding: 10px;
+  background-color: black;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.update-button {
+  text-align: center;
+}
+
+.quote {
+  width: 100%;
+}
+
+button {
+  background-color: var(--color-yellow);
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-text);
+  border-radius: 5px;
+  border: 0;
+}
+
+/* css cho vé*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  color: var(--color-text);
+}
+
+td:last-child div {
+  margin: auto;
+}
+
+/*css cho hóa đơn*/
+.bill-list {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.bill-card {
+  background-color: white;
+  border-radius: 5px;
+  width: 350px;
+  height: auto;
+  padding: 10px;
+}
+
+.bill-time {
+  color: black;
+}
+
+.bill-card h1 {
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+
+.bill-card h3 {
+  font-size: 20px;
+}
+
+.bill-card p{
+  width: 250px;
+}
+
+.bill-cinema {
+  border-bottom: 1px dashed black;
+  padding-bottom: 10px;
+  color: black;
+}
+
+.bill-movie {
+  padding-top: 10px;
+  color: black;
+}
+
+.bill-card ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding-bottom: 10px;
+  color: black;
+}
+
+.bill-room {
+  border-bottom: 1px dashed black;
+  padding-bottom: 10px;
+  color: black;
+}
+
+.bill-group {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed black;
+  padding: 10px 0;
+  color: black;
+}
+
+.bill-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: black;
+}
+
+.total-price {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/*css cho phim của tôi */
+#my-movie ul{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  list-style: none;
+}
+
+.movie-menu{
+  padding: 10px 20px;
+  width: 250px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.movie-menu i{
+  margin-right: 10px;
+}
+
+.movie-watched-select{
+  background-color: var(--color-blue);
+}
+
+.movie-favourite-select{
+  background-color: var(--color-red);
+}
+
+.movie-remind-select{
+  background-color: var(--color-golden);
+}
+
+.movie-list{
+  display: flex;
+  margin: 25px 0;
+  padding: 20px;
+}
+
+.movie-list img{
+  width: 229px;
+  height: 320px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 0 15px 15px 0;
+}
+
+/* css cho khối chọn avatar */
+.avatar {
+  background-color: black;
+  border-radius: 15px;
+  width: 1000px;
+  height: auto;
+  padding: 30px;
+  position: fixed;
+  top: 25%;
+  left: 22%;
+  z-index: 2;
+  display: none;
+}
+
+.avatar-title {
+  color: var(--color-yellow);
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.avatar-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 300px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.avatar-image {
+  width: 100px;
+  height: 100px;
+  margin: 3px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.avatar-image:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* css cho khối chọn ảnh nền */
+.wallpaper {
+  background-color: black;
+  border-radius: 15px;
+  width: 1000px;
+  height: auto;
+  padding: 30px;
+  position: fixed;
+  top: 25%;
+  left: 22%;
+  z-index: 2;
+  display: none;
+}
+
+.wallpaper-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 300px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.wallpaper-image {
+  width: 300px;
+  height: 169px;
+  margin: 3px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wallpaper-image:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wallpaper-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* css cho khối chọn danh hiệu */
+.apellation {
+  background-color: black;
+  border-radius: 15px;
+  width: 1000px;
+  height: auto;
+  padding: 30px;
+  position: fixed;
+  top: 25%;
+  left: 22%;
+  z-index: 2;
+  display: none;
+  text-align: center;
+}
+
+.select-button {
+  display: none;
+}

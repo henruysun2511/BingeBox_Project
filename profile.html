@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BingeBox Cinema - Thông tin cá nhân</title>
+    <link rel="icon" type="image/png" href="/assets/images/bingebox_logo.png" />
+
+    <!-- Nhúng font và icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/profile.css" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <div class="section-1">
+      <div class="inner-image">
+        <img src="assets/images/movieBigPosters/BPsuperman.jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="section-2">
+      <div class="container">
+        <div class="inner-wrap">
+          <div class="profile-avatar">
+            <img src="assets/images/actors/meo.png" alt="" />
+          </div>
+          <div class="profile-info">
+            <h1 class="profile-name">Huy Sun</h1>
+            <ul class="profile-apellation">
+              <li>Kẻ hủy diệt phim</li>
+              <li>Thích phim hành động</li>
+              <li>Một ngày 10 phim</li>
+              <li>Phú ông bao vé</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-4">
+            <div class="profile-common">
+              <h1>Thông tin chung</h1>
+              <p class="profile-quote">
+                "Mỗi bộ phim là một chuyến hành trình – không chỉ qua câu chuyện
+                trên màn ảnh, mà còn qua cảm xúc bên trong chính ta."
+              </p>
+              <div class="profile-common-info">
+                <p>Tên: Huy Sun</p>
+                <p>Email: huysun2511@gmail.com</p>
+                <p>Mã khách hàng: 2005-tkweb-nhom4-10-6</p>
+              </div>
+              <div class="profile-barcode">
+                <h3>Mã barcode</h3>
+                <img
+                  src="assets/images/barcode_2005-tkweb-nhom4-10-6.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8">
+            <div class="profile-detail">
+              <ul class="profile-title">
+                <li class="movie-watched">
+                  <i class="fa-solid fa-film"></i>
+                  <h3>7</h3>
+                  <p>Số phim đã xem</p>
+                </li>
+                <li class="total-expenditure">
+                  <i class="fa-solid fa-money-check-dollar"></i>
+                  <h3>5.000.000 đ</h3>
+                  <p>Tổng chi tiêu</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-trophy"></i>
+                  <h3>500 BG</h3>
+                  <p>Điểm thưởng</p>
+                </li>
+              </ul>
+              <ul class="profile-menu">
+                <li class="menu-item" data-target="my-info">
+                  Thông tin chi tiết
+                </li>
+                <li class="menu-item" data-target="my-ticket">Vé của tôi</li>
+                <li class="menu-item" data-target="my-bill">Hóa đơn</li>
+                <li class="menu-item" data-target="my-movie">Phim của tôi</li>
+              </ul>
+              <ul>
+                <!-- Thông tin cá nhân -->
+                <div class="menu-detail" id="my-info">
+                  <div class="form">
+                    <div class="form-group">
+                      <label>Họ và tên</label>
+                      <input type="text" value="Đặng Nhật Huy" readonly />
+                    </div>
+                    <div class="form-group">
+                      <label>Ngày sinh</label>
+                      <input type="text" value="25/11/2005" readonly />
+                    </div>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input
+                        type="email"
+                        value="huysun2511@gmail.com"
+                        readonly
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Số điện thoại</label>
+                      <input type="text" value="0362832880" readonly />
+                    </div>
+                    <div class="form-group">
+                      <label>Giới tính</label>
+                      <label
+                        ><input type="radio" name="gender" checked /> Nam</label
+                      >
+                      <label><input type="radio" name="gender" /> Nữ</label>
+                    </div>
+                    <div class="form-group">
+                      <label>Mật khẩu</label>
+                      <input type="password" value="password" readonly />
+                    </div>
+                  </div>
+                  <div class="quote form-group">
+                    <label>Quote phim ảnh của bạn</label>
+                    <textarea
+                      name=""
+                      id=""
+                      placeholder="Nhập nội dung..."
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Ảnh đại diện</label>
+                    <div class="avatar-image-2">
+                      <img src="assets/images/actors/meo.png" alt="" />
+                      <i class="fa-solid fa-pen pen-1"></i>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Ảnh nền</label>
+                    <div class="wallpaper-image-2">
+                      <img
+                        src="assets/images/movieBigPosters/BPsuperman.jpg"
+                        alt=""
+                      />
+                      <i class="fa-solid fa-pen pen-2"></i>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Danh hiệu</label>
+                    <ul class="profile-apellation">
+                      <li>Kẻ hủy diệt phim</li>
+                      <li>Thích phim hành động</li>
+                      <li>Một ngày 10 phim</li>
+                      <li>Phú ông bao vé</li>
+                    </ul>
+                    <i class="fa-solid fa-pen pen-3"></i>
+                  </div>
+                  <div class="update-button"><button>Cập nhật</button></div>
+                </div>
+                <!-- Thông tin vé -->
+                <div class="menu-detail" id="my-ticket" style="display: none">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Phim</th>
+                        <th>Rạp</th>
+                        <th>Giờ</th>
+                        <th>Ngày</th>
+                        <th>Phòng</th>
+                        <th>Ghế</th>
+                        <th>QR Code</th>
+                      </tr>
+                    </thead>
+                    <tbody id="ticket-table-body">
+                      <!-- JS render vào đây -->
+                    </tbody>
+                  </table>
+                </div>
+                <!-- Thông tin hóa đơn -->
+                <div class="menu-detail" id="my-bill" style="display: none">
+                  <div class="bill-list">
+                    <div class="bill-card">
+                      <h1>HỆ THỐNG RẠP CHIẾU PHIM BINGEBOX</h1>
+                      <div class="bill-time">
+                        Thời gian giao dịch: 21/2/2025
+                      </div>
+                      <div class="bill-cinema">BingeBox Cinema Liễu Giai</div>
+                      <h3 class="bill-movie">Captain America: Thế giới mới</h3>
+                      <ul>
+                        <li>2D</li>
+                        <li>Phụ đề</li>
+                        <li>T13</li>
+                      </ul>
+                      <h3 class="bill-room">Phòng: 8</h3>
+                      <div class="bill-group">
+                        <div class="bill-seat">
+                          <p>Ghế: A3, A4</p>
+                          <div class="seat-type">Thường x2</div>
+                        </div>
+                        <div class="bill-price">180.000d</div>
+                      </div>
+                      <div class="bill-group">
+                        <p>Combo 1</p>
+                        <div class="bill-price">180.000d</div>
+                      </div>
+                      <div class="bill-group">
+                        <p>Danh tặng bạn mới</p>
+                        <div class="bill-price">-100.000d</div>
+                      </div>
+                      <div class="bill-total">
+                        <h3>Tổng tiền:</h3>
+                        <div class="total-price">500 000 đ</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Thông tin phim -->
+                <div class="menu-detail" id="my-movie" style="display: none">
+                  <ul>
+                    <li
+                      class="movie-menu movie-watched-select"
+                      data-target="watched"
+                    >
+                      <i class="fa-solid fa-film"></i>Phim đã xem
+                    </li>
+                    <li
+                      class="movie-menu movie-favourite-select"
+                      data-target="favourite"
+                    >
+                      <i class="fa-solid fa-heart"></i>Phim yêu thích
+                    </li>
+                    <li
+                      class="movie-menu movie-remind-select"
+                      data-target="remind"
+                    >
+                      <i class="fa-solid fa-bell"></i>Nhắc tôi
+                    </li>
+                  </ul>
+                  <div class="movie-list" id="watched"></div>
+                  <div
+                    class="movie-list"
+                    id="favourite"
+                    style="display: none"
+                  ></div>
+                  <div
+                    class="movie-list"
+                    id="remind"
+                    style="display: none"
+                  ></div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="avatar">
+      <h1 class="avatar-title">VUI LÒNG CHỌN ẢNH ĐẠI DIỆN CỦA BẠN</h1>
+      <div class="avatar-wrap">
+        <div class="avatar-image">
+          <img src="assets/images/actors/aaron.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="wallpaper">
+      <h1 class="avatar-title">VUI LÒNG CHỌN ẢNH NỀN CỦA BẠN</h1>
+      <div class="wallpaper-wrap">
+        <div class="wallpaper-image">
+          <img src="assets/images/movieBigPosters/BPsuperman.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="apellation">
+      <h1 class="avatar-title">VUI LÒNG CHỌN DANH HIỆU CỦA BẠN</h1>
+      <ul class="profile-apellation">
+        <li>Kẻ hủy diệt phim</li>
+        <li>Thích phim hành động</li>
+        <li>Một ngày 10 phim</li>
+        <li>Phú ông bao vé</li>
+      </ul>
+      <button class="select-button">Xác nhận</button>
+    </div>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="scripts/profile.js"></script>
+    <script src="./scripts/loadComponents.js"></script>
+  </body>
+</html>
