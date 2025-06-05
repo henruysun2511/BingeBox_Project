@@ -11,9 +11,12 @@ window.onload = () => {
       password: password.value,
     };
     const users = JSON.parse(localStorage.getItem("users")) || [];
-    if (!Validator.validateLogin(user)) {
-      Message.messageInfo("Vui lòng nhập đầy đủ thông tin", "error");
-      return;
+    const error = Validator.validateLogin(user);
+    if (error) {
+      // Hiển thị lỗi theo từng trường
+      if (error.username) Message.messageInfo(error.username, "error");
+      if (error.password) Message.messageInfo(error.password, "error");
+      return; // Dừng lại nếu có lỗi
     }
     const foundUser = users.find(
       (u) => u.username === user.username && u.password === user.password

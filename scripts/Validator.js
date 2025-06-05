@@ -1,7 +1,7 @@
 class Validator {
   // Kiểm tra đăng ký: name, email, password, confirmPassword
   validateRegister(data) {
-    if (!data.username || data.username.trim() === '') {
+    if (!data.username || data.username.trim() === "") {
       return false;
     }
 
@@ -20,15 +20,15 @@ class Validator {
   validateLogin(data) {
     const errors = {};
 
-    if (!this.isValidEmail(data.email)) {
-      errors.email = 'Email không hợp lệ';
+    if (data.username.trim() === "") {
+      errors.username = "Tên đăng nhập không được để trống";
     }
 
     if (!data.password || data.password.length < 6) {
-      errors.password = 'Mật khẩu phải có ít nhất 6 ký tự';
+      errors.password = "Mật khẩu phải có ít nhất 6 ký tự";
     }
 
-    return errors;
+    return Object.keys(errors).length > 0 ? errors : null;
   }
 
   // Hàm phụ: kiểm tra định dạng email
