@@ -110,7 +110,6 @@
             border-radius: 30px;
             border: 0;
             background: linear-gradient(90deg, #ff5757, #8c52ff);
-
         }
 
         .header .inner-regist ul li .button-dk:hover {
@@ -227,7 +226,7 @@
             </a>
             <div class="inner-menu">
                 <ul>
-                    <li><a href="./showtime.html">Lịch chiếu</a></li>
+                    <li><a class="" href="./showtime.html">Lịch chiếu</a></li>
                     <li><a href="./promotion.html">Khuyến mãi</a></li>
                     <li><a href="./new.html">Tin tức</a></li>
                     <li><a href="./price.html">Giá vé</a></li>
@@ -267,7 +266,7 @@
         if (currentUser) {
             const user = JSON.parse(currentUser);
             loginButton.setAttribute("href", "./profile.html");
-            registerButton.setAttribute("href", "#");
+            registerButton.setAttribute("href", "./index.html");
 
             loginButton.textContent = `Xin chào, ${user.username}`;
             registerButton.textContent = "Đăng xuất";

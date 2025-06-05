@@ -75,7 +75,6 @@ const movies =
                         {
                             date: '27-05-2025',
                             showtimes: [
-                                { time: '15:10', room: 'Phòng 1' },
                                 { time: '17:20', room: 'Phòng 2' },
                                 { time: '20:30', room: 'Phòng 3' },
                                 { time: '21:10', room: 'Phòng 3' }
@@ -84,19 +83,19 @@ const movies =
                         {
                             date: '28-05-2025',
                             showtimes: [
-                                { time: '15:10', room: 'Phòng 1' },
+                                { time: '16:10', room: 'Phòng 1' },
                                 { time: '17:20', room: 'Phòng 2' },
                                 { time: '20:30', room: 'Phòng 3' },
-                                { time: '21:10', room: 'Phòng 3' }
+                                { time: '21:20', room: 'Phòng 3' }
                             ]
                         },
                         {
                             date: '29-05-2025',
                             showtimes: [
-                                { time: '15:10', room: 'Phòng 1' },
-                                { time: '17:20', room: 'Phòng 2' },
-                                { time: '20:30', room: 'Phòng 3' },
-                                { time: '21:10', room: 'Phòng 3' }
+                                { time: '16:10', room: 'Phòng 1' },
+                                { time: '18:20', room: 'Phòng 2' },
+                                { time: '21:30', room: 'Phòng 3' },
+                                { time: '23:10', room: 'Phòng 3' }
                             ]
                         },
                     ]

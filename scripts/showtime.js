@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const dateArray = [...dateSet];
-    dateArray.sort();
 
     dateArray.forEach((date, index) => {
       const btn = document.createElement('button');
@@ -77,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [...dateButtonDiv.children].forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
 
+        console.log(btn.textContent);
         renderMoviesByCinemaAndDate(cinemaName, date);
       });
 
@@ -98,8 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!cinema) return;
 
       const schedule = cinema.schedules.find((s) => s.date === date);
-      if (!schedule || schedule.showtimes.length === 0) return;
-
+      if (!schedule || !schedule.showtimes || schedule.showtimes.length === 0) return;
       const card = document.createElement('div');
       card.className = 'movie-card';
 
