@@ -4,11 +4,12 @@ const user = JSON.parse(localStorage.getItem("currentUser"));
 if (!user) {
   window.location.href = "../login/login.html";
 }
-const info = document.querySelectorAll(".col2-set span");
-const hello = document.querySelector(".hello strong");
-hello.textContent = `Xin chào ${user.username},`;
-info[0].textContent = `Tên: ${user.username}`;
-info[1].textContent = `Email: ${user.email}`;
+const loadInfo=()=>{
+  const input_username = document.getElementById("name-input");
+  const input_email = document.getElementById("email-input");
+  const input_phone = document.getElementById("phone-input");
+  
+}
 
 //Viết sự kiện chọn menu hiện menu-detail tương ứng
 const menuItems = document.querySelectorAll(".menu-item");

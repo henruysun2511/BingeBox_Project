@@ -1,266 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/base.css" />
     <style>
-        .header {
-            background-color: #2E4BA6;
-            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-            padding: 0 50px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 999;
+      .header {
+        background-color: #2e4ba6;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+        padding: 0 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+      }
+
+      .header .inner-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header .inner-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+      }
+
+      .header .inner-wrap .inner-logo a {
+        margin-right: 10px;
+      }
+
+      .header .inner-wrap .inner-logo img {
+        height: 80px;
+        width: auto;
+        margin-right: 8px;
+      }
+
+      .header .inner-wrap .inner-logo p {
+        color: white;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .header .inner-wrap .inner-menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .header .inner-wrap .inner-menu ul li a {
+        display: inline-block;
+        padding: 35px 20px;
+        color: white;
+        font-size: 18px;
+      }
+
+      .header .inner-wrap .inner-menu ul li a:hover {
+        background-color: blue;
+      }
+
+      .header .inner-wrap .inner-regist {
+        height: 80px;
+      }
+
+      .header .inner-wrap .inner-regist ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        height: 100%;
+      }
+
+      .header .inner-regist ul li {
+        margin-right: 10px;
+      }
+
+      .header .inner-regist ul li button {
+        padding: 10px 25px;
+        border-radius: 30px;
+        border: 0;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .header .inner-regist ul li .button a {
+        color: white;
+        font-weight: 400;
+      }
+
+      .header .inner-regist ul li .button-dn {
+        background: linear-gradient(90deg, #5de0e6, #004aad);
+      }
+
+      .header .inner-regist ul li .button-dk {
+        background: linear-gradient(90deg, #ff5757, #8c52ff);
+      }
+
+      .header .inner-regist ul li .button-dn:hover {
+        padding: 10px 25px;
+        border-radius: 30px;
+        border: 0;
+        background: linear-gradient(90deg, #ff5757, #8c52ff);
+      }
+
+      .header .inner-regist ul li .button-dk:hover {
+        padding: 10px 25px;
+        border-radius: 30px;
+        border: 0;
+        background: linear-gradient(90deg, #5de0e6, #004aad);
+      }
+
+      .header .inner-icon {
+        display: none;
+        color: white;
+        font-size: 25px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .inner-menu {
+          display: none;
+          flex-direction: column;
+          background-color: #2e4ba6;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          padding: 10px 0;
         }
 
-        .header .inner-wrap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .inner-regist {
+          display: none;
+          flex-direction: column;
+          background-color: #2e4ba6;
+          position: absolute;
+          top: 860%;
+          left: 0;
+          width: 100%;
+          padding: 10px 0;
         }
 
-        .header .inner-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
+        .inner-menu.show-menu {
+          display: flex;
         }
 
-        .header .inner-wrap .inner-logo a {
-            margin-right: 10px;
+        .inner-menu ul {
+          flex-direction: column;
+          width: 100%;
         }
 
-        .header .inner-wrap .inner-logo img {
-            height: 80px;
-            width: auto;
-            margin-right: 8px;
-
+        .inner-menu ul li a {
+          padding: 10px 20px;
+          text-align: center;
+          width: 100%;
         }
 
-        .header .inner-wrap .inner-logo p {
-            color: white;
-            font-weight: 700;
-            margin: 0;
+        .inner-regist.show-regist {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 30px 0;
         }
 
-        .header .inner-wrap .inner-menu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
+        .inner-regist ul {
+          flex-direction: column;
+          width: 100%;
+          padding: 0;
         }
 
+        .inner-regist ul li {
+          width: 100%;
+          text-align: center;
+          margin: 5px 0;
+        }
+
+        .inner-regist ul li button {
+          width: 80%;
+        }
+
+        .header .inner-icon {
+          display: block;
+          cursor: pointer;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
         .header .inner-wrap .inner-menu ul li a {
-            display: inline-block;
-            padding: 35px 20px;
-            color: white;
-            font-size: 18px;
+          padding: 10px;
+          text-align: center;
+          width: 100%;
         }
 
-        .header .inner-wrap .inner-menu ul li a:hover {
-            background-color: blue;
+        .inner-regist {
+          display: none;
+          flex-direction: column;
+          background-color: #2e4ba6;
+          position: absolute;
+          top: 535%;
+          left: 0;
+          width: 100%;
+          padding: 10px 0;
         }
-
-        .header .inner-wrap .inner-regist {
-            height: 80px;
-        }
-
-        .header .inner-wrap .inner-regist ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            list-style-type: none;
-            height: 100%;
-
-        }
-
-        .header .inner-regist ul li {
-            margin-right: 10px;
-        }
-
-        .header .inner-regist ul li button {
-            padding: 10px 25px;
-            border-radius: 30px;
-            border: 0;
-            font-size: 15px;
-            font-weight: 600;
-
-        }
-
-        .header .inner-regist ul li .button a {
-            color: white;
-            font-weight: 400;
-        }
-
-        .header .inner-regist ul li .button-dn {
-            background: linear-gradient(90deg, #5de0e6, #004aad);
-        }
-
-        .header .inner-regist ul li .button-dk {
-            background: linear-gradient(90deg, #ff5757, #8c52ff);
-        }
-
-        .header .inner-regist ul li .button-dn:hover {
-            padding: 10px 25px;
-            border-radius: 30px;
-            border: 0;
-            background: linear-gradient(90deg, #ff5757, #8c52ff);
-
-        }
-
-        .header .inner-regist ul li .button-dk:hover {
-            padding: 10px 25px;
-            border-radius: 30px;
-            border: 0;
-            background: linear-gradient(90deg, #5de0e6, #004aad);
-
-        }
-
-        .header .inner-icon{
-            display: none;
-            color: white;
-            font-size: 25px;
-        }
-
-        @media screen and (max-width: 1024px) {
-            .inner-menu {
-                display: none;
-                flex-direction: column;
-                background-color: #2E4BA6;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                padding: 10px 0;
-            }
-
-            .inner-regist {
-                display: none;
-                flex-direction: column;
-                background-color: #2E4BA6;
-                position: absolute;
-                top: 860%;
-                left: 0;
-                width: 100%;
-                padding: 10px 0;
-            }
-
-            .inner-menu.show-menu {
-                display: flex;
-            }
-
-            .inner-menu ul {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .inner-menu ul li a {
-                padding: 10px 20px;
-                text-align: center;
-                width: 100%;
-            }
-
-            .inner-regist.show-regist {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                padding: 30px 0;
-            }
-
-            .inner-regist ul {
-                flex-direction: column;
-                width: 100%;
-                padding: 0;
-            }
-
-            .inner-regist ul li {
-                width: 100%;
-                text-align: center;
-                margin: 5px 0;
-            }
-
-            .inner-regist ul li button {
-                width: 80%;
-            }
-
-            .header .inner-icon {
-                display: block;
-                cursor: pointer;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .header .inner-wrap .inner-menu ul li a {
-                padding: 10px;
-                text-align: center;
-                width: 100%;
-            }
-
-            .inner-regist {
-                display: none;
-                flex-direction: column;
-                background-color: #2E4BA6;
-                position: absolute;
-                top: 535%;
-                left: 0;
-                width: 100%;
-                padding: 10px 0;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="header">
-        <div class="inner-wrap">
-            <a href="./index.html">
-                <div class="inner-logo">
-                    <img src="./assets/images/bingebox_logo.png" alt="bingebox_logo.png">
-                    <p>BINGEBOX <br>CINEMA</p>
-                </div>
-            </a>
-            <div class="inner-menu">
-                <ul>
-                    <li><a href="./showtime.html">Lịch chiếu</a></li>
-                    <li><a href="./promotion.html">Khuyến mãi</a></li>
-                    <li><a href="./new.html">Tin tức</a></li>
-                    <li><a href="./price.html">Giá vé</a></li>
-                    <li><a href="./blogCinematic.html">Blog phim</a></li>
-                    <li><a href="./magicBox.html">Magic box</a></li>
-                    <li><a href="./aboutUs.html">Về chúng tôi</a></li>
-                </ul>
-            </div>
-            <div class="inner-regist">
-                <ul>
-                    <li><button class="button button-dn">
-                            <a href="./accounts/login/login.html">Đăng nhập</a></button></li>
-                    <li><button class="button button-dk">
-                            <a href="./accounts/register/register.html">Đăng ký</a></button></li>
-                </ul>
-            </div>
-            <div class="inner-icon"><i class="fa-solid fa-bars"></i></div>
+      <div class="inner-wrap">
+        <a href="./index.html">
+          <div class="inner-logo">
+            <img
+              src="./assets/images/bingebox_logo.png"
+              alt="bingebox_logo.png"
+            />
+            <p>BINGEBOX <br />CINEMA</p>
+          </div>
+        </a>
+        <div class="inner-menu">
+          <ul>
+            <li><a href="./showtime.html">Lịch chiếu</a></li>
+            <li><a href="./promotion.html">Khuyến mãi</a></li>
+            <li><a href="./new.html">Tin tức</a></li>
+            <li><a href="./price.html">Giá vé</a></li>
+            <li><a href="./blogCinematic.html">Blog phim</a></li>
+            <li><a href="./magicBox.html">Magic box</a></li>
+            <li><a href="./aboutUs.html">Về chúng tôi</a></li>
+          </ul>
         </div>
+        <div class="inner-regist">
+          <ul>
+            <li>
+              <button class="button button-dn">
+                <a href="./accounts/login/login.html">Đăng nhập</a>
+              </button>
+            </li>
+            <li>
+              <button class="button button-dk">
+                <a href="./accounts/register/register.html">Đăng ký</a>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="inner-icon"><i class="fa-solid fa-bars"></i></div>
+      </div>
     </div>
 
     <script>
-        const menuIcon = document.querySelector('.inner-icon');
-        const menu = document.querySelector('.inner-menu');
-        const regist = document.querySelector('.inner-regist');
+      const menuIcon = document.querySelector(".inner-icon");
 
-        menuIcon.addEventListener('click', () => {
-            regist.classList.toggle('show-regist');
-            menu.classList.toggle('show-menu');
+      const menu = document.querySelector(".inner-menu");
+      const regist = document.querySelector(".inner-regist");
 
+      menuIcon.addEventListener("click", () => {
+        regist.classList.toggle("show-regist");
+        menu.classList.toggle("show-menu");
+      });
+
+      const currentUser = localStorage.getItem("currentUser");
+
+      const loginButton = document.querySelector(".button-dn a");
+      const registerButton = document.querySelector(".button-dk a");
+
+      if (currentUser) {
+        const user = JSON.parse(currentUser);
+        loginButton.setAttribute("href", "./accounts/profile/profile.html");
+        registerButton.setAttribute("href", "#");
+
+        loginButton.textContent = `Xin chào, ${user.username}`;
+        registerButton.textContent = "Đăng xuất";
+
+        registerButton.addEventListener("click", (event) => {
+          event.preventDefault(); // Ngăn nhảy trang
+          localStorage.removeItem("currentUser");
+          window.location.reload();
         });
+      } else {
+        loginButton.textContent = "Đăng nhập";
+        loginButton.setAttribute("href", "./accounts/login/login.html");
+
+        registerButton.textContent = "Đăng ký";
+        registerButton.setAttribute(
+          "href",
+          "./accounts/register/register.html"
+        );
+      }
     </script>
-
-
-</body>
-
+  </body>
 </html>
