@@ -172,9 +172,8 @@ function renderAvatarList() {
         localStorage.setItem("currentUser", JSON.stringify(user));
         document.querySelector('.avatar').style.display = 'none';
 
-        const avatarImage = document.querySelector(".avatar-image-2");
-        avatarImage.innerHTML = `<img src="${user.avatar}">
-      <i class="fa-solid fa-pen pen-1"></i>`
+        const avatarImg = document.querySelector('.avatar-image-2 img');
+        if (avatarImg) avatarImg.src = user.avatar;
       });
     })
   }
@@ -184,6 +183,14 @@ function renderAvatarList() {
   updateIconAvatar.addEventListener('click', function () {
     avatarSection.style.display = 'block';
   });
+}
+function addEditAvatarListener() {
+  const updateIconAvatar = document.querySelector('.pen-1');
+  if (updateIconAvatar) {
+    updateIconAvatar.addEventListener('click', function () {
+      document.querySelector('.avatar').style.display = 'block';
+    });
+  }
 }
 renderAvatarList();
 
@@ -204,9 +211,8 @@ function renderWallpaperList() {
         localStorage.setItem("currentUser", JSON.stringify(user));
         document.querySelector('.wallpaper').style.display = 'none';
 
-        const wallpaperImage = document.querySelector(".wallpaper-image-2");
-        wallpaperImage.innerHTML = `<img src="${user.wallpaper}" alt="" />
-                    <i class="fa-solid fa-pen pen-2"></i>`;
+        const wallpaperImage = document.querySelector(".wallpaper-image-2 img");
+        wallpaperImage.src = user.wallpaper;
       });
     })
   }
