@@ -237,12 +237,16 @@
           <ul>
             <li>
               <button class="button button-dn">
-                <a href="./accounts/login/login.html">Đăng nhập</a>
+                <a id="login-link" href="./accounts/login/login.html"
+                  >Đăng nhập</a
+                >
               </button>
             </li>
             <li>
               <button class="button button-dk">
-                <a href="./accounts/register/register.html">Đăng ký</a>
+                <a id="register-link" href="./accounts/register/register.html"
+                  >Đăng ký</a
+                >
               </button>
             </li>
           </ul>
@@ -252,44 +256,40 @@
     </div>
 
     <script>
-      const menuIcon = document.querySelector(".inner-icon");
+      // document.addEventListener("DOMContentLoaded", function () {
+        const loginButton = document.getElementById("login-link");
+        const registerButton = document.getElementById("register-link");
 
-      const menu = document.querySelector(".inner-menu");
-      const regist = document.querySelector(".inner-regist");
+        const currentUser = localStorage.getItem("currentUser");
 
-      menuIcon.addEventListener("click", () => {
-        regist.classList.toggle("show-regist");
-        menu.classList.toggle("show-menu");
-      });
+        if (currentUser) {
+          const user = JSON.parse(currentUser);
+          loginButton.textContent = `Xin chào, ${user.username}`;
+          loginButton.setAttribute("href", "./profile.html");
 
-      const currentUser = localStorage.getItem("currentUser");
+          registerButton.textContent = "Đăng xuất";
+          registerButton.setAttribute("href", "#");
 
-      const loginButton = document.querySelector(".button-dn a");
-      const registerButton = document.querySelector(".button-dk a");
+          registerButton.addEventListener("click", function (e) {
+            e.preventDefault();
+            localStorage.removeItem("currentUser");
+            window.location.reload();
+          });
+        } else {
+          loginButton.textContent = "Đăng nhập";
+          loginButton.setAttribute("href", "accounts/login/login.html");
 
-      if (currentUser) {
-        const user = JSON.parse(currentUser);
-        loginButton.setAttribute("href", "./accounts/profile/profile.html");
-        registerButton.setAttribute("href", "#");
+          registerButton.textContent = "Đăng ký";
+          registerButton.setAttribute(
+            "href",
+            "accounts/register/register.html"
+          );
+        }
 
-        loginButton.textContent = `Xin chào, ${user.username}`;
-        registerButton.textContent = "Đăng xuất";
-
-        registerButton.addEventListener("click", (event) => {
-          event.preventDefault(); // Ngăn nhảy trang
-          localStorage.removeItem("currentUser");
-          window.location.reload();
-        });
-      } else {
-        loginButton.textContent = "Đăng nhập";
-        loginButton.setAttribute("href", "./accounts/login/login.html");
-
-        registerButton.textContent = "Đăng ký";
-        registerButton.setAttribute(
-          "href",
-          "./accounts/register/register.html"
-        );
-      }
+        // Sau khi đã gán xong => hiện các nút
+        loginButton.style.visibility = "visible";
+        registerButton.style.visibility = "visible";
+      // });
     </script>
   </body>
 </html>
