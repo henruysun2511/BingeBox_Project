@@ -93,10 +93,20 @@ if (movie) {
 
     });
 
+    // Update trailer iframe with proper parameters
     const movieTrailer = document.getElementById('inner-iframe');
+    const videoUrl = new URL(movie.trailer);
+    const updatedUrl = videoUrl.href.includes('?') ? 
+        `${videoUrl.href}&enablejsapi=1&rel=0` : 
+        `${videoUrl.href}?enablejsapi=1&rel=0`;
+        
     movieTrailer.innerHTML = `
-        <iframe width="860" height="515" frameborder="0" src="${movie.trailer}"
-            allowfullscreen></iframe>`;
+        <iframe class="trailer-iframe" 
+            src="${updatedUrl}"
+            frameborder="0" 
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>`;
 
     //Viết sự kiện cho nút trailer
     document.addEventListener('DOMContentLoaded', function () {
@@ -106,25 +116,45 @@ if (movie) {
         const closeTrailer = document.getElementById('close');
         const overlay = document.getElementById('overlay');
 
-
-        playTrailer.addEventListener('click', function () {
+        function openTrailer() {
             overlay.style.display = 'block';
             movieTrailer2.style.display = 'block';
-            closeTrailer.style.display = 'block'
-        });
+            closeTrailer.style.display = 'block';
+            document.body.classList.add('trailer-open');
+        }
 
-        buttonTrailer.addEventListener('click', function () {
-            overlay.style.display = 'block';
-            movieTrailer2.style.display = 'block';
-            closeTrailer.style.display = 'block'
-        });
+        function closeTrailerHandler() {
+            const iframe = movieTrailer2.querySelector('iframe');
+            if (iframe) {
+                const iframeSrc = iframe.src;
+                iframe.src = ''; // Clear the source first
+                setTimeout(() => {
+                    movieTrailer2.innerHTML = `
+                        <iframe class="trailer-iframe" 
+                            src="${updatedUrl}"
+                            frameborder="0" 
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        ></iframe>`;
+                    overlay.style.display = 'none';
+                    movieTrailer2.style.display = 'none';
+                    closeTrailer.style.display = 'none';
+                    document.body.classList.remove('trailer-open');
+                }, 100);
+            } else {
+                overlay.style.display = 'none';
+                movieTrailer2.style.display = 'none';
+                closeTrailer.style.display = 'none';
+                document.body.classList.remove('trailer-open');
+            }
+        }
 
-        closeTrailer.addEventListener('click', function () {
-            overlay.style.display = 'none';
-            movieTrailer2.style.display = 'none';
-            closeTrailer.style.display = 'none'
-            movieTrailer2.querySelector('iframe').src = movieTrailer2.querySelector('iframe').src
-        });
+        playTrailer.addEventListener('click', openTrailer);
+        buttonTrailer.addEventListener('click', openTrailer);
+        closeTrailer.addEventListener('click', closeTrailerHandler);
+        
+        // Close trailer when clicking overlay
+        overlay.addEventListener('click', closeTrailerHandler);
     });
 
     //Render lịch chiếu

@@ -57,20 +57,45 @@ if (movies) {
             overlay.style.display = 'block';
             movieTrailer.style.display = 'block';
             closeTrailer.style.display = 'block';
+            document.body.classList.add('trailer-open');
+
+            // Add YouTube parameters to control video behavior
+            const videoUrl = new URL(item.trailer);
+            const updatedUrl = videoUrl.href.includes('?') ? 
+                `${videoUrl.href}&enablejsapi=1&rel=0` : 
+                `${videoUrl.href}?enablejsapi=1&rel=0`;
 
             // Cập nhật src iframe đúng trailer của phim được click
             movieTrailer.innerHTML = `
-            <iframe width="860" height="515" src="${item.trailer}" frameborder="0" allowfullscreen></iframe>
+            <iframe class="trailer-iframe" 
+                src="${updatedUrl}" 
+                frameborder="0" 
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
         `;
         });
 
         closeTrailer.addEventListener('click', function () {
-            overlay.style.display = 'none';
-            movieTrailer.style.display = 'none';
-            closeTrailer.style.display = 'none';
-
-            // Reset iframe để ngừng video
-            movieTrailer.innerHTML = '';
+            // Get the iframe and post a stop message to it
+            const iframe = movieTrailer.querySelector('iframe');
+            if (iframe) {
+                const iframeSrc = iframe.src;
+                iframe.src = ''; // Clear the source first
+                setTimeout(() => {
+                    movieTrailer.innerHTML = ''; // Then clear the entire content
+                    overlay.style.display = 'none';
+                    movieTrailer.style.display = 'none';
+                    closeTrailer.style.display = 'none';
+                    document.body.classList.remove('trailer-open');
+                }, 100);
+            } else {
+                overlay.style.display = 'none';
+                movieTrailer.style.display = 'none';
+                closeTrailer.style.display = 'none';
+                movieTrailer.innerHTML = '';
+                document.body.classList.remove('trailer-open');
+            }
         });
 
     });
@@ -131,20 +156,45 @@ if (movieComingSoons) {
             overlay.style.display = 'block';
             movieTrailer.style.display = 'block';
             closeTrailer.style.display = 'block';
+            document.body.classList.add('trailer-open');
+
+            // Add YouTube parameters to control video behavior
+            const videoUrl = new URL(item.trailer);
+            const updatedUrl = videoUrl.href.includes('?') ? 
+                `${videoUrl.href}&enablejsapi=1&rel=0` : 
+                `${videoUrl.href}?enablejsapi=1&rel=0`;
 
             // Cập nhật src iframe đúng trailer của phim được click
             movieTrailer.innerHTML = `
-            <iframe width="860" height="515" src="${item.trailer}" frameborder="0" allowfullscreen></iframe>
+            <iframe class="trailer-iframe" 
+                src="${updatedUrl}" 
+                frameborder="0" 
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
         `;
         });
 
         closeTrailer.addEventListener('click', function () {
-            overlay.style.display = 'none';
-            movieTrailer.style.display = 'none';
-            closeTrailer.style.display = 'none';
-
-            // Reset iframe để ngừng video
-            movieTrailer.innerHTML = '';
+            // Get the iframe and post a stop message to it
+            const iframe = movieTrailer.querySelector('iframe');
+            if (iframe) {
+                const iframeSrc = iframe.src;
+                iframe.src = ''; // Clear the source first
+                setTimeout(() => {
+                    movieTrailer.innerHTML = ''; // Then clear the entire content
+                    overlay.style.display = 'none';
+                    movieTrailer.style.display = 'none';
+                    closeTrailer.style.display = 'none';
+                    document.body.classList.remove('trailer-open');
+                }, 100);
+            } else {
+                overlay.style.display = 'none';
+                movieTrailer.style.display = 'none';
+                closeTrailer.style.display = 'none';
+                movieTrailer.innerHTML = '';
+                document.body.classList.remove('trailer-open');
+            }
         });
     });
 }
