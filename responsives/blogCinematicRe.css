@@ -21,6 +21,35 @@
         left: 15%;
         top: 32%;
     }
+
+    .reply-comment {
+        width: 90%;
+        left: 5%;
+        height: 80%;
+        top: 10%;
+    }
+
+    .old-comment img,
+    .new-comment img,
+    .reply-image img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #close {
+        font-size: 30px;
+        top: -15px;
+        right: -5px;
+    }
+
+    .reply-button {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+
+    textarea {
+        height: 50px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -51,7 +80,7 @@
         height: auto;
         position: fixed;
         top: 25%;
-        left: 10%;
+        left: 05%;
     }
 
     .nickname {
@@ -71,6 +100,34 @@
     #nickname-input{
         width: 300px;
     }
+
+    .reply-comment {
+        width: 100%;
+        left: 0;
+        top: 10%;
+        height: 90%;
+        padding: 15px;
+        border-radius: 0;
+    }
+
+    .reply-box {
+        padding-top: 10px;
+    }
+
+    textarea {
+        height: 70px;
+    }
+
+    .reply-button {
+        padding: 12px 10px;
+        font-size: 16px;
+    }
+
+    #close {
+        font-size: 26px;
+        top: -10px;
+        right: 0;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -84,7 +141,7 @@
         height: auto;
         position: fixed;
         top: 10%;
-        left: 0;
+        right: 10%;
     }
 
     .nickname {

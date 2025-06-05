@@ -110,7 +110,6 @@
             border-radius: 30px;
             border: 0;
             background: linear-gradient(90deg, #ff5757, #8c52ff);
-
         }
 
         .header .inner-regist ul li .button-dk:hover {
@@ -121,7 +120,7 @@
 
         }
 
-        .header .inner-icon{
+        .header .inner-icon {
             display: none;
             color: white;
             font-size: 25px;
@@ -227,7 +226,7 @@
             </a>
             <div class="inner-menu">
                 <ul>
-                    <li><a href="./showtime.html">Lịch chiếu</a></li>
+                    <li><a class="" href="./showtime.html">Lịch chiếu</a></li>
                     <li><a href="./promotion.html">Khuyến mãi</a></li>
                     <li><a href="./new.html">Tin tức</a></li>
                     <li><a href="./price.html">Giá vé</a></li>
@@ -249,15 +248,44 @@
     </div>
 
     <script>
-        const menuIcon = document.querySelector('.inner-icon');
-        const menu = document.querySelector('.inner-menu');
-        const regist = document.querySelector('.inner-regist');
+        const menuIcon = document.querySelector(".inner-icon");
 
-        menuIcon.addEventListener('click', () => {
-            regist.classList.toggle('show-regist');
-            menu.classList.toggle('show-menu');
+        const menu = document.querySelector(".inner-menu");
+        const regist = document.querySelector(".inner-regist");
 
+        menuIcon.addEventListener("click", () => {
+            regist.classList.toggle("show-regist");
+            menu.classList.toggle("show-menu");
         });
+
+        const currentUser = localStorage.getItem("currentUser");
+
+        const loginButton = document.querySelector(".button-dn a");
+        const registerButton = document.querySelector(".button-dk a");
+
+        if (currentUser) {
+            const user = JSON.parse(currentUser);
+            loginButton.setAttribute("href", "./profile.html");
+            registerButton.setAttribute("href", "./index.html");
+
+            loginButton.textContent = `Xin chào, ${user.username}`;
+            registerButton.textContent = "Đăng xuất";
+
+            registerButton.addEventListener("click", (event) => {
+                event.preventDefault(); // Ngăn nhảy trang
+                localStorage.removeItem("currentUser");
+                window.location.reload();
+            });
+        } else {
+            loginButton.textContent = "Đăng nhập";
+            loginButton.setAttribute("href", "./accounts/login/login.html");
+
+            registerButton.textContent = "Đăng ký";
+            registerButton.setAttribute(
+                "href",
+                "./accounts/register/register.html"
+            );
+        }
     </script>
 
 
