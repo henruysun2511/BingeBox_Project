@@ -1,4 +1,6 @@
 import { movies } from './objectForCinema.js';
+import { isLoggedIn } from './auth.js';
+import Message from "./Message.js";
 
 const selectMovie = document.getElementById('select-movie');
 const selectCinema = document.getElementById('select-cinema');
@@ -125,6 +127,13 @@ quickticketButton.addEventListener('click', function () {
     const selectedSchedule = selectedCinema?.schedules.find(schedule => schedule.date === selectedDate);
     const selectedTime = selectedSchedule?.showtimes.find(showtime => showtime.time === selectedShowtime);
 
+    if (!isLoggedIn()) {
+        Message.messageInfo("Vui lòng chọn đăng nhập", "error").then((result) => {
+            window.location.href = './accounts/login/login.html';
+        }).catch((err) => { });
+        return;
+    }
+
     if (selectedMovie && selectedCinema && selectedShowtime) {
         const bookingInfo = {
             bookingImage: selectedMovie.imageUrl,
@@ -143,7 +152,7 @@ quickticketButton.addEventListener('click', function () {
         sessionStorage.setItem('bookingInfo', JSON.stringify(bookingInfo));
         // Chuyển hướng đến trang mua vé
         window.location.href = `./booking.html`;
-    
+
     }
 });
 

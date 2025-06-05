@@ -273,6 +273,7 @@
       display: flex;
       justify-content: center;
       gap: 5px;
+      flex-wrap: wrap;
     }
 
     .bill-card {
@@ -297,7 +298,7 @@
       font-size: 20px;
     }
 
-    .bill-card p{
+    .bill-card p {
       width: 250px;
     }
 
@@ -347,14 +348,14 @@
     }
 
     /*css cho phim của tôi */
-    #my-movie ul{
+    #my-movie ul {
       display: flex;
       gap: 15px;
       justify-content: center;
       list-style: none;
     }
 
-    .movie-menu{
+    .movie-menu {
       padding: 10px 20px;
       width: 250px;
       text-align: center;
@@ -364,29 +365,29 @@
       text-transform: uppercase;
     }
 
-    .movie-menu i{
+    .movie-menu i {
       margin-right: 10px;
     }
 
-    .movie-watched-select{
+    .movie-watched-select {
       background-color: var(--color-blue);
     }
 
-    .movie-favourite-select{
+    .movie-favourite-select {
       background-color: var(--color-red);
     }
 
-    .movie-remind-select{
+    .movie-remind-select {
       background-color: var(--color-golden);
     }
 
-    .movie-list{
+    .movie-list {
       display: flex;
       margin: 25px 0;
       padding: 20px;
     }
 
-    .movie-list img{
+    .movie-list img {
       width: 229px;
       height: 320px;
       border-radius: 10px;
@@ -510,4 +511,14 @@
 
     .select-button {
       display: none;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 999;
     }

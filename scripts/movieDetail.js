@@ -1,5 +1,8 @@
 import { movies } from "./objectForCinema.js";
 import { movieComingSoons } from "./objectForCinema.js";
+import { isLoggedIn } from './auth.js';
+import Message from "./Message.js";
+
 
 // Lấy id phim từ URL
 
@@ -192,6 +195,14 @@ if (movie) {
                     let timeNumber = timeItem.querySelector('.time-number');
                     if (timeNumber) {
                         timeNumber.addEventListener('click', () => {
+                            //Chưa đăng nhập
+                            if (!isLoggedIn()) {
+                                Message.messageInfo("Vui lòng chọn đăng nhập", "error").then((result) => {
+                                    window.location.href = './accounts/login/login.html';
+                                }).catch((err) => { });
+                                return;
+                            }
+
                             //lưu thông tin suất chiếu vào session storage
                             const bookingInfo = {
                                 bookingImage: movie.imageUrl,
@@ -244,7 +255,7 @@ if (movie) {
 
     const buttonFavourite = document.querySelector('.button-two');
     if (buttonFavourite) {
-        buttonFavourite.addEventListener('click', function(e) {
+        buttonFavourite.addEventListener('click', function (e) {
             e.preventDefault();
             addMovieToLocalStorage(movie, 'favorite');
             alert('Đã thêm vào danh sách yêu thích');

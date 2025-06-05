@@ -58,6 +58,7 @@ if (movies) {
             movieTrailer.style.display = 'block';
             closeTrailer.style.display = 'block';
 
+
             // Cập nhật src iframe đúng trailer của phim được click
             movieTrailer.innerHTML = `
             <iframe width="860" height="515" src="${item.trailer}" frameborder="0" allowfullscreen></iframe>
@@ -73,6 +74,13 @@ if (movies) {
             movieTrailer.innerHTML = '';
         });
 
+        //Viết sự kiến ấn vào nút mua vé ngay
+        const buyTicketButton = colDiv.querySelector('.inner-button button');
+        buyTicketButton.addEventListener('click', function (event) {
+            event.stopPropagation();
+            // Chuyển hướng sang trang showtime.html
+            window.location.href = 'showtime.html';
+        });
     });
 }
 

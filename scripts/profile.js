@@ -1,14 +1,133 @@
 import { movies, movieComingSoons } from "./objectForCinema.js";
+import Validator from "./Validator.js";
+import Message from "./Message.js";
 
-const user = JSON.parse(localStorage.getItem('currentUser'));
+const user = JSON.parse(localStorage.getItem("currentUser"));
 if (!user) {
-  window.location.href = '../login/login.html';
+  window.location.href = "accounts/login/login.html";
 }
-const info = document.querySelectorAll('.col2-set span');
-const hello = document.querySelector('.hello strong');
-hello.textContent = `Xin chào ${user.username},`;
-info[0].textContent = `Tên: ${user.username}`;
-info[1].textContent = `Email: ${user.email}`;
+const loadInfo = () => {
+  const input_username = document.getElementById("name-input");
+  const input_email = document.getElementById("email-input");
+  const input_phone = document.getElementById("phone-input");
+  const input_birthday = document.getElementById("birthday-input");
+  const input_password = document.getElementById("password-input");
+  const input_quote = document.getElementById("quote-input");
+  const name = document.querySelector(".section-2 h1");
+  const profile_name = document.getElementById("profile-name");
+  const profile_email = document.getElementById("profile-email");
+
+
+  if (user) {
+    name.innerHTML = `${user.username}`;
+    input_username.value = user.username || "";
+    input_email.value = user.email || "";
+    input_phone.value = user.phone || "";
+    input_birthday.value = user.birthday || "";
+    input_password.value = user.password || "";
+    input_quote.value = user.quote || "";
+
+    profile_name.textContent = `Tên đăng nhập: ${user.username}`;
+    profile_email.textContent = `Email: ${user.email}`;
+
+    //Render lại ảnh đại diện
+    const avatarImg = document.querySelector(".profile-avatar img");
+    const avatarImage = document.querySelector(".avatar-image-2");
+    if (user.avatar) {
+      avatarImg.src = user.avatar;
+      avatarImage.innerHTML = `<img src="${user.avatar}">
+      <i class="fa-solid fa-pen pen-1"></i>`
+    }
+
+    //Render lại ảnh nền
+    const wallpaperImg = document.querySelector(".section-1 .inner-image img");
+    const wallpaperImage = document.querySelector(".wallpaper-image-2");
+    if (user.wallpaper) {
+      wallpaperImg.src = user.wallpaper;
+      wallpaperImage.innerHTML = `<img src="${user.wallpaper}" alt="" />
+                    <i class="fa-solid fa-pen pen-2"></i>`;
+    }
+
+    // Render lại danh hiệu
+    const appellationList = document.querySelector(".profile-info .profile-apellation");
+    const profile_appellation = document.querySelector(".section-3 .profile-apellation");
+    if (user.appellations && Array.isArray(user.appellations)) {
+      appellationList.innerHTML = "";
+      profile_appellation.innerHTML = "";
+      user.appellations.forEach(title => {
+        const li = document.createElement("li");
+        li.textContent = title;
+        appellationList.appendChild(li);
+
+        const li2 = document.createElement("li");
+        li2.textContent = title;
+        profile_appellation.appendChild(li2);
+
+      });
+    }
+
+    // Render lại quote
+    const quoteParagraph = document.querySelector(".profile-quote");
+    if (user.quote) {
+      quoteParagraph.textContent = `"${user.quote}"`;
+    }
+  }
+};
+loadInfo();
+
+const updateInfo = () => {
+  const btnUpdateInfo = document.getElementById("update-info");
+  btnUpdateInfo.addEventListener("click", () => {
+    const input_username = document.getElementById("name-input").value;
+    const input_email = document.getElementById("email-input").value;
+    const input_phone = document.getElementById("phone-input").value;
+    const input_birthday = document.getElementById("birthday-input").value;
+    const input_password = document.getElementById("password-input").value;
+    const input_quote = document.getElementById("quote-input").value;
+    const userInfo = {
+      username: input_username,
+      email: input_email,
+      phone: input_phone,
+      birthday: input_birthday,
+      password: input_password,
+      quote: input_quote,
+      avatar: user.avatar,
+      wallpaper: user.wallpaper,
+      appellations: user.appellations,
+    };
+    Message.messageConfirm(
+      "Bạn có chắc chắn muốn cập nhật thông tin không?",
+      "question"
+    ).then((result) => {
+      if (result.isConfirmed) {
+        // Validate userInfo
+        const errors = Validator.validateUpdateUser(userInfo);
+        if (!errors) {
+          // Update user information
+          localStorage.setItem("currentUser", JSON.stringify(userInfo));
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+          const userIndex = users.findIndex((u) => u.email === user.email);
+          if (userIndex !== -1) {
+            users[userIndex] = { ...users[userIndex], ...userInfo };
+            localStorage.setItem("users", JSON.stringify(users));
+            Message.messageInfo("Cập nhật thông tin thành công!", "success")
+              .then((result) => {
+                // Handle success
+                window.location.reload();
+              })
+              .catch((err) => { });
+          }
+        }
+      } else {
+        // Hiển thị lỗi theo từng trường
+        if (errors.username) Message.messageInfo(errors.username, "error");
+        if (errors.email) Message.messageInfo(errors.email, "error");
+        return; // Dừng lại nếu có lỗi
+      }
+    });
+  });
+};
+updateInfo();
 
 
 //Viết sự kiện chọn menu hiện menu-detail tương ứng
@@ -46,6 +165,17 @@ function renderAvatarList() {
       avatarImage.className = 'avatar-image';
       avatarImage.innerHTML = `<img src="${avatar}" alt="">`;
       avatarWrap.appendChild(avatarImage);
+
+      //Viết sự kiện click chọn ảnh
+      avatarImage.addEventListener('click', function () {
+        user.avatar = avatar;
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        document.querySelector('.avatar').style.display = 'none';
+
+        const avatarImage = document.querySelector(".avatar-image-2");
+        avatarImage.innerHTML = `<img src="${user.avatar}">
+      <i class="fa-solid fa-pen pen-1"></i>`
+      });
     })
   }
   //Viết sự kiện click vào icon sửa
@@ -67,6 +197,17 @@ function renderWallpaperList() {
       wallpaperImage.className = 'wallpaper-image';
       wallpaperImage.innerHTML = `<img src="${wallpaper}" alt="">`;
       wallpaperWrap.appendChild(wallpaperImage);
+
+      //Viết sự kiện click chọn ảnh nền
+      wallpaperImage.addEventListener('click', function () {
+        user.wallpaper = wallpaper;
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        document.querySelector('.wallpaper').style.display = 'none';
+
+        const wallpaperImage = document.querySelector(".wallpaper-image-2");
+        wallpaperImage.innerHTML = `<img src="${user.wallpaper}" alt="" />
+                    <i class="fa-solid fa-pen pen-2"></i>`;
+      });
     })
   }
   const wallpaperSection = document.querySelector('.wallpaper');
@@ -108,6 +249,25 @@ function renderApellationList() {
   const updateIconApellation = document.querySelector('.pen-3');
   updateIconApellation.addEventListener('click', function () {
     apellationSection.style.display = 'block';
+  });
+
+  // Lưu danh hiệu khi nhấn "Xác nhận"
+  selectButton.addEventListener('click', function () {
+    const selectedItems = apellationWrap.querySelectorAll('.selected');
+    const selectedTitles = Array.from(selectedItems).map(item => item.textContent);
+    user.appellations = selectedTitles;
+    localStorage.setItem("currentUser", JSON.stringify(user));
+    document.querySelector('.apellation').style.display = 'none';
+
+    const profile_appellation = document.querySelector(".section-3 .profile-apellation");
+    profile_appellation.innerHTML = "";
+    selectedTitles.forEach(title => {
+      const li2 = document.createElement("li");
+      li2.textContent = title;
+      profile_appellation.appendChild(li2);
+    });
+
+
   });
 }
 renderApellationList();
@@ -258,7 +418,7 @@ myMovieMenu.forEach(item => {
 //Phim đã xem
 const watchedImages = [];
 moviesWatched.forEach(watchedTitle => {
-  const matchedMovie = movies.find(m => m.name === watchedTitle); 
+  const matchedMovie = movies.find(m => m.name === watchedTitle);
   if (matchedMovie) {
     watchedImages.push(matchedMovie.imageUrl || matchedMovie.bigPoster);
   }
@@ -286,3 +446,12 @@ reminds.forEach(remind => {
   movieImage.src = `${remind.imageUrl}`;
   document.querySelector('#remind').appendChild(movieImage);
 });
+
+document.querySelectorAll('.close-popup').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.parentElement.style.display = 'none';
+  });
+});
+
+
+

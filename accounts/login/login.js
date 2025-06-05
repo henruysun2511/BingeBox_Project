@@ -1,5 +1,5 @@
-import Validator from "../../scripts/validator.js";
-import Message from "../../scripts/message.js";
+import Validator from "../../scripts/Validator.js";
+import Message from "../../scripts/Message.js";
 window.onload = () => {
   const form = document.querySelector("form");
   const username = document.querySelector("#username");
@@ -35,3 +35,4 @@ window.onload = () => {
     }
   });
 };
+

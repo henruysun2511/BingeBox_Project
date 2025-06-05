@@ -1,4 +1,6 @@
 import { movies } from './objectForCinema.js';
+import { isLoggedIn } from './auth.js';
+
 
 const movieLayout = document.getElementById('movieLayout');
 
@@ -129,6 +131,13 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.textContent = showtime.time;
 
         btn.addEventListener('click', () => {
+          //Chưa đăng nhập
+          if (!isLoggedIn()) {
+            alert('Vui lòng đăng nhập để tiếp tục đặt vé.');
+            window.location.href = './accounts/login/login.html';
+            return;
+          }
+
           const bookingInfo = {
             bookingImage: movie.imageUrl,
             bookingName: movie.name,
@@ -151,6 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
       movieListDiv.appendChild(card);
     });
   }
+
+
 
   renderCinemaSelection();
 });

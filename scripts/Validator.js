@@ -30,6 +30,19 @@ class Validator {
 
     return Object.keys(errors).length > 0 ? errors : null;
   }
+  validateUpdateUser(data) {
+    const errors = {};
+    if (data.username.trim() === "") {
+      errors.username = "Tên đăng nhập không được để trống";
+    }
+    if (!this.isValidEmail(data.email)) {
+      errors.email = "Email không hợp lệ";
+    }
+    if (!data.password || data.password.length < 6) {
+      errors.password = "Mật khẩu phải có ít nhất 6 ký tự";
+    }
+    return Object.keys(errors).length > 0 ? errors : null;
+  }
 
   // Hàm phụ: kiểm tra định dạng email
   isValidEmail(email) {

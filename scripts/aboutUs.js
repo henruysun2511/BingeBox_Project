@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: '024.7300.7586',
             email: 'chuaboc@bingeboxcinema.vn',
             openHours: '8:00 - 22:00 hàng ngày',
-            image: 'assets/images/gioithieu/anhrap1.jpeg',
-            map: 'assets/images/gioithieu/rap1.png',
+            image: './assets/images/aboutUs/anhrap1.jpeg',
+            map: './assets/images/aboutUs/rap1.png',
             mapLink: 'https://g.co/kgs/MZ7eQR5'
         },
         'hoan-kiem': {
@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: '024.7300.8586',
             email: 'hoankiem@bingeboxcinema.vn',
             openHours: '9:00 - 22:00 hàng ngày',
-            image: 'assets/images/gioithieu/anhrap2.jpg',
-            map: 'assets/images/gioithieu/rap2.png',
+            image: './assets/images/aboutUs/anhrap2.jpg',
+            map: './assets/images/aboutUs/rap2.png',
             mapLink: 'https://g.co/kgs/xTjravJ'
         },
         'metropolis': {
@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: '024.7300.9586',
             email: 'metropolis@bingeboxcinema.vn',
             openHours: '9:00 - 22:00 hàng ngày',
-            image: 'assets/images/gioithieu/anhrap3.jpg',
-            map: 'assets/images/gioithieu/rap3.png',
+            image: './assets/images/aboutUs/anhrap3.jpg',
+            map: './assets/images/aboutUs/rap3.png',
             mapLink: 'https://g.co/kgs/Y62CnTo'
         }
     };

@@ -275,6 +275,7 @@
                 event.preventDefault(); // Ngăn nhảy trang
                 localStorage.removeItem("currentUser");
                 window.location.reload();
+                window.location.href = `./index.html`;
             });
         } else {
             loginButton.textContent = "Đăng nhập";

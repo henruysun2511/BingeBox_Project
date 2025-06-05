@@ -78,13 +78,24 @@ function nextStep() {
     } else {
         // Lấy thông tin ghế, đồ ăn, giá từ sessionStorage
         const selectedSeats = JSON.parse(sessionStorage.getItem('selectedSeats')) || {};
-        const selectedFoods = JSON.parse(sessionStorage.getItem('selectedFoods')) || []; 
+        const selectedFoods = JSON.parse(sessionStorage.getItem('selectedFoods')) || [];
         const selectedPromotion = JSON.parse(sessionStorage.getItem('promotionInfo')) || null;
         const seatTotalPrice = parseInt(sessionStorage.getItem('seatTotalPrice')) || 0;
         const foodTotalPrice = parseInt(sessionStorage.getItem('foodTotalPrice')) || 0;
         const promotionTotalPrice = parseFloat(sessionStorage.getItem('promotionTotalPrice')) || 0;
 
         const totalPrice = (seatTotalPrice + foodTotalPrice) * (1 - promotionTotalPrice);
+
+        if (!selectedSeats || Object.keys(selectedSeats).length === 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Chưa chọn ghế',
+                text: 'Vui lòng chọn ít nhất 1 ghế để tiếp tục!',
+            }).then(() => {
+                window.location.reload();
+            });
+            return;
+        }
 
         // Lấy thông tin phim
         const bookingInfo = JSON.parse(sessionStorage.getItem('bookingInfo'));
@@ -117,8 +128,14 @@ function nextStep() {
         }
 
         // Chuyển sang trang hóa đơn
-        alert("Thanh toán thành công!");
-        window.location.href = `bill.html`;
+        Swal.fire({
+            icon: 'success',
+            title: 'Hoàn thành',
+            text: 'Đặt vé thành công',
+        }).then(() => {
+            window.location.href = `bill.html`;
+        });
+      
     }
     showStep();
 }
@@ -153,3 +170,4 @@ function updateTotalPrice() {
         totalPriceElement.textContent = `${totalPrice.toLocaleString()} đ`;
     }
 }
+
