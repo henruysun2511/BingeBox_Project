@@ -82,9 +82,9 @@
                 trên màn ảnh, mà còn qua cảm xúc bên trong chính ta."
               </p>
               <div class="profile-common-info">
-                <p>Tên: Huy Sun</p>
-                <p>Email: huysun2511@gmail.com</p>
-                <p>Mã khách hàng: 2005-tkweb-nhom4-10-6</p>
+                <p id="profile-name"></p>
+                <p id="profile-email"></p>
+                <p id="profile-id">Mã khách hàng: 2005-tkweb-nhom4-10-6</p>
               </div>
               <div class="profile-barcode">
                 <h3>Mã barcode</h3>
@@ -189,7 +189,9 @@
                     </ul>
                     <i class="fa-solid fa-pen pen-3"></i>
                   </div>
-                  <div class="update-button"><button>Cập nhật</button></div>
+                  <div class="update-button">
+                    <button type="submit" id="update-info">Cập nhật</button>
+                  </div>
                 </div>
                 <!-- Thông tin vé -->
                 <div class="menu-detail" id="my-ticket" style="display: none">
@@ -330,7 +332,8 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
-
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="module" src="./scripts/profile.js"></script>
     <script src="./scripts/loadComponents.js"></script>

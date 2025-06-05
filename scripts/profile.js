@@ -1,15 +1,78 @@
+import Validator from "./Validator.js";
+import Message from "./Message.js";
 import { movies, movieComingSoons } from "./objectForCinema.js";
 
 const user = JSON.parse(localStorage.getItem("currentUser"));
 if (!user) {
-  window.location.href = "../login/login.html";
+  window.location.href = "accounts/login/login.html";
 }
-const loadInfo=()=>{
+const loadInfo = () => {
   const input_username = document.getElementById("name-input");
   const input_email = document.getElementById("email-input");
   const input_phone = document.getElementById("phone-input");
-  
-}
+  const input_birthday = document.getElementById("birthday-input");
+  const input_password = document.getElementById("password-input");
+  const profile_name = document.getElementById("profile-name");
+  const profile_email = document.getElementById("profile-email");
+  if (user) {
+    input_username.value = user.username || "";
+    input_email.value = user.email || "";
+    input_phone.value = user.phone || "";
+    input_birthday.value = user.birthday || "";
+    input_password.value = user.password || "";
+    profile_name.textContent = `${"Tên đăng nhập: "}${user.username || ""}`;
+    profile_email.textContent = `${"Email: "}${user.email || ""}`;
+  }
+};
+loadInfo();
+const updateInfo = () => {
+  const btnUpdateInfo = document.getElementById("update-info");
+  btnUpdateInfo.addEventListener("click", () => {
+    const input_username = document.getElementById("name-input").value;
+    const input_email = document.getElementById("email-input").value;
+    const input_phone = document.getElementById("phone-input").value;
+    const input_birthday = document.getElementById("birthday-input").value;
+    const input_password = document.getElementById("password-input").value;
+    const userInfo = {
+      username: input_username,
+      email: input_email,
+      phone: input_phone,
+      birthday: input_birthday,
+      password: input_password,
+    };
+    Message.messageConfirm(
+      "Bạn có chắc chắn muốn cập nhật thông tin không?",
+      "question"
+    ).then((result) => {
+      if (result.isConfirmed) {
+        // Validate userInfo
+        const errors = Validator.validateUpdateUser(userInfo);
+        if (!errors) {
+          // Update user information
+          localStorage.setItem("currentUser", JSON.stringify(userInfo));
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+          const userIndex = users.findIndex((u) => u.email === user.email);
+          if (userIndex !== -1) {
+            users[userIndex] = { ...users[userIndex], ...userInfo };
+            localStorage.setItem("users", JSON.stringify(users));
+            Message.messageInfo("Cập nhật thông tin thành công!", "success")
+              .then((result) => {
+                // Handle success
+                window.location.reload();
+              })
+              .catch((err) => {});
+          }
+        }
+      } else {
+        // Hiển thị lỗi theo từng trường
+        if (errors.username) Message.messageInfo(errors.username, "error");
+        if (errors.email) Message.messageInfo(errors.email, "error");
+        return; // Dừng lại nếu có lỗi
+      }
+    });
+  });
+};
+updateInfo();
 
 //Viết sự kiện chọn menu hiện menu-detail tương ứng
 const menuItems = document.querySelectorAll(".menu-item");
