@@ -1,0 +1,117 @@
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .section-3 .inner-wrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .profile-info h1 {
+        text-align: center;
+    }
+
+    .profile-title li h3 {
+        font-size: 18px;
+    }
+
+    .profile-menu li {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .inner-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-common {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .menu-detail {
+        width: 100%;
+    }
+}
+
+/* Tablet đứng (480px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 480px) {
+    .section-3 .inner-wrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .profile-info h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .profile-apellation li {
+        font-size: 13px;
+    }
+
+    .profile-title li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu-detail table th,
+    .menu-detail table td {
+        font-size: 12px;
+    }
+
+    .bill-card {
+        padding: 10px;
+    }
+}
+
+/* Mobile nhỏ (dưới 480px) */
+@media screen and (max-width: 479px) {
+    .section-3 .inner-wrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .inner-wrap {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-avatar img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h1 {
+        font-size: 18px;
+    }
+
+    .profile-title li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .profile-menu li {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px;
+    }
+
+    .bill-card h1 {
+        font-size: 16px;
+    }
+
+    .wallpaper-image-2 img,
+    .avatar-image-2 img {
+        width: 100%;
+        height: auto;
+    }
+}

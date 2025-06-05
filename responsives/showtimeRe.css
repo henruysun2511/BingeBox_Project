@@ -1,0 +1,61 @@
+@media (max-width: 1024px) {
+  .movie-layout {
+    padding: 20px 30px;
+  }
+
+  .movie-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inner-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .movie-info {
+    text-align: center;
+    width: 100%;
+  }
+
+  .times{
+    justify-content: center;
+  }
+
+  .cinema-selection {
+    padding: 30px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cinema-selection {
+    padding: 20px;
+  }
+
+  .cinema-selection button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .date-buttons button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .movie-layout {
+    padding: 20px;
+  }
+
+  .movie-info {
+    font-size: 14px;
+  }
+
+  .tag {
+    font-size: 13px;
+  }
+
+  .times button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}

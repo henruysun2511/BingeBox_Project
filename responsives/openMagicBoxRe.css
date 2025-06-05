@@ -6,7 +6,6 @@
     }
 }
 
-
 @media screen and (max-width: 768px) {
     .section-1 {
         position: fixed;
@@ -14,7 +13,6 @@
         left: 13%;
     }
 }
-
 
 @media screen and (max-width: 480px) {
     .section-1 {
