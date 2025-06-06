@@ -258,7 +258,7 @@ if (movie) {
         buttonFavourite.addEventListener('click', function (e) {
             e.preventDefault();
             addMovieToLocalStorage(movie, 'favorite');
-            alert('Đã thêm vào danh sách yêu thích');
+            Message.messageInfo("Đã lưu vào danh sách yêu thích", "success");
         });
     }
 
@@ -279,7 +279,7 @@ if (movie) {
             buttonRemind.addEventListener('click', function (e) {
                 e.preventDefault();
                 addMovieToLocalStorage(movie, 'remind');
-                alert('Đã thêm vào danh sách nhắc nhở');
+                Message.messageInfo("Đã lưu vào danh sách nhắc tôi", "success");
             });
         }
     }

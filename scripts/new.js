@@ -197,7 +197,7 @@ function populateNewsDetail(newsItem, newsId) {
         newsItem.relatedNews.forEach(relatedItem => {
             const li = document.createElement('li');
             const a = document.createElement('a');
-            a.href = `detail-new.html?id=${relatedItem.id}`;
+            a.href = `newDetail.html?id=${relatedItem.id}`;
             a.textContent = relatedItem.title;
             a.addEventListener('click', function(e) {
                 // If it's the same page, prevent default and reload the content
