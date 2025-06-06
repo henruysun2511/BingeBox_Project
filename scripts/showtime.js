@@ -1,6 +1,6 @@
 import { movies } from './objectForCinema.js';
 import { isLoggedIn } from './auth.js';
-
+import Message from "./Message.js";
 
 const movieLayout = document.getElementById('movieLayout');
 
@@ -133,8 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
           //Chưa đăng nhập
           if (!isLoggedIn()) {
-            alert('Vui lòng đăng nhập để tiếp tục đặt vé.');
-            window.location.href = './accounts/login/login.html';
+            Message.messageInfo("Vui lòng đăng nhập để tiếp tục", "error").then((result) => {
+              window.location.href = './accounts/login/login.html';
+            }).catch((err) => { });
             return;
           }
 

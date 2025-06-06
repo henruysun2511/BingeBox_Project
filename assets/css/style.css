@@ -343,7 +343,7 @@ select {
 
 /* css cho trailer */
 #overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
     left: 0;
@@ -353,7 +353,6 @@ select {
     display: none;
 }
 
-/* Close button */
 #close {
     position: fixed;
     top: 15%;
@@ -365,7 +364,7 @@ select {
     display: none;
 }
 
-/* Centered fixed iframe container */
+
 .inner-iframe {
     position: fixed;
     top: 50%;
