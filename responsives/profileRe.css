@@ -70,11 +70,25 @@
 
 /* Mobile nhỏ (dưới 480px) */
 @media screen and (max-width: 479px) {
+    .section-1 .inner-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .section-2 .profile-avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-2 .profile-name{
+        font-size: 30px;
+    }
+
     .section-3 .inner-wrap {
         padding-left: 0;
         padding-right: 0;
     }
-    
+
     .inner-wrap {
         flex-direction: column;
         align-items: center;
@@ -113,5 +127,13 @@
     .avatar-image-2 img {
         width: 100%;
         height: auto;
+    }
+
+    .menu-detail{
+        width: 100%;
+    }
+
+    #my-ticket{
+        overflow-x: scroll;
     }
 }
