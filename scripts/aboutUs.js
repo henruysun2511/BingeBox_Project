@@ -71,11 +71,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 <div class="cinema-map">
-                    <a href="${cinema.mapLink}" target="_blank" rel="noopener">
-                    <img src="${cinema.map}" alt="Bản đồ đến ${cinema.name}">
+                    <a href="${cinema.mapLink}" target="_blank" rel="noopener" class="map-link">
+                        <p class="map-message">Nhấn vào đây để xem bản đồ đường đi đến ${cinema.name}</p>
                     </a>
-            </div>
-
+                </div>
             `;
         }
     });
