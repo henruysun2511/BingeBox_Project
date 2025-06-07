@@ -1,0 +1,267 @@
+/* Global Styles */
+.has-fixed-header {
+    padding-top: 100px;
+}
+
+/* Fix for anchor links - adjust this to properly handle fixed header */
+span[id] {
+    display: block;
+    position: relative;
+    top: -120px; 
+    visibility: hidden;
+    height: 1px;
+    margin-bottom: -1px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Header Styles */
+
+
+/* Cinema System Section */
+.cinema-system {
+    padding: 40px 0 20px;
+    color: #fff;
+}
+
+.cinema-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cinema-tab {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.cinema-tab.active, .cinema-tab:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Cinema Details Section */
+.cinema-details {
+    color: #fff;
+    padding: 20px 0 40px;
+}
+
+.cinema-content-wrapper {
+    display: none;
+}
+
+.cinema-content-wrapper.active {
+    display: block;
+}
+
+.cinema-name {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cinema-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.cinema-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cinema-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cinema-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cinema-info p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.cinema-map img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cinema-map {
+    margin-top: 20px;
+}
+
+.map-link {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.map-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.map-message {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Movies Section */
+.movies-section {
+    padding: 40px 0;
+    color: #fff;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #f25b68;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Movie Modal/Lightbox */
+.movie-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-modal-content {
+    position: relative;
+    /* background-color: #0b1752; */
+    max-width: 800px;
+    width: 90%;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.movie-modal-content img {
+    max-height: 70vh;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.movie-modal-content h3 {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+

@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: '024.7300.7586',
             email: 'chuaboc@bingeboxcinema.vn',
             openHours: '8:00 - 22:00 hàng ngày',
-            image: '/assets/images/aboutUs/anhrap1.jpeg',
-            map: '/assets/images/aboutUs/rap1.PNG',
+            image: './assets/images/aboutUs/anhrap1.jpeg',
             mapLink: 'https://g.co/kgs/MZ7eQR5'
         },
         'hoan-kiem': {
@@ -28,8 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: '024.7300.8586',
             email: 'hoankiem@bingeboxcinema.vn',
             openHours: '9:00 - 22:00 hàng ngày',
-            image: '/assets/images/aboutUs/anhrap2.jpg',
-            map: '/assets/images/aboutUs/rap2.PNG',
+            image: './assets/images/aboutUs/anhrap2.jpg',
             mapLink: 'https://g.co/kgs/xTjravJ'
         },
         'metropolis': {
@@ -40,8 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             phone: '024.7300.9586',
             email: 'metropolis@bingeboxcinema.vn',
             openHours: '9:00 - 22:00 hàng ngày',
-            image: '/assets/images/aboutUs/anhrap3.jpg',
-            map: '/assets/images/aboutUs/rap3.PNG',
+            image: './assets/images/aboutUs/anhrap3.jpg',
             mapLink: 'https://g.co/kgs/Y62CnTo'
         }
     };
@@ -71,11 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
                 <div class="cinema-map">
-                    <a href="${cinema.mapLink}" target="_blank" rel="noopener">
-                    <img src="${cinema.map}" alt="Bản đồ đến ${cinema.name}">
+                    <a href="${cinema.mapLink}" target="_blank" rel="noopener" class="map-link">
+                        <p class="map-message">Nhấn vào đây để xem bản đồ đường đi đến ${cinema.name}</p>
                     </a>
-            </div>
-
+                </div>
             `;
         }
     });
