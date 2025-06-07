@@ -136,4 +136,28 @@
     #my-ticket{
         overflow-x: scroll;
     }
+
+    .avatar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 25%;
+        left: 0%;
+    }
+
+    .wallpaper {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 25%;
+        left: 0;
+    }
+
+    .apellation {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 15%;
+        left: 0%;
+    }
 }
