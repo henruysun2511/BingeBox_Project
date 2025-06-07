@@ -1,4 +1,4 @@
-/* Global Styles */
+
 .has-fixed-header {
     padding-top: 100px;
 }
@@ -156,6 +156,29 @@ img {
     margin-top: 20px;
 }
 
+.cinema-map {
+    margin-top: 20px;
+}
+
+.map-link {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.map-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.map-message {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+}
+
 /* Movies Section */
 .movies-section {
     padding: 40px 0;
@@ -241,4 +264,3 @@ img {
     font-size: 24px;
     cursor: pointer;
 }
-
